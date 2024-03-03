@@ -24,7 +24,7 @@
 <meta property="og:description" content="Java复习笔记Java-Lesson 0 (Resources) Java 8 官方文档: https:&#x2F;&#x2F;docs.oracle.com&#x2F;javase&#x2F;8&#x2F;docs&#x2F;api&#x2F; Google Java Style Guide: https:&#x2F;&#x2F;google.github.io&#x2F;styleguide&#x2F;javaguide.html  Java-Lesson 1 (Basic Grammar) 标识符">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-03T03:04:49.000Z">
-<meta property="article:modified_time" content="2024-03-03T04:10:21.776Z">
+<meta property="article:modified_time" content="2024-03-03T05:06:17.967Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -590,25 +590,15 @@
 <p>(3) 构造方法可以有多个, 构造方法可以&#x3D;&#x3D;<strong>重载</strong>&#x3D;&#x3D; (运行时会根据参数形式来具体选择构造方法). </p>
 <p>(4) 当没有声明构造函数时, 默认含有一个无参数的构造函数, 当显式声明构造函数后, 默认的构造函数就不存在.</p>
 </li>
-<li><pre><code class="java">public class Dog extends Animal &#123;
-    public Dog(String name) &#123;
-        super(name); // 由于super就是父类名, 而父类构造方法和类同名, 所以此处子类的构造方法中用super调用了父类的构造方法
-    &#125;
-    public void greet() &#123;
-        System.out.println(&quot;WangWang..., I am &quot; + this.name);
-    &#125;
-    public void run() &#123;
-        System.out.println(&quot;I am running!&quot;);
-    &#125;
-&#125;
-<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs mipsasm"><br><span class="hljs-number">24</span>. ==**静态类型和实际类型**==: <br><br>    ```<span class="hljs-keyword">java</span><br><span class="hljs-keyword"></span>    <span class="hljs-keyword">Base </span><span class="hljs-keyword">base </span>= new Child()<span class="hljs-comment">; // Base: 静态类型, Child: 实际类型</span><br></code></pre></td></tr></table></figure>
+<li><p>继承: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">Dog</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">Animal</span> &#123;<br>    <span class="hljs-keyword">public</span> <span class="hljs-title function_">Dog</span><span class="hljs-params">(String name)</span> &#123;<br>        <span class="hljs-built_in">super</span>(name); <span class="hljs-comment">// 由于super就是父类名, 而父类构造方法和类同名, 所以此处子类的构造方法中用super调用了父类的构造方法</span><br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">greet</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;WangWang..., I am &quot;</span> + <span class="hljs-built_in">this</span>.name);<br>    &#125;<br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">run</span><span class="hljs-params">()</span> &#123;<br>        System.out.println(<span class="hljs-string">&quot;I am running!&quot;</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>&#x3D;&#x3D;<strong>静态类型和实际类型</strong>&#x3D;&#x3D;: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-type">Base</span> <span class="hljs-variable">base</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">Child</span>(); <span class="hljs-comment">// Base: 静态类型, Child: 实际类型</span><br></code></pre></td></tr></table></figure>
 
-一个变量都有两个类型.  
-
-**静态类型: 引用变量的类型, 在编译期确定, 无法改变**
-
-**实际类型: 实例对象的类型, 在编译期无法确定, 需在运行期确定, 可以改变**
-</code></pre>
+<p>一个变量都有两个类型.  </p>
+<p><strong>静态类型: 引用变量的类型, 在编译期确定, 无法改变</strong></p>
+<p><strong>实际类型: 实例对象的类型, 在编译期无法确定, 需在运行期确定, 可以改变</strong></p>
 </li>
 <li><p><strong>static</strong>关键字: 是Java中用来表达隶属于”类”本身, 而不隶属于类的对象的一个关键字. (可修饰变量(静态变量), 方法(静态方法), <strong>语句块(初始化类变量)</strong>)</p>
 </li>
@@ -1067,11 +1057,11 @@
 
 <p>先为Random对象设置一个种子(这样程序每次运行都会得到相同的结果). ints() 方法会生成一个流, 两个参数可以设置所生成值的上下界. 这里生成了一个由随机的int组成的流, 我们使用中间流操作**distinct()<strong>去掉重复的值, 再使用</strong>limit()**选择前7个值. 然后我们告诉它, 希望元素是有序的(sorted()). 最后, 我们使用了 ForEach(), 它会根据我们传递的函数, 在每个流对象上执行一个操作. 这里我们传递了一个方法引用<code>System.out::println</code>, 用于将每个条目显示在控制台上.</p>
 </li>
-<li><pre><code class="java">Predicate&lt;Use&gt; predicate1 = user -&gt; user.getAge() &lt; 21;
-List&lt;User&gt; collect = list.stream().filter(predicate1).filter(user -&gt; user.getSalary() &gt; 2000).collect(Collections.toList()).forEach(System.out::println);
-// 构建流, 过滤, 收集器收集, 逐个打印
-<figure class="highlight maxima"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs maxima"><br>   collect会将将流 (惰性) 收集起来.<br><br><span class="hljs-number">10</span>. foreach是对列表操作, <span class="hljs-built_in">map</span> / reduce则是对流操作: <br><br>    ```java<br>      <span class="hljs-comment">/** map */</span><br>      list.stream().<span class="hljs-built_in">map</span>(<span class="hljs-built_in">num</span>-&gt;<span class="hljs-built_in">num</span> + <span class="hljs-number">10</span>);<br>      <span class="hljs-comment">/** reduce */</span><br>      int <span class="hljs-built_in">sum</span> = list.stream().reduce(<span class="hljs-number">0</span>, (a, b) -&gt; a + b).<span class="hljs-built_in">get</span>()<br></code></pre></td></tr></table></figure>
-</code></pre>
+<li><p>collect会将将流 (惰性) 收集起来: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs java">Predicate&lt;Use&gt; predicate1 = user -&gt; user.getAge() &lt; <span class="hljs-number">21</span>;<br>List&lt;User&gt; collect = list.stream().filter(predicate1).filter(user -&gt; user.getSalary() &gt; <span class="hljs-number">2000</span>).collect(Collections.toList()).forEach(System.out::println);<br><span class="hljs-comment">// 构建流, 过滤, 收集器收集, 逐个打印</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>foreach是对列表操作, map &#x2F; reduce则是对流操作: </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-comment">/** map */</span><br>list.stream().map(num-&gt;num + <span class="hljs-number">10</span>);<br><span class="hljs-comment">/** reduce */</span><br><span class="hljs-type">int</span> <span class="hljs-variable">sum</span> <span class="hljs-operator">=</span> list.stream().reduce(<span class="hljs-number">0</span>, (a, b) -&gt; a + b).get()<br></code></pre></td></tr></table></figure>
 </li>
 <li><p>流还有 <code>distinct()</code>操作, 把相同的元素变为一个. 还有<code>sorted(Comparator.reserveOrder())</code></p>
 </li>
@@ -1380,30 +1370,12 @@ List&lt;User&gt; collect = list.stream().filter(predicate1).filter(user -&gt; us
 <li><p>race condition(竞争条件) 多个资源竞争不能被同时访问的资源</p>
 </li>
 <li><p>解决方案: 对资源加锁, 确保一个时刻只有一个任务在使用共享资源 (使其互斥)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">class</span> <span class="hljs-title class_">MutexEvenGenerator</span> <span class="hljs-keyword">extends</span> <span class="hljs-title class_">IntGenerator</span> &#123;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">int</span> <span class="hljs-variable">currentEvenValue</span> <span class="hljs-operator">=</span> <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">private</span> <span class="hljs-type">Lock</span> <span class="hljs-variable">lock</span> <span class="hljs-operator">=</span> <span class="hljs-keyword">new</span> <span class="hljs-title class_">ReentrantLock</span>(); <span class="hljs-comment">// 即创建一个锁</span><br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-type">int</span> <span class="hljs-title function_">next</span><span class="hljs-params">()</span> &#123;<br>        <span class="hljs-comment">// 加锁</span><br>        lock.lock();<br>        <span class="hljs-keyword">try</span> &#123;<br>			++currentEvenValue;<br>            Thread.<span class="hljs-keyword">yield</span>();<br>			++currentEvenValue;<br>       		<span class="hljs-keyword">return</span> currentEvenValue;<br>        &#125; <span class="hljs-keyword">finally</span> &#123; <span class="hljs-comment">// 即是return了, finally里面的语句还会执行</span><br>            lock.unlock(); <span class="hljs-comment">// 一定要用try-catch的finally释放锁</span><br>        &#125;<br>    &#125;<br>    <br>    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title function_">main</span><span class="hljs-params">(String[] args)</span> &#123;<br>        EvenChecker.test(<span class="hljs-keyword">new</span> <span class="hljs-title class_">MutexEvenGenerator</span>(), <span class="hljs-number">10</span>);<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 </li>
-<li><pre><code class="java">public class MutexEvenGenerator extends IntGenerator &#123;
-    private int currentEvenValue = 0;
-    private Lock lock = new ReentrantLock(); // 即创建一个锁
-    
-    public int next() &#123;
-        // 加锁
-        lock.lock();
-        try &#123;
-            ++currentEvenValue;
-            Thread.yield();
-            ++currentEvenValue;
-               return currentEvenValue;
-        &#125; finally &#123; // 即是return了, finally里面的语句还会执行
-            lock.unlock(); // 一定要用try-catch的finally释放锁
-        &#125;
-    &#125;
-    
-    public static void main(String[] args) &#123;
-        EvenChecker.test(new MutexEvenGenerator(), 10);
-    &#125;
-&#125;
-<figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs autohotkey"><br><span class="hljs-number">12</span>. `ReentrantLock` 类, 里面的方法`tryLock()` 尝试获取锁, 返回成功与否, 若有参数 `tryLock(timeout, TimeUnit.SECONDS)`, 则会等timeout个TimeUnit的时间, 若这段时间内获取锁成功也返回<span class="hljs-literal">true</span>. <br><br><span class="hljs-number">13</span>. `Synchronized` 关键字 -- 只允许一个线程进入这一方法, 这整个方法不允许被多个线程同时调用. <br><br>    ```java<br>    public synchronized int next() &#123;&#125;<br></code></pre></td></tr></table></figure>
-</code></pre>
+<li><p><code>ReentrantLock</code> 类, 里面的方法<code>tryLock()</code> 尝试获取锁, 返回成功与否, 若有参数 <code>tryLock(timeout, TimeUnit.SECONDS)</code>, 则会等timeout个TimeUnit的时间, 若这段时间内获取锁成功也返回true. </p>
+</li>
+<li><p><code>Synchronized</code> 关键字 – 只允许一个线程进入这一方法, 这整个方法不允许被多个线程同时调用. </p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs java"><span class="hljs-keyword">public</span> <span class="hljs-keyword">synchronized</span> <span class="hljs-type">int</span> <span class="hljs-title function_">next</span><span class="hljs-params">()</span> &#123;&#125;<br></code></pre></td></tr></table></figure>
 </li>
 <li><p><code>synchronized</code>标记了是一个 <strong>临界区 (critical sections)</strong> , 整个临界区一次只有一个线程可以进入. </p>
 </li>
@@ -1583,11 +1555,33 @@ List&lt;User&gt; collect = list.stream().filter(predicate1).filter(user -&gt; us
 <p><code>[]</code> 必须匹配括号里的内容</p>
 <p><code>[^]</code> 必须匹配除了括号里以外的字符 (这里^的意思与之前)</p>
 </li>
-<li><pre><code class="java">Pattern.matches(&quot;^\w+@(\w\.)&#123;0, 2&#125;\w+\.(edu|com|gov|net)$&quot;, str);
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><code class="hljs prolog"><br><span class="hljs-number">4.</span> <span class="hljs-string">``</span>\w<span class="hljs-string">``</span>: [a-zA-<span class="hljs-symbol">Z0</span><span class="hljs-number">-9</span><span class="hljs-symbol">_</span>] 即构成一个单词的所有可能组合, 字母数字下划线.<br><br>   <span class="hljs-string">``</span>\d<span class="hljs-string">``</span>: [<span class="hljs-number">0</span><span class="hljs-number">-9</span>] digits<br><br>   <span class="hljs-string">``</span>\<span class="hljs-symbol">D</span><span class="hljs-string">``</span>: [\^<span class="hljs-number">0</span><span class="hljs-number">-9</span>] not a digit<br><br>   <span class="hljs-string">``</span>\s<span class="hljs-string">``</span>: 空白字符<br><br>   <span class="hljs-string">``</span>\<span class="hljs-symbol">S</span><span class="hljs-string">``</span>: 空白字符<br><br>   <span class="hljs-string">``</span>\<span class="hljs-symbol">W</span><span class="hljs-string">``</span>: [\^a-zA-<span class="hljs-symbol">Z0</span><span class="hljs-number">-9</span><span class="hljs-symbol">_</span>] 非单词字符以外所有字符<br><br>   <br><br><br>## <span class="hljs-symbol">Jar</span>包<br><br><span class="hljs-number">1.</span> 只要涉及到<span class="hljs-symbol">Java</span>的项目, 就不可避免地接触到jar包. 而实际开发中，maven, gradle等项目管理工具为我们自动地管理jar包以及相关的依赖, 让jar包的调用看起来如黑盒一般<span class="hljs-string">&quot;密不透风&quot;</span>. 本节让我们打开这个黑盒, 了解有关jar包的知识. (参考 - <span class="hljs-symbol">Java</span>核心技术)<br><br><span class="hljs-number">2.</span> jar包就是 <span class="hljs-symbol">Java</span> <span class="hljs-symbol">Archive</span> <span class="hljs-symbol">File</span>, 是<span class="hljs-symbol">Java</span>的一种文档格式, 是一种与平台无关的文件格式, 可将多个文件合成一个文件. 与zip包很相似, 准确的说, jar和zip的唯一区别就是在jar文件的内容中, 包含了一个 <span class="hljs-string">`META-INF/MAINIFEST.MF`</span> 文件, 作为jar里面的详情单. <br><br><span class="hljs-number">3.</span> jar包主要是对class文件进行打包, 这意味着jar包是跨平台的. <br><br><span class="hljs-number">4.</span> 使用指令 <span class="hljs-string">`jar -tf xxx.jar`</span> 查看jar里面的内容. <br><br><span class="hljs-number">5.</span> 可以查看到jar包里面一般有 .<span class="hljs-symbol">MF</span> .class 文件, 还有静态资源文件如 .html, .css 以及 .js等. <br><br><span class="hljs-number">6.</span> jar包用于发布, 方便将自己实现的功能提供给别人使用. <br><br><span class="hljs-number">7.</span> 还有war包, war包是一个可以直接运行的web模块, 通常应用于web项目中, war包可以部署到<span class="hljs-symbol">Tomcat</span>等容器中, war包能打包的内容jar包都可以打包. <br><br><span class="hljs-number">8.</span> 如何打jar包? 首先将编写好的java项目用<span class="hljs-string">`javac`</span>命令生成字节码文件, 然后在命令行中执行<br><br>   <span class="hljs-string">``</span><span class="hljs-string">`shell</span><br><span class="hljs-string">   jar -cvf xxx.jar com/src/A.class com/B.class</span><br></code></pre></td></tr></table></figure>
+<li><p><code>\w</code>: [a-zA-Z0-9_] 即构成一个单词的所有可能组合, 字母数字下划线.</p>
+<p><code>\d</code>: [0-9] digits</p>
+<p><code>\D</code>: [^0-9] not a digit</p>
+<p><code>\s</code>: 空白字符</p>
+<p><code>\S</code>: 空白字符</p>
+<p><code>\W</code>: [^a-zA-Z0-9_] 非单词字符以外所有字符</p>
+</li>
+</ol>
+<h2 id="Jar包"><a href="#Jar包" class="headerlink" title="Jar包"></a>Jar包</h2><ol>
+<li><p>只要涉及到Java的项目, 就不可避免地接触到jar包. 而实际开发中，maven, gradle等项目管理工具为我们自动地管理jar包以及相关的依赖, 让jar包的调用看起来如黑盒一般”密不透风”. 本节让我们打开这个黑盒, 了解有关jar包的知识. (参考 - Java核心技术)</p>
+</li>
+<li><p>jar包就是 Java Archive File, 是Java的一种文档格式, 是一种与平台无关的文件格式, 可将多个文件合成一个文件. 与zip包很相似, 准确的说, jar和zip的唯一区别就是在jar文件的内容中, 包含了一个 <code>META-INF/MAINIFEST.MF</code> 文件, 作为jar里面的详情单. </p>
+</li>
+<li><p>jar包主要是对class文件进行打包, 这意味着jar包是跨平台的. </p>
+</li>
+<li><p>使用指令 <code>jar -tf xxx.jar</code> 查看jar里面的内容. </p>
+</li>
+<li><p>可以查看到jar包里面一般有 .MF .class 文件, 还有静态资源文件如 .html, .css 以及 .js等. </p>
+</li>
+<li><p>jar包用于发布, 方便将自己实现的功能提供给别人使用. </p>
+</li>
+<li><p>还有war包, war包是一个可以直接运行的web模块, 通常应用于web项目中, war包可以部署到Tomcat等容器中, war包能打包的内容jar包都可以打包. </p>
+</li>
+<li><p>如何打jar包? 首先将编写好的java项目用<code>javac</code>命令生成字节码文件, 然后在命令行中执行</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs shell">jar -cvf xxx.jar com/src/A.class com/B.class<br></code></pre></td></tr></table></figure>
 
-c表示要创建一个新的jar包，v表示创建的过程中在控制台输出创建过程的一些信息，f表示给生成的jar包命名.  
-</code></pre>
+<p>c表示要创建一个新的jar包，v表示创建的过程中在控制台输出创建过程的一些信息，f表示给生成的jar包命名.  </p>
 </li>
 <li><p>手动打jar包需要自己新建MANIFEST文件, 一般使用intellij idea打包, 步骤如下: </p>
 <ol>

@@ -24,7 +24,7 @@
 <meta property="og:description" content="C语言复习笔记Lesson 1: 输入输出 program程序 Operations运算符 expressions表达式 statements语句  理解第一个程序hello.c的各个部分： 12345#include : preprocessor directive 预处理指令main: function 函数int main(): takes no arguments, return an i">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2024-03-02T14:30:33.000Z">
-<meta property="article:modified_time" content="2024-03-03T02:51:36.481Z">
+<meta property="article:modified_time" content="2024-03-03T03:00:21.279Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary_large_image">
   
@@ -375,7 +375,7 @@
 </li>
 <li><p>写代码就像写诗 – 多换行. </p>
 </li>
-<li><p>在合适的场景多用<strong>布尔变量</strong>. </p>
+<li><p>在合适的场景多用<strong>布尔变量</strong>.</p>
 </li>
 <li><p><strong>scanf是有返回值的.</strong> 一般来说, <strong>匹配了几个就返回几</strong>.</p>
 <p><code>%d%d%d, &amp;a, &amp;b, &amp;c</code></p>
@@ -383,12 +383,21 @@
 <p>如果输入 abc 不能匹配, 就返回0</p>
 <p>如果是   “          “   这样的空输入就返回EOF, (end of file, 文件结束符, 一般来说其值&#x3D; -1 )</p>
 </li>
-<li><p>读取整型数组: </p>
+<li><p>读取int数组: </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">do</span> &#123;<br>    <span class="hljs-built_in">scanf</span>(<span class="hljs-string">&quot;%d&quot;</span>, &amp;n);<br>    arr[i++] = n;<br>  &#125; <span class="hljs-keyword">while</span>( getchar() != <span class="hljs-string">&#x27;\n&#x27;</span>);<br></code></pre></td></tr></table></figure>
 </li>
-<li><pre><code class="c">while( (string[i++] = getchar()) != &#39;\n&#39;); // 读入一个无换行的字符串,美中不足是最后一个位置会是&#39;\n&#39;(垃圾值)
-<figure class="highlight scss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><code class="hljs scss"><br><span class="hljs-number">12</span>. `<span class="hljs-built_in">strlen</span>()` 返回字符串长度<br><br><span class="hljs-number">13</span>. `<span class="hljs-built_in">memset</span>()` 只能初始化值为**<span class="hljs-number">0</span>和-<span class="hljs-number">1</span>** <br><br><br><br>## Lesson <span class="hljs-number">4</span>: 多维数组<br><br><span class="hljs-number">1</span>. `game-of-life.c` 中涉及的系统调用: <br><br>   ```c<br>   <span class="hljs-built_in">Sleep</span>(<span class="hljs-number">1000</span>); <span class="hljs-comment">//表示暂停的毫秒 ，在windows.h头文件下</span><br>   <br>   <span class="hljs-built_in">system</span>(&quot;cls&quot;);  <span class="hljs-comment">//清屏</span><br>   <br>   <span class="hljs-comment">//Linux</span><br>   <span class="hljs-built_in">sleep</span>(<span class="hljs-number">1</span>); <span class="hljs-comment">//表示暂停的秒数; 在unistd.h下</span><br>   <span class="hljs-built_in">system</span>(&quot;clear&quot;); <span class="hljs-comment">// 在stdlib.h下</span><br>   <span class="hljs-built_in">printf</span>(&quot;\<span class="hljs-number">033</span>c&quot;); <span class="hljs-comment">// 清空</span><br></code></pre></td></tr></table></figure>
-</code></pre>
+<li><p>读取字符串:  </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-keyword">while</span>( (<span class="hljs-built_in">string</span>[i++] = getchar()) != <span class="hljs-string">&#x27;\n&#x27;</span>); <span class="hljs-comment">// 读入一个无换行的字符串,美中不足是最后一个位置会是&#x27;\n&#x27;(垃圾值)</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p><code>strlen()</code> 返回字符串长度</p>
+</li>
+<li><p><code>memset()</code> 只能初始化值为<strong>0和-1</strong></p>
+</li>
+</ol>
+<h2 id="Lesson-4-多维数组"><a href="#Lesson-4-多维数组" class="headerlink" title="Lesson 4: 多维数组"></a>Lesson 4: 多维数组</h2><ol>
+<li><p><code>game-of-life.c</code> 中涉及的系统调用: </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c">Sleep(<span class="hljs-number">1000</span>); <span class="hljs-comment">//表示暂停的毫秒 ，在windows.h头文件下</span><br><br>system(<span class="hljs-string">&quot;cls&quot;</span>);  <span class="hljs-comment">//清屏</span><br><br><span class="hljs-comment">//Linux</span><br>sleep(<span class="hljs-number">1</span>); <span class="hljs-comment">//表示暂停的秒数; 在unistd.h下</span><br>system(<span class="hljs-string">&quot;clear&quot;</span>); <span class="hljs-comment">// 在stdlib.h下</span><br><span class="hljs-built_in">printf</span>(<span class="hljs-string">&quot;\033c&quot;</span>); <span class="hljs-comment">// 清空</span><br></code></pre></td></tr></table></figure>
+
 </li>
 <li><p>二维数组实现上下左右移动: </p>
 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> vectors[<span class="hljs-number">4</span>][<span class="hljs-number">2</span>] = &#123;&#123;<span class="hljs-number">0</span>, <span class="hljs-number">1</span>&#125;, &#123;<span class="hljs-number">0</span>, <span class="hljs-number">-1</span>&#125;, &#123;<span class="hljs-number">1</span>, <span class="hljs-number">0</span>&#125;, &#123;<span class="hljs-number">-1</span>, <span class="hljs-number">0</span>&#125;&#125;;  <span class="hljs-comment">// vector[i][j]可以认为是第i组里面的第j个元素</span><br><br><span class="hljs-type">int</span> count = <span class="hljs-number">0</span>;<br><span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>; k &lt; <span class="hljs-number">4</span>; ++k) &#123;<br>    <span class="hljs-type">int</span> newI = i + vectors[k][<span class="hljs-number">0</span>];<br>    <span class="hljs-type">int</span> newJ = j + vectors[k][<span class="hljs-number">1</span>];<br>    <span class="hljs-keyword">if</span> (arr[newI][newJ] == <span class="hljs-string">&#x27;?&#x27;</span>) &#123; <span class="hljs-comment">// 实现上下左右方向的统计雷的个数</span><br>        count++;<br>    &#125;<br>&#125;<br></code></pre></td></tr></table></figure></li>

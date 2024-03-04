@@ -4,6 +4,19 @@
   
   
   <entry>
+    <title>Golang复习笔记</title>
+    <link href="/2024/03/04/Golang%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2024/03/04/Golang%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[<h1 id="Golang复习笔记"><a href="#Golang复习笔记" class="headerlink" title="Golang复习笔记"></a>Golang复习笔记</h1><h2 id="1-intro"><a href="#1-intro" class="headerlink" title="1: intro"></a>1: intro</h2><ol><li><p>Golang: 极简单的部署方式</p><ol><li>可直接编译成机器码</li><li>不依赖其它库</li><li>直接运行可部署</li></ol></li><li><p>Golang是一门静态类型语言 – 编译时可检查出隐藏的问题</p></li><li><p>语言层面的并发</p><ol><li>天生支持并发</li><li>充分利用多核</li></ol><figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br><span class="hljs-string">&quot;fmt&quot;</span><br>    <span class="hljs-string">&quot;time&quot;</span><br>)<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">goFunc</span><span class="hljs-params">(i <span class="hljs-type">int</span>)</span></span> &#123;<br>    fmt.Println(<span class="hljs-string">&quot;goroutine &quot;</span>, i, <span class="hljs-string">&quot; ...&quot;</span>)<br>&#125; <br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>    <span class="hljs-keyword">for</span> i := <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10000</span>; i++ &#123;<br>        <span class="hljs-keyword">go</span> goFunc(i) <span class="hljs-comment">// 开启一个并发协程</span><br>    &#125;<br>    <br>    time.Sleep(time.Second)<br>&#125;<br></code></pre></td></tr></table></figure></li><li><p>强大的标准库</p><ol><li>runtime系统调度机制</li><li>高效的GC (垃圾回收)</li><li>丰富的标准库</li></ol></li><li><p>简单易学</p><ol><li>25个关键字</li><li>内嵌C语法支持</li><li>面向对象</li><li>跨平台</li></ol></li><li><p>Golang的强项</p><ol><li>云计算基础设施</li><li>基础后端软件</li><li>微服务</li><li>互联网基础设施</li></ol></li><li><p>Golang的不足</p><ol><li>包管理, 大部分包都在Github上</li><li>所有的Exception都用Error处理 (没有try-catch)</li><li>对C的降级处理并非无缝, 没有C降级到asm那么完美 (例如序列化问题)</li></ol></li></ol><h2 id="2-basic-feature"><a href="#2-basic-feature" class="headerlink" title="2: basic feature"></a>2: basic feature</h2><ol><li><code>package main</code> 表示一个可独立执行的程序, 每个 Go 应用程序都包含一个名为 main 的包. </li><li>golang中的表达式, 末尾的分号<code>;</code>可加可不加, 建议不加. </li><li><code>import &quot;fmt&quot;</code> 表示导入fmt包, fmt包里包含了格式化IO的函数. </li><li>main函数式每一个可执行程序必须包含的. </li><li>注释, 类似C语言, <code>//</code> 单行注释;  <code>/* ... */</code> 块注释. </li><li><code>fmt.Println(...)</code> 与 <code>fmt.Print(...)</code> 格式化输出. </li><li></li><li></li></ol>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Java复习笔记</title>
     <link href="/2024/03/03/Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <url>/2024/03/03/Java%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>

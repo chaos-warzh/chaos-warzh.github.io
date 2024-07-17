@@ -16,21 +16,23 @@
   <meta name="author" content="Zhaohui Wang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="基于sysy库函数IO的测试框架​		由于前端开发已接近尾声, 并且我找到了去年初赛的全部测试用例 (https:&#x2F;&#x2F;gitlab.eduxiji.net&#x2F;csc1&#x2F;nscscc&#x2F;compiler2023&#x2F;-&#x2F;tree&#x2F;master), 为了能用上这些测试用例, 我将原来的测试框架移入 naivetest 包下, 并且新创建了TestFrontEndIO这一测试驱动类.  ​		下面将介绍如何使用">
+    <meta name="description" content="Backend Bugs 出现bug的源码: 12345678int foo() &#123;  return 5;&#125;int main() &#123;  putint(foo());  return 0;&#125;  目前生成的目标代码: (简化过) 1234567891011121314151617181920212223242526272829303132333435363738">
 <meta property="og:type" content="article">
-<meta property="og:title" content="基于sysy库函数IO的测试框架">
-<meta property="og:url" content="https://chaos-warzh.github.io/2024/06/14/%E5%9F%BA%E4%BA%8Esysy%E5%BA%93%E5%87%BD%E6%95%B0IO%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/index.html">
+<meta property="og:title" content="backend-bugs">
+<meta property="og:url" content="https://chaos-warzh.github.io/2024/07/18/backend-bugs/index.html">
 <meta property="og:site_name" content="chaos-warzh&#39;s blog">
-<meta property="og:description" content="基于sysy库函数IO的测试框架​		由于前端开发已接近尾声, 并且我找到了去年初赛的全部测试用例 (https:&#x2F;&#x2F;gitlab.eduxiji.net&#x2F;csc1&#x2F;nscscc&#x2F;compiler2023&#x2F;-&#x2F;tree&#x2F;master), 为了能用上这些测试用例, 我将原来的测试框架移入 naivetest 包下, 并且新创建了TestFrontEndIO这一测试驱动类.  ​		下面将介绍如何使用">
+<meta property="og:description" content="Backend Bugs 出现bug的源码: 12345678int foo() &#123;  return 5;&#125;int main() &#123;  putint(foo());  return 0;&#125;  目前生成的目标代码: (简化过) 1234567891011121314151617181920212223242526272829303132333435363738">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-06-14T08:30:05.000Z">
-<meta property="article:modified_time" content="2024-06-14T18:59:34.291Z">
+<meta property="og:image" content="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1">
+<meta property="article:published_time" content="2024-07-17T17:53:21.000Z">
+<meta property="article:modified_time" content="2024-07-17T17:54:00.448Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1">
   
   
   
-  <title>基于sysy库函数IO的测试框架 - chaos-warzh&#39;s blog</title>
+  <title>backend-bugs - chaos-warzh&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +198,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="基于sysy库函数IO的测试框架"></span>
+            <span id="subtitle" data-typed-text="backend-bugs"></span>
           
         </div>
 
@@ -207,8 +209,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-06-14 16:30" pubdate>
-          2024年6月14日 下午
+        <time datetime="2024-07-18 01:53" pubdate>
+          2024年7月18日 凌晨
         </time>
       </span>
     
@@ -219,7 +221,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          245 字
+          180 字
         
       </span>
     
@@ -230,7 +232,7 @@
         
         
         
-          3 分钟
+          2 分钟
         
       </span>
     
@@ -267,21 +269,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">基于sysy库函数IO的测试框架</h1>
+            <h1 id="seo-header">backend-bugs</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="基于sysy库函数IO的测试框架"><a href="#基于sysy库函数IO的测试框架" class="headerlink" title="基于sysy库函数IO的测试框架"></a>基于sysy库函数IO的测试框架</h1><p>​		由于前端开发已接近尾声, 并且我找到了去年初赛的全部测试用例 (<a target="_blank" rel="noopener" href="https://gitlab.eduxiji.net/csc1/nscscc/compiler2023/-/tree/master">https://gitlab.eduxiji.net/csc1/nscscc/compiler2023/-/tree/master</a>), 为了能用上这些测试用例, 我将原来的测试框架移入 <code>naivetest</code> 包下, 并且新创建了<code>TestFrontEndIO</code>这一测试驱动类. </p>
-<p>​		下面将介绍如何使用这一框架: </p>
-<h2 id="使用指南"><a href="#使用指南" class="headerlink" title="使用指南"></a>使用指南</h2><ol>
-<li>首先, 获取远端的 <code>wzh-dev-front</code> 分支的代码</li>
-<li>在配置好llvm的环境下, 运行驱动类中的 <code>testAll</code> 方法以测试<code>2023</code>文件夹下的全部用例, 运行 <code>testFrontEndIO</code> 方法以测试<code>2023</code>文件夹下的自定义的部分用例, 运行 <code>testPart</code> 方法以测试 <code>2023part</code> 文件夹下的所有用例. (请不要删除 <code>2023</code> 目录下的文件, 而你可以灵活的删改 <code>2023part</code> 目录下的内容)</li>
-</ol>
-<h2 id="测试情况"><a href="#测试情况" class="headerlink" title="测试情况"></a>测试情况</h2><ol>
-<li>数组初始化 <code>&#123;&#123;&#125;,  , &#125;</code></li>
-<li>多维数组传参 (77)</li>
-<li>数组, 函数, 控制流翻译 69 75 81</li>
+                <h1 id="Backend-Bugs"><a href="#Backend-Bugs" class="headerlink" title="Backend Bugs"></a>Backend Bugs</h1><ol>
+<li><p>出现bug的源码:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">foo</span><span class="hljs-params">()</span> &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">5</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>  putint(foo());<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>目前生成的目标代码: (简化过)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs assembly">.data<br>.text<br>ifElseIf:<br>ifElseIfEntry:<br>	li a0, 5<br>	ret<br><br>.globl main<br>main:<br>mainEntry:<br>	# reserve space<br>	addi sp, sp, -4<br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	# call ifElseIf<br>	call ifElseIf<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# get address of local var:ifElseIf<br>	sw a0, 0(sp)<br><br>	# prepare params<br><br>	# fetch variables<br><br>	# get address of local var:ifElseIf<br>	lw t1, 0(sp)<br>	mv a0, t1<br><br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	call putint<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# fetch variables<br>	li a0, 0<br><br>	addi sp, sp, 4<br>	ret<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>报错信息 (昉星光2) : </p>
+<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Bus</span> <span class="hljs-literal">error</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>修改代码使得 <code>sp</code> 按照8字节对齐: (即 <strong>sp 的当前值</strong> 永远与 <strong>sp初始值</strong> 相差 8*k 个字节): </p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs assembly">.data<br>.text<br>ifElseIf:<br>ifElseIfEntry:<br>	li a0, 5<br>	ret<br><br>.globl main<br>main:<br>mainEntry:<br>	# reserve space<br>	addi sp, sp, -8<br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	# call ifElseIf<br>	call ifElseIf<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# get address of local var:ifElseIf<br>	sw a0, 0(sp)<br><br>	# prepare params<br><br>	# fetch variables<br><br>	# get address of local var:ifElseIf<br>	lw t1, 0(sp)<br>	mv a0, t1<br><br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	call putint<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# fetch variables<br>	li a0, 0<br><br>	addi sp, sp, 8<br>	ret<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>报错消失, 输出正确答案 5</p>
+<p>​	<img src="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1" srcset="/img/loading.gif" lazyload></p>
+</li>
 </ol>
 
                 
@@ -300,8 +308,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>基于sysy库函数IO的测试框架</div>
-      <div>https://chaos-warzh.github.io/2024/06/14/基于sysy库函数IO的测试框架/</div>
+      <div>backend-bugs</div>
+      <div>https://chaos-warzh.github.io/2024/07/18/backend-bugs/</div>
     </div>
     <div class="license-meta">
       
@@ -313,7 +321,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年6月14日</div>
+          <div>2024年7月18日</div>
         </div>
       
       
@@ -345,18 +353,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/18/backend-bugs/" title="backend-bugs">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">backend-bugs</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/02/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E6%8C%87%E5%8D%97/" title="前端测试框架指南">
-                        <span class="hidden-mobile">前端测试框架指南</span>
+                      <a href="/2024/06/14/%E5%9F%BA%E4%BA%8Esysy%E5%BA%93%E5%87%BD%E6%95%B0IO%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" title="基于sysy库函数IO的测试框架">
+                        <span class="hidden-mobile">基于sysy库函数IO的测试框架</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

@@ -16,23 +16,21 @@
   <meta name="author" content="Zhaohui Wang">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Backend Bugs 出现bug的源码: 12345678int foo() &#123;  return 5;&#125;int main() &#123;  putint(foo());  return 0;&#125;  目前生成的目标代码: (简化过) 1234567891011121314151617181920212223242526272829303132333435363738">
+    <meta name="description" content="2024毕昇杯总结​		现在是2024年8月22号, 我在杭州的宾馆里无聊, 便想着码一些字, 纯属闲谈, 并没有任何meanings. ()  ​		&gt;&gt; 关于比赛 ​		今年5月从群里得知毕昇杯比赛开始报名, 遂萌生参赛想法, 5月20日左右组建好队伍并报名. 到今天差不多正好3个月, 中间考了个期末考试. 由于毕昇杯编译器比赛每年都用sysy语言作为源语言, 且初赛测试用例多年不">
 <meta property="og:type" content="article">
-<meta property="og:title" content="backend-bugs">
-<meta property="og:url" content="https://chaos-warzh.github.io/2024/07/18/backend-bugs/index.html">
+<meta property="og:title" content="2024毕昇杯总结.md">
+<meta property="og:url" content="https://chaos-warzh.github.io/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93-md/index.html">
 <meta property="og:site_name" content="chaos-warzh&#39;s blog">
-<meta property="og:description" content="Backend Bugs 出现bug的源码: 12345678int foo() &#123;  return 5;&#125;int main() &#123;  putint(foo());  return 0;&#125;  目前生成的目标代码: (简化过) 1234567891011121314151617181920212223242526272829303132333435363738">
+<meta property="og:description" content="2024毕昇杯总结​		现在是2024年8月22号, 我在杭州的宾馆里无聊, 便想着码一些字, 纯属闲谈, 并没有任何meanings. ()  ​		&gt;&gt; 关于比赛 ​		今年5月从群里得知毕昇杯比赛开始报名, 遂萌生参赛想法, 5月20日左右组建好队伍并报名. 到今天差不多正好3个月, 中间考了个期末考试. 由于毕昇杯编译器比赛每年都用sysy语言作为源语言, 且初赛测试用例多年不">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1">
-<meta property="article:published_time" content="2024-07-17T17:53:21.000Z">
-<meta property="article:modified_time" content="2024-07-17T17:54:00.448Z">
+<meta property="article:published_time" content="2024-08-22T14:24:48.000Z">
+<meta property="article:modified_time" content="2024-08-22T15:57:26.647Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1">
   
   
   
-  <title>backend-bugs - chaos-warzh&#39;s blog</title>
+  <title>2024毕昇杯总结.md - chaos-warzh&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="backend-bugs"></span>
+            <span id="subtitle" data-typed-text="2024毕昇杯总结.md"></span>
           
         </div>
 
@@ -209,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-18 01:53" pubdate>
-          2024年7月18日 凌晨
+        <time datetime="2024-08-22 22:24" pubdate>
+          2024年8月22日 晚上
         </time>
       </span>
     
@@ -221,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          180 字
+          936 字
         
       </span>
     
@@ -232,7 +230,7 @@
         
         
         
-          2 分钟
+          8 分钟
         
       </span>
     
@@ -269,28 +267,27 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">backend-bugs</h1>
+            <h1 id="seo-header">2024毕昇杯总结.md</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="Backend-Bugs"><a href="#Backend-Bugs" class="headerlink" title="Backend Bugs"></a>Backend Bugs</h1><ol>
-<li><p>出现bug的源码:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs c"><span class="hljs-type">int</span> <span class="hljs-title function_">foo</span><span class="hljs-params">()</span> &#123;<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">5</span>;<br>&#125;<br><br><span class="hljs-type">int</span> <span class="hljs-title function_">main</span><span class="hljs-params">()</span> &#123;<br>  putint(foo());<br>  <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>&#125;<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>目前生成的目标代码: (简化过)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs assembly">.data<br>.text<br>ifElseIf:<br>ifElseIfEntry:<br>	li a0, 5<br>	ret<br><br>.globl main<br>main:<br>mainEntry:<br>	# reserve space<br>	addi sp, sp, -4<br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	# call ifElseIf<br>	call ifElseIf<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# get address of local var:ifElseIf<br>	sw a0, 0(sp)<br><br>	# prepare params<br><br>	# fetch variables<br><br>	# get address of local var:ifElseIf<br>	lw t1, 0(sp)<br>	mv a0, t1<br><br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	call putint<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# fetch variables<br>	li a0, 0<br><br>	addi sp, sp, 4<br>	ret<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>报错信息 (昉星光2) : </p>
-<figure class="highlight nginx"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs nginx"><span class="hljs-attribute">Bus</span> <span class="hljs-literal">error</span><br></code></pre></td></tr></table></figure>
-</li>
-<li><p>修改代码使得 <code>sp</code> 按照8字节对齐: (即 <strong>sp 的当前值</strong> 永远与 <strong>sp初始值</strong> 相差 8*k 个字节): </p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs assembly">.data<br>.text<br>ifElseIf:<br>ifElseIfEntry:<br>	li a0, 5<br>	ret<br><br>.globl main<br>main:<br>mainEntry:<br>	# reserve space<br>	addi sp, sp, -8<br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	# call ifElseIf<br>	call ifElseIf<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# get address of local var:ifElseIf<br>	sw a0, 0(sp)<br><br>	# prepare params<br><br>	# fetch variables<br><br>	# get address of local var:ifElseIf<br>	lw t1, 0(sp)<br>	mv a0, t1<br><br><br>	# save caller saved regs<br>	addi sp, sp, -8<br>	sd ra, 0(sp)<br><br>	call putint<br><br>	# restore caller saved regs<br>	ld ra, 0(sp)<br>	addi sp, sp, 8<br><br>	# fetch variables<br>	li a0, 0<br><br>	addi sp, sp, 8<br>	ret<br></code></pre></td></tr></table></figure>
-</li>
-<li><p>报错消失, 输出正确答案 5</p>
-<p>​	<img src="https://box.nju.edu.cn/f/91c7b87f28d34e5f9439/?dl=1" srcset="/img/loading.gif" lazyload></p>
-</li>
-</ol>
+                <h1 id="2024毕昇杯总结"><a href="#2024毕昇杯总结" class="headerlink" title="2024毕昇杯总结"></a>2024毕昇杯总结</h1><p>​		现在是2024年8月22号, 我在杭州的宾馆里无聊, 便想着码一些字, 纯属闲谈, 并没有任何meanings. () </p>
+<p>​		&gt;&gt; 关于比赛</p>
+<p>​		今年5月从群里得知毕昇杯比赛开始报名, 遂萌生参赛想法, 5月20日左右组建好队伍并报名. 到今天差不多正好3个月, 中间考了个期末考试. 由于毕昇杯编译器比赛每年都用<code>sysy</code>语言作为源语言, 且初赛测试用例多年不换, 所以我在备赛时就想到了此比赛其实可以提早很多准备, 越长的准备时间显然对于比赛更有利, 事实上也如我所料, 在报名截止时, 已经有一些队伍搓到了IR阶段甚至更多. </p>
+<p>​		&gt;&gt; 开始开发		</p>
+<p>​		报名之后我们组织开始开发, 由于我们对于真实编译系统这种大型复杂软件并不熟悉, 所以一开始只是做了粗略简单的分工, 便直接开始coding, 本意是希望快速验证然后逐步调优, 但是事实上光原型构建就花费了巨量时间, 最后迫于时间压力也没有再调整, 直接把原型作为产品发布了, 事后想回头再修改, 软件规模却已经变得很大且不易修改. ( <em>教训: 大型复杂软件构建时, 总体架构还是要先定好, 边写边想的方法只适合写小程序</em> )</p>
+<p>​		在后期编译优化的过程中, 我们的代码耦合度已经过高, 且受到糟糕的整体设计的限制, 导致开发举步维艰且团队成员之间彼此的开发动辄出现冲突, 直到决赛结束由于不同优化的冲突带来的bug也没有修复, 这使得我们的项目几乎走到了无法开发的失败边缘. </p>
+<p>​		我们的项目此时已经接近失败, 时间的压力也不允许我们大规模重写或重构, 更重要的是, 开发了接近3个月, 我们原来对于项目的激情也逐渐归于平淡. 此时进入到线下决赛, 在优化了寄存器的使用后, 我们的编译器性能意外地提高了几乎一倍, 这似乎宣告着我们之前的工作方向的偏差. 此时又有比赛的测试环境和测试用例严谨性又状况频出, 整体的参赛体验可谓大打折扣, 多的不便多言了. </p>
+<p>​	&gt;&gt; 总结</p>
+<p>​		对于这次比赛, 虽没有获多么高的奖, 但是也不算空手而归. 复杂软件从头的自主开发, 这可以说是我的第一次尝试 (之前都是补全代码或者是项目规模不大) . 我理解到了很多刚入门编程时无法理解的关于软件开发的实战经验, 包括流水线和持续集成等技术层面, 也包括复杂项目开发的管理层面, 现在更加佩服tls的tai-e了 (orz) . </p>
+<p>​		此外, 参赛此行也认识很多朋友, 了解了菊厂的内幕 (划掉), 也迈出了曾经避之不及的组织团队的一小步, 并且据队友所说, 我的答辩表现还不错 (猫猫得意.jpg). </p>
+<p>​	   最后, 看到我的github里收藏的诸多优秀作品, 笔者援引古代诗句以传达心中思绪: </p>
+<p>​						苏州司业诗名老</p>
+<p>​						乐府皆言妙入神</p>
+<p>​						看似寻常最奇崛</p>
+<p>​						成如容易却艰辛 </p>
+<p>​		祝国产基础软件不断突破, 越来越好! </p>
 
                 
               </div>
@@ -308,8 +305,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>backend-bugs</div>
-      <div>https://chaos-warzh.github.io/2024/07/18/backend-bugs/</div>
+      <div>2024毕昇杯总结.md</div>
+      <div>https://chaos-warzh.github.io/2024/08/22/2024毕昇杯总结-md/</div>
     </div>
     <div class="license-meta">
       
@@ -321,7 +318,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月18日</div>
+          <div>2024年8月22日</div>
         </div>
       
       
@@ -353,18 +350,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93-md/" title="2024毕昇杯总结.md">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">2024毕昇杯总结.md</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/06/14/%E5%9F%BA%E4%BA%8Esysy%E5%BA%93%E5%87%BD%E6%95%B0IO%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" title="基于sysy库函数IO的测试框架">
-                        <span class="hidden-mobile">基于sysy库函数IO的测试框架</span>
+                      <a href="/2024/07/18/backend-bugs/" title="backend-bugs">
+                        <span class="hidden-mobile">backend-bugs</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

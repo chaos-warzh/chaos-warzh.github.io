@@ -25,6 +25,8 @@
 <meta name="twitter:card" content="summary_large_image">
   
   
+    <meta name="referrer" content="no-referrer-when-downgrade">
+  
   
   <title>chaos-warzh&#39;s blog</title>
 
@@ -58,7 +60,7 @@
   <script id="fluid-configs">
     var Fluid = window.Fluid || {};
     Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"chaos-warzh.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
+    var CONFIG = {"hostname":"chaos-warzh.github.io","root":"/","version":"1.9.7","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml","include_content_in_search":true};
 
     if (CONFIG.web_analytics.follow_dnt) {
       var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
@@ -68,6 +70,33 @@
   <script  src="/js/utils.js" ></script>
   <script  src="/js/color-schema.js" ></script>
   
+
+  
+
+  
+    <!-- Google tag (gtag.js) -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        Fluid.utils.createScript("https://www.googletagmanager.com/gtag/js?id=", function() {
+          window.dataLayer = window.dataLayer || [];
+          function gtag() {
+            dataLayer.push(arguments);
+          }
+          gtag('js', new Date());
+          gtag('config', '');
+        });
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
 
 
   
@@ -257,13 +286,13 @@
     <article class="col-12 col-md-12 mx-auto index-info">
       <h2 class="index-header">
         
-        <a href="/2024/07/18/backend-bugs/" target="_self">
+        <a href="/2024/07/18/RISC-V%E5%9C%B0%E5%9D%80%E5%AF%B9%E9%BD%90%E8%B8%A9%E5%9D%91/" target="_self">
           backend-bugs
         </a>
       </h2>
 
       
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/07/18/backend-bugs/" target="_self">
+      <a class="index-excerpt index-excerpt__noimg" href="/2024/07/18/RISC-V%E5%9C%B0%E5%9D%80%E5%AF%B9%E9%BD%90%E8%B8%A9%E5%9D%91/" target="_self">
         <div>
           Backend Bugs 出现bug的源码: 12345678int foo() &#123;  return 5;&#125;int main() &#123;  putint(foo());  return 0;&#125;  目前生成的目标代码: (简化过) 1234567891011121314151617181920212223242526272829303132333435363738
         </div>
@@ -275,72 +304,6 @@
             <i class="iconfont icon-date"></i>
             <time datetime="2024-07-18 01:53" pubdate>
               2024-07-18
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/06/14/%E5%9F%BA%E4%BA%8Esysy%E5%BA%93%E5%87%BD%E6%95%B0IO%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" target="_self">
-          基于sysy库函数IO的测试框架
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/14/%E5%9F%BA%E4%BA%8Esysy%E5%BA%93%E5%87%BD%E6%95%B0IO%E7%9A%84%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6/" target="_self">
-        <div>
-          基于sysy库函数IO的测试框架​		由于前端开发已接近尾声, 并且我找到了去年初赛的全部测试用例 (https://gitlab.eduxiji.net/csc1/nscscc/compiler2023/-/tree/master), 为了能用上这些测试用例, 我将原来的测试框架移入 naivetest 包下, 并且新创建了TestFrontEndIO这一测试驱动类.  ​		下面将介绍如何使用
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-06-14 16:30" pubdate>
-              2024-06-14
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
-    
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2024/06/02/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E6%8C%87%E5%8D%97/" target="_self">
-          前端测试框架指南
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2024/06/02/%E5%89%8D%E7%AB%AF%E6%B5%8B%E8%AF%95%E6%A1%86%E6%9E%B6%E6%8C%87%E5%8D%97/" target="_self">
-        <div>
-          前端测试框架使用指南​		由于观察控制台输出的测试方法不够便捷且不方便共享, 我们构建了测试框架. 利用此测试框架, 大家可以方便地为编译器前端构建测试用例, 从而更容易查出bug, 提高团队开发的效率.  ​		目前你可以在 wzh-dev 获取此测试框架alpha版, 经过重构和review后, 该测试框架会合并入 main 分支.  测试单个样例 首先, 在 src/test/resouce
-        </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2024-06-02 15:24" pubdate>
-              2024-06-02
             </time>
           </div>
         

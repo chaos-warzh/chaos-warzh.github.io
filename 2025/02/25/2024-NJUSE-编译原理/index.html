@@ -7,7 +7,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chaos-warzh.github.io/img/butterfly-icon.png">
 <meta property="article:published_time" content="2025-02-25T06:50:49.000Z">
-<meta property="article:modified_time" content="2025-02-25T09:31:04.801Z">
+<meta property="article:modified_time" content="2025-02-25T09:51:14.542Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chaos-warzh.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/",
   "image": "https://chaos-warzh.github.io/img/butterfly-icon.png",
   "datePublished": "2025-02-25T06:50:49.000Z",
-  "dateModified": "2025-02-25T09:31:04.801Z",
+  "dateModified": "2025-02-25T09:51:14.542Z",
   "author": [
     {
       "@type": "Person",
@@ -158,7 +158,7 @@
   isHighlightShrink: false,
   isToc: true,
   pageType: 'post'
-}</script><meta name="generator" content="Hexo 7.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">chaos-warzh's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2024-NJUSE-编译原理</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">2024-NJUSE-编译原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-25T09:31:04.801Z" title="更新于 2025-02-25 17:31:04">2025-02-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>2024-NJUSE-编译原理</h1>
+}</script><meta name="generator" content="Hexo 7.1.1"></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">chaos-warzh's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2024-NJUSE-编译原理</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">2024-NJUSE-编译原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-25T09:51:14.542Z" title="更新于 2025-02-25 17:51:14">2025-02-25</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>2024-NJUSE-编译原理</h1>
 <blockquote>
 <p>课程内容参考 <a target="_blank" rel="noopener" href="https://qingkaishi.github.io/Compilers.html">https://qingkaishi.github.io/Compilers.html</a></p>
 </blockquote>
@@ -209,21 +209,22 @@
 <li>
 <p>串的运算:</p>
 <ol>
-<li>连接: 如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">xy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span></li>
-<li>幂次: 如<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mn>5</mn></msup><mo>=</mo><mi>s</mi><mi>s</mi><mi>s</mi><mi>s</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">s^5 = sssss</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">5</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span><span class="mrel">=</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mord mathit">s</span><span class="mord mathit">s</span></span></span></span></li>
-<li>闭包: 用<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∗</mo></mrow><annotation encoding="application/x-tex">*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46528em;"></span><span class="strut bottom" style="height:0.46528em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∗</span></span></span></span>符号</li>
+<li>连接: 如$$xy$$</li>
+<li>幂次: 如$$s^5 = sssss$$</li>
+<li>闭包: 用$$*$$符号</li>
 </ol>
 </li>
 </ol>
 </li>
 <li>
 <p>例子:</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>=</mo><mrow><mi>A</mi><mo separator="true">,</mo><mi>B</mi><mo separator="true">,</mo><mi>C</mi><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>Z</mi><mo separator="true">,</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo separator="true">,</mo><mi>c</mi><mo separator="true">,</mo><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mo separator="true">,</mo><mi>z</mi></mrow></mrow><annotation encoding="application/x-tex">L = {A, B, C, ..., Z, a, b, c, ..., z}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mrel">=</span><span class="mord textstyle uncramped"><span class="mord mathit">A</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.05017em;">B</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.07153em;">C</span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.07153em;">Z</span><span class="mpunct">,</span><span class="mord mathit">a</span><span class="mpunct">,</span><span class="mord mathit">b</span><span class="mpunct">,</span><span class="mord mathit">c</span><span class="mpunct">,</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mord mathrm">.</span><span class="mpunct">,</span><span class="mord mathit" style="margin-right:0.04398em;">z</span></span></span></span></span> 表示字符集合</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">L^4</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">4</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> – 任意长度为4的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span>中字符组成的串</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">L^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.688696em;"></span><span class="strut bottom" style="height:0.688696em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> – 任意长度的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span>中字符组成的串</p>
-</li>
-<li>
-<p>运算优先级 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∗</mo></mrow><annotation encoding="application/x-tex">*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46528em;"></span><span class="strut bottom" style="height:0.46528em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∗</span></span></span></span> (闭包) &gt; 连接 &gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∣</span></span></span></span> (或运算)</p>
+L = {A, B, C, ..., Z, a, b, c, ..., z}$$ 表示字符集合
+
+$$L^4$$ -- 任意长度为4的$$L$$中字符组成的串
+
+$$L^*$$ -- 任意长度的$$L$$中字符组成的串
+
+
 </li>
 </ol>
 <h2 id="1-ANTLR-4">1: ANTLR 4</h2>
@@ -331,71 +332,78 @@
 <ol>
 <li>
 <p>(语言)</p>
-<p>语言是给定字母表 Σ 上一个<strong>任意的<em>可数</em>的串集合.</strong></p>
+<p>语言是给定字母表 $$Σ$$ 上一个<strong>任意的<em>可数</em>的串集合.</strong></p>
 </li>
 <li>
 <p>(字母表)</p>
-<p>字母表 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Σ</mi></mrow><annotation encoding="application/x-tex">\Sigma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">Σ</span></span></span></span> 是一个有限的符号集合.</p>
+<p>字母表 $$\Sigma$$ 是一个有限的符号集合.</p>
 </li>
 <li>
 <p>(串)</p>
-<p>字母表 Σ 上的串 (<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span></span></span></span>) 是由 Σ 中<strong>符号构成的一个有穷序列</strong>. 空串: |ε| = 0</p>
+<p>字母表 $$Σ$$ 上的串 ($$s$$) 是由 $$Σ$$ 中<strong>符号构成的一个有穷序列</strong>. 空串: $$|ε| = 0$$</p>
 </li>
 <li>
-<p>连接运算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">xy</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit">x</span><span class="mord mathit" style="margin-right:0.03588em;">y</span></span></span></span></p>
+<p>连接运算 $$xy$$</p>
 </li>
 <li>
-<p>幂乘运算 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>s</mi><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">s^0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8141079999999999em;"></span><span class="strut bottom" style="height:0.8141079999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">s</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord mathrm">0</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+<p>幂乘运算 $$s^0$$</p>
 </li>
 </ol>
 </li>
 <li>
 <p>正则表达式的<strong>形式化定义</strong></p>
-<p>给定字母表 Σ, Σ 上的正则表达式由且仅由以下规则定义:</p>
-<p>(1) ϵ 是正则表达式;</p>
-<p>(2) ∀a ∈ Σ, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi></mrow><annotation encoding="application/x-tex">a</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">a</span></span></span></span> 是正则表达式;</p>
-<p>(3) 如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> 是正则表达式, 则 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">(r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span> 是正则表达式;</p>
-<p>(4) 如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span> 与 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>s</mi></mrow><annotation encoding="application/x-tex">s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">s</span></span></span></span> 是正则表达式, 则 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">r|s</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathrm">∣</span><span class="mord mathit">s</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">rs</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">s</span></span></span></span>, r ^∗ 也是正则表达式.</p>
+<p>给定字母表 $$Σ$$, $$Σ$$ 上的正则表达式由且仅由以下规则定义:</p>
+<p>(1) $$ϵ$$ 是正则表达式;</p>
+<p>(2) $$∀a ∈ Σ$$, $$a$$ 是正则表达式;</p>
+<p>(3) 如果 $$r$$ 是正则表达式, 则 $$®$$ 是正则表达式;</p>
+<p>(4) 如果 $$r$$ 与 $$s$$ 是正则表达式, 则 $$r|s$$, $$rs$$, $$r ^∗$$ 也是正则表达式.</p>
 </li>
 <li>
-<p>运算优先级: <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∗</mo></mrow><annotation encoding="application/x-tex">*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.46528em;"></span><span class="strut bottom" style="height:0.46528em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord">∗</span></span></span></span> (闭包) &gt; 连接 &gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">∣</mi></mrow><annotation encoding="application/x-tex">|</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathrm">∣</span></span></span></span> (或运算)</p>
+<p>运算优先级: $$*$$ (闭包) &gt; 连接 &gt; $$|$$ (或运算)</p>
 </li>
 <li>
-<p>每一个正则表达式<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi></mrow><annotation encoding="application/x-tex">r</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.02778em;">r</span></span></span></span>都对应一个正则语言 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>r</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(r)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span></span></span></span>.</p>
+<p>每一个正则表达式$$r$$都对应一个正则语言 $$L®$$.</p>
 </li>
 <li>
 <p><strong>语言</strong>的运算 (注意区别于串的运算):</p>
-<p>对于语言 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span> 和 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi></mrow><annotation encoding="application/x-tex">M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span></p>
+<p>对于语言 $$L$$ 和 $$M$$</p>
 <ul>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>∪</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">L \cup M</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>∪</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">L \cup M
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mbin">∪</span><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span></span></p>
 <ul>
 <li>并运算</li>
 </ul>
 </li>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">LM</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">LM
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mord mathit" style="margin-right:0.10903em;">M</span></span></span></span></span></p>
 <ul>
 <li>连接运算 (类比笛卡尔积)</li>
 </ul>
 </li>
 <li>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">L^*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.688696em;"></span><span class="strut bottom" style="height:0.688696em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mo>∗</mo></msup></mrow><annotation encoding="application/x-tex">L^*
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.738696em;"></span><span class="strut bottom" style="height:0.738696em;vertical-align:0em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="vlist"><span style="top:-0.413em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord">∗</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span></span></p>
 <ul>
-<li><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span>的Kleen闭包 ; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.68333em;"></span><span class="strut bottom" style="height:0.68333em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span></span></span></span>的正闭包 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>L</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">L^+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.771331em;"></span><span class="strut bottom" style="height:0.771331em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span class="mord mathit">L</span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord">+</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span>  闭包允许我们构造无穷集合.</li>
-</ul>
-</li>
-</ul>
-</li>
 <li>
-<p>正则语言的运算规则:</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo>)</mo><mo>=</mo><mi>L</mi><mo>(</mo><mi>r</mi><mo>)</mo><mo>∪</mo><mi>L</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(r|s) = L(r)\cup L(s)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathrm">∣</span><span class="mord mathit">s</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mbin">∪</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit">s</span><span class="mclose">)</span></span></span></span></p>
-<p>$L(rs) = L®L(s) $</p>
-<p>L(r ^∗ ) = (L(r))^∗</p>
+L$$的Kleen闭包 ; $$L$$的正闭包 $$L^+$$  闭包允许我们构造无穷集合. 
+
+
+</li>
+</ul>
+</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>r</mi><mi mathvariant="normal">∣</mi><mi>s</mi><mo>)</mo><mo>=</mo><mi>L</mi><mo>(</mo><mi>r</mi><mo>)</mo><mo>∪</mo><mi>L</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(r|s) = L(r)\cup L(s)
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathrm">∣</span><span class="mord mathit">s</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mbin">∪</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit">s</span><span class="mclose">)</span></span></span></span></span></p>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>L</mi><mo>(</mo><mi>r</mi><mi>s</mi><mo>)</mo><mo>=</mo><mi>L</mi><mo>(</mo><mi>r</mi><mo>)</mo><mi>L</mi><mo>(</mo><mi>s</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">L(rs) = L(r)L(s) 
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mord mathit">s</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.02778em;">r</span><span class="mclose">)</span><span class="mord mathit">L</span><span class="mopen">(</span><span class="mord mathit">s</span><span class="mclose">)</span></span></span></span></span></p>
+L(r ^∗ ) = (L(r))^∗
+
 </li>
 <li>
 <p>非确定性有穷自动机(Nondeterministic Finite Automaton) A 是一个五元组 A = (Σ, S, s~0~, δ, F):</p>
-<p>(1) 字母表 Σ (ϵ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∉</mo></mrow><annotation encoding="application/x-tex">\notin</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0em;"></span><span class="strut bottom" style="height:0em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">∉</span></span></span></span> Σ)</p>
+<p>(1) 字母表 Σ (ϵ $$\notin$$ Σ)</p>
 <p>(2) 有穷的状态集合 S</p>
 <p>(3) 唯一的初始状态 s~0~ ∈ S</p>
 <p>(4) 状态转移函数 δ  : S × (Σ ∪ {ϵ}) → 2 ^S^</p>
@@ -422,7 +430,7 @@
 </li>
 <li>
 <p>确定性有穷自动机 A 是一个五元组 A = (Σ, S, s0, δ, F):</p>
-<p>(1) 字母表 Σ (ϵ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∉</mo></mrow><annotation encoding="application/x-tex">\notin</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0em;"></span><span class="strut bottom" style="height:0em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">∉</span></span></span></span> Σ)</p>
+<p>(1) 字母表 Σ (ϵ $$\notin$$ Σ)</p>
 <p>(2) 有穷的状态集合 S</p>
 <p>(3) <strong>唯一</strong>的初始状态 s~0~ ∈ S</p>
 <p>(4) 状态转移函数 δ : S × Σ → S</p>
@@ -511,7 +519,7 @@
 <p>N : (Σ~N~ , S~N~ , n~0~, δ~N~ , F~N~ )</p>
 <p>D : (Σ~D~, S~D~, d~0~, δ~D~, F~D~)</p>
 <p>Σ~D~ = Σ~N~</p>
-<p>S~D~ ⊆ 2 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mrow></mrow><mrow><msub><mi>S</mi><mi>N</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">^{S_N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.8413309999999999em;"></span><span class="strut bottom" style="height:0.8413309999999999em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord"><span></span><span class="vlist"><span style="top:-0.363em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-textstyle scriptstyle uncramped"><span class="mord scriptstyle uncramped"><span class="mord"><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="vlist"><span style="top:0.15em;margin-right:0.07142857142857144em;margin-left:-0.05764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span><span class="reset-scriptstyle scriptscriptstyle cramped"><span class="mord mathit" style="margin-right:0.10903em;">N</span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">​</span></span>​</span></span></span></span></span></span> (∀s~D~ ∈ S~D~ : s~D~ ⊆ S~N~ )</p>
+<p>S~D~ ⊆ 2 $$^{S_N}$$ (∀s~D~ ∈ S~D~ : s~D~ ⊆ S~N~ )</p>
 <p>初始状态 d~0~ = ϵ-closure(n~0~)</p>
 <p>转移函数 ∀a ∈ Σ~D~ : δ~D~(s~D~, a) = ϵ-closure(move(s~D~, a))</p>
 <p>接受状态集 F~D~ = {s~D~ ∈ S~D~ | ∃f ∈ F~N~ . f ∈ s~D~}</p>
@@ -654,7 +662,7 @@
 <li>
 <p>立即消除左递归的<em><strong>实例</strong></em> :</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">A -&gt; Aα | β </span><br><span class="line">转换成:</span><br><span class="line">A -&gt; βA&#x27;</span><br><span class="line">A&#x27; -&gt; αA&#x27; | ε</span><br></pre></td></tr></table></figure>
-<p>一定要有 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> !</p>
+<p>一定要有 $$\epsilon$$ !</p>
 </li>
 <li>
 <p>消除立即左递归的方法不能消除因为2步或多步推导而产生的左递归.</p>
@@ -694,7 +702,7 @@
 <li>
 <p>FIRST函数的意义:</p>
 <p>如果两个A产生式 A -&gt; α | β , 其中 FIRST(α) 和 FIRST(β) 是不相交的集合.</p>
-<p>下一个输入符号是a, 若a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> FIRST(α) 则选择 A -&gt;α , 反之选择 另一个.</p>
+<p>下一个输入符号是a, 若a $$\in$$ FIRST(α) 则选择 A -&gt;α , 反之选择 另一个.</p>
 </li>
 <li>
 <p>怎么计算First?</p>
@@ -703,19 +711,19 @@
 <p>如果X是终结符, 那么FIRST(X) = {X}</p>
 </li>
 <li>
-<p>如果X是非终结符, 且有规则 X -&gt; a… 则 a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> FIRST(X) 如果 X -&gt; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> 则 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> FIRST(X)</p>
+<p>如果X是非终结符, 且有规则 X -&gt; a… 则 a $$\in$$ FIRST(X) 如果 X -&gt; $$\epsilon$$ 则 $$\epsilon$$ $$\in$$ FIRST(X)</p>
 </li>
 <li>
 <p>对于规则 X -&gt; Y1 Y2 …</p>
-<p>把 FIRST(Y1) 里的所有非<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> 符号添加进 FIRST(X), 如果 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span>在 FIRST(Y1) 中, 把 FIRST(Y2) 中的非<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> 符号添加进 FIRST(X) 中. … 以此类推,   一旦前面有<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> , 就往后看, 直到无<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> 或者结尾 -&gt; 就是 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> .</p>
+<p>把 FIRST(Y1) 里的所有非$$\epsilon$$ 符号添加进 FIRST(X), 如果 $$\epsilon$$在 FIRST(Y1) 中, 把 FIRST(Y2) 中的非$$\epsilon$$ 符号添加进 FIRST(X) 中. … 以此类推,   一旦前面有$$\epsilon$$ , 就往后看, 直到无$$\epsilon$$ 或者结尾 -&gt; 就是 $$\epsilon$$ .</p>
 </li>
 </ul>
 </li>
 <li>
-<p>对于非终结符 A, FOLLOW(A) 定义为可能在某些句型中紧跟在A右边的终结符的集合. 例如: S =*=&gt; αAaβ, 终结符号a <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> Follow(A)</p>
+<p>对于非终结符 A, FOLLOW(A) 定义为可能在某些句型中紧跟在A右边的终结符的集合. 例如: S =*=&gt; αAaβ, 终结符号a $$\in$$ Follow(A)</p>
 </li>
 <li>
-<p>若A是某些句型的最右符号, 那么 $ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> Follow(A). $是结束标记</p>
+<p>若A是某些句型的最右符号, 那么 $$ $$\in$$ Follow(A). $$是结束标记</p>
 </li>
 <li>
 <p>FOLLOW的作用是帮助我们选择恰当的产生式</p>
@@ -723,15 +731,15 @@
 <li>
 <p>FOLLOW计算: 计算各个非终结符A的FOLLOW集合的方法就是 <strong>不断应用以下规则</strong>:</p>
 <ul>
-<li>将 $ 放入 FOLLOW(S), S 是开始符号, 而$是输入串的结束标记</li>
-<li>如果存在产生式 A -&gt; αBβ, 那么First(β)中除<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span>之外的所有符号 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∈</mo></mrow><annotation encoding="application/x-tex">\in</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.5391em;"></span><span class="strut bottom" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="base textstyle uncramped"><span class="mrel">∈</span></span></span></span> FOLLOW(B)</li>
-<li>如果存在一个产生式 A -&gt; αB, 或存在产生式 A -&gt; αBβ 且 <strong>First(β)包含<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span></strong> ,那么 FOLLOW(A) 的所有符号都在 FOLLOW(B)  中.</li>
+<li>将 $$ 放入 FOLLOW(S), S 是开始符号, 而$$是输入串的结束标记</li>
+<li>如果存在产生式 A -&gt; αBβ, 那么First(β)中除$$\epsilon$$之外的所有符号 $$\in$$ FOLLOW(B)</li>
+<li>如果存在一个产生式 A -&gt; αB, 或存在产生式 A -&gt; αBβ 且 <strong>First(β)包含$$\epsilon$$</strong> ,那么 FOLLOW(A) 的所有符号都在 FOLLOW(B)  中.</li>
 </ul>
 </li>
 <li>
 <p>==<strong>考题1</strong>==: 对于给定的文法 –</p>
 <ol>
-<li>改造二义性 | 左递归 | 左公因子 (<strong><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.43056em;"></span><span class="strut bottom" style="height:0.43056em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mord mathit">ϵ</span></span></span></span> 不能丢</strong> 各种需要epsilon的时候都不能丢)</li>
+<li>改造二义性 | 左递归 | 左公因子 (<strong>$$\epsilon$$ 不能丢</strong> 各种需要epsilon的时候都不能丢)</li>
 <li>得到一个新的文法, 计算它的First和Follow集</li>
 </ol>
 </li>
@@ -895,7 +903,7 @@
 <p>自顶向下构建语法分析树:</p>
 <p>根节点是文法的起始符号 S;</p>
 <p>每个中间节点表示对某个非终结符应用某个产生式进行推导 (Q : 选择哪个非终结符, 以及选择哪个产生式)</p>
-<p>叶节点是词法单元流 w$ 仅包含终结符号与特殊的文件结束符 $ (EOF)</p>
+<p>叶节点是词法单元流 w$$ 仅包含终结符号与特殊的文件结束符 $$ (EOF)</p>
 </li>
 <li>
 <p>Q : 选择哪个非终结符, 以及选择哪个产生式?</p>
@@ -939,7 +947,7 @@
 <li>
 <p>Definition: (<strong>Follow(A) 集合</strong>)</p>
 <p>对于任意的 (产生式的左部) 非终结符 A ∈ N :</p>
-<p>Follow(A) = { t ∈ T ∪ {$} | ∃s. S  =^∗^=&gt;  s ≜ βA<strong>t</strong>γ }.     // 如果有一个句型长成这样: βA<strong>t</strong>γ , 那么相当于A后面可以跟一个终结符t.</p>
+<p>Follow(A) = { t ∈ T ∪ {$$} | ∃s. S  =^∗^=&gt;  s ≜ βA<strong>t</strong>γ }.     // 如果有一个句型长成这样: βA<strong>t</strong>γ , 那么相当于A后面可以跟一个终结符t.</p>
 </li>
 <li>
 <p>考虑产生式 A → α, 如果从 α 可能推导出空串 (α =^∗^=&gt; ϵ), 则只有当<strong>当前词法单元 t ∈ Follow(A)</strong>, 才可以选择该产生式 (即<em>此时</em> (A后面出现了t) 允许将 A → α =^∗^=&gt; ϵ  这条产生式放入预测表)</p>
@@ -969,7 +977,7 @@
 <p>再计算每个<strong>符号串 α</strong> 的 First(α) 集合</p>
 <p>对于 α = Xβ</p>
 <p>First(α)  =</p>
-<p>▶First(X) 									 ϵ <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∉</mo></mrow><annotation encoding="application/x-tex">\notin</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0em;"></span><span class="strut bottom" style="height:0em;vertical-align:0em;"></span><span class="base textstyle uncramped"><span class="mrel">∉</span></span></span></span> L(X)</p>
+<p>▶First(X) 									 ϵ $$\notin$$ L(X)</p>
 <p>▶(First(X) \ {ϵ}) ∪ First(β) 	 	ϵ ∈ L(X)</p>
 <p>最后, 如果 ϵ ∈ L(α), 则将 ϵ 加入 First(α)。</p>
 </li>
@@ -977,7 +985,7 @@
 <p>为每个非终结符 X 计算 Follow(X) 集合 :</p>
 <p>procedure follow(X)</p>
 <p>​	for X 是开始符号 do								 ▷ 规则 1: X 是开始符号  (相当于X是整个程序)</p>
-<p>​		Follow(X) ← Follow(X) ∪ {$}</p>
+<p>​		Follow(X) ← Follow(X) ∪ {$$}</p>
 <p>// 以下都要从产生式右侧找X</p>
 <p>​	for A → αX do											▷ 规则 2: X 是某产生式右部的最后一个符号</p>
 <p>​		Follow(X) ← Follow(X) ∪ Follow(A)</p>
@@ -1018,7 +1026,7 @@
 <p><strong>非递归的 (栈) , 基于预测分析表</strong>的实现方法:</p>
 <p>产生式: <strong>S -&gt; (S + F)</strong></p>
 <p><em>转换成栈:</em></p>
-<p>栈底 [$ , <s>S</s> , ), F, +, S, (</p>
+<p>栈底 [$$ , <s>S</s> , ), F, +, S, (</p>
 <p>用栈模拟, 相当于把S弹出, 把S的右部压栈, 注意因为是栈结构</p>
 <p>所以先压右括号 (<strong>从右往左压</strong>)</p>
 <p>获得了一个栈, 就可以利用栈做语法分析了, 如果栈顶是一个终结符, 那么就弹出, 如果栈顶是一个非终结符, 就递归调用非终结符, 把产生式右部压入 (相当于语法树上此节点的下边缘).</p>
@@ -1238,10 +1246,10 @@
 </li>
 <li>
 <p>添加属性: (给规则加了返回值 <strong>returns</strong> 之后, 我们后续就可以用val来获取这一属性值.)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@header &#123;</span><br><span class="line">	package ag.expr;</span><br><span class="line">	import java.util.*;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@parser::members &#123;</span><br><span class="line">	Map&lt;String, Integer&gt; memory = new HashMap&lt;&gt;();</span><br><span class="line">	int eval(int l, int r, int op) &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expr returns [int val]</span><br><span class="line">	: l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr &#123; $val = $l.val $r.val; System.out.println($val); &#125;</span><br><span class="line">	| ...</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@header &#123;</span><br><span class="line">	package ag.expr;</span><br><span class="line">	import java.util.*;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@parser::members &#123;</span><br><span class="line">	Map&lt;String, Integer&gt; memory = new HashMap&lt;&gt;();</span><br><span class="line">	int eval(int l, int r, int op) &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expr returns [int val]</span><br><span class="line">	: l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr &#123; $$val = $$l.val $$r.val; System.out.println($$val); &#125;</span><br><span class="line">	| ...</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
 <ol>
 <li>
-<p>插入一段java代码以告诉antlr如何计算属性值. 要在开头使用一个$符来引用对象.</p>
+<p>插入一段java代码以告诉antlr如何计算属性值. 要在开头使用一个$$符来引用对象.</p>
 </li>
 <li>
 <p>插入的代码放在了产生式的最右端, 这不是为了好看, 而是说明<strong>前面所有操作执行过之后</strong>, 再执行花括号里的代码.</p>
@@ -1262,7 +1270,7 @@
 </li>
 <li>
 <p>antlr对于给规则加参数的支持:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vars[String typeStr]</span><br><span class="line">	: vars[$typeStr] &#x27;,&#x27; ID</span><br><span class="line">		 &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	| ID &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vars[String typeStr]</span><br><span class="line">	: vars[$$typeStr] &#x27;,&#x27; ID</span><br><span class="line">		 &#123; System.out.println($$ID.text + &quot;:&quot; + $$typeStr); &#125;</span><br><span class="line">	| ID &#123; System.out.println($$ID.text + &quot;:&quot; + $$typeStr); &#125;</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
 </li>
 <li>
 <p>语法制导的定义 (SDD, Syntax-Directed Definition)</p>
@@ -2116,7 +2124,7 @@
 <li>
 <p>r (归约) , 何时归约? LR(0)遇到接受状态 (除了产生式左部是S’) 即归约, 没有额外条件.</p>
 <p>一旦遇到可以归约的状态, 例如2号状态, 则一行都直接填写对应的归约®, 而不管任何额外条件.</p>
-<p>特殊情况, 如果产生式左部是S’, 则在$一列填写接受 <strong><code>acc</code></strong></p>
+<p>特殊情况, 如果产生式左部是S’, 则在$$一列填写接受 <strong><code>acc</code></strong></p>
 </li>
 </ul>
 </li>
@@ -2188,7 +2196,7 @@
 <p><img src="https://chendingya.github.io/2023/04/09/23-Compilers/ch17-LR(1)-LR(1)%20%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8/image-20230623165244815.png" alt="image-20230623165244815"></p>
 </li>
 <li>
-<p>初始状态: ($表示输入终止, 表示期望匹配S之外就是结束了($) )</p>
+<p>初始状态: ($$表示输入终止, 表示期望匹配S之外就是结束了($$) )</p>
 <p><img src="https://chendingya.github.io/2023/04/09/23-Compilers/ch17-LR(1)-LR(1)%20%E8%AF%AD%E6%B3%95%E5%88%86%E6%9E%90%E5%99%A8/image-20230623165301238.png" alt="image-20230623165301238"></p>
 </li>
 <li>

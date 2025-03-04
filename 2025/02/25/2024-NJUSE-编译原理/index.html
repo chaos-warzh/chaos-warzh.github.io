@@ -1,13 +1,13 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024-NJUSE-编译原理 | chaos-warzh's blog</title><meta name="author" content="Zhaohui Wang"><meta name="copyright" content="Zhaohui Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="2024-NJUSE-编译原理  课程内容参考 https:&#x2F;&#x2F;qingkaishi.github.io&#x2F;Compilers.html  0: intro  行内公式：$E&#x3D;mc^2$ 行內 \(E&#x3D;mc^2\) 多行內 \(E&#x3D;mc^2\) 块级公式：$$E&#x3D;mc^2$$    编译器的工作:   词法分析（Lexical Analysis） 语法分析（Syntax Analysis &#x2F; Par">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>2024-NJUSE-编译原理 | chaos-warzh's blog</title><meta name="author" content="Zhaohui Wang"><meta name="copyright" content="Zhaohui Wang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="课程内容参考 https:&#x2F;&#x2F;qingkaishi.github.io&#x2F;Compilers.html  intro   编译器的工作:   词法分析（Lexical Analysis） 语法分析（Syntax Analysis &#x2F; Parsing） 语义分析（Semantic Analysis） 翻译（Translating）产生IR 优化（Optimization） 代码生成（Code Gen">
 <meta property="og:type" content="article">
 <meta property="og:title" content="2024-NJUSE-编译原理">
 <meta property="og:url" content="https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/index.html">
 <meta property="og:site_name" content="chaos-warzh&#39;s blog">
-<meta property="og:description" content="2024-NJUSE-编译原理  课程内容参考 https:&#x2F;&#x2F;qingkaishi.github.io&#x2F;Compilers.html  0: intro  行内公式：$E&#x3D;mc^2$ 行內 \(E&#x3D;mc^2\) 多行內 \(E&#x3D;mc^2\) 块级公式：$$E&#x3D;mc^2$$    编译器的工作:   词法分析（Lexical Analysis） 语法分析（Syntax Analysis &#x2F; Par">
+<meta property="og:description" content="课程内容参考 https:&#x2F;&#x2F;qingkaishi.github.io&#x2F;Compilers.html  intro   编译器的工作:   词法分析（Lexical Analysis） 语法分析（Syntax Analysis &#x2F; Parsing） 语义分析（Semantic Analysis） 翻译（Translating）产生IR 优化（Optimization） 代码生成（Code Gen">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://chaos-warzh.github.io/img/butterfly-icon.png">
 <meta property="article:published_time" content="2025-02-25T06:50:49.000Z">
-<meta property="article:modified_time" content="2025-02-26T09:07:21.690Z">
+<meta property="article:modified_time" content="2025-03-04T02:02:48.971Z">
 <meta property="article:author" content="Zhaohui Wang">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://chaos-warzh.github.io/img/butterfly-icon.png"><script type="application/ld+json">{
@@ -17,7 +17,7 @@
   "url": "https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/",
   "image": "https://chaos-warzh.github.io/img/butterfly-icon.png",
   "datePublished": "2025-02-25T06:50:49.000Z",
-  "dateModified": "2025-02-26T09:07:21.690Z",
+  "dateModified": "2025-03-04T02:02:48.971Z",
   "author": [
     {
       "@type": "Person",
@@ -163,17 +163,10 @@
     inlineMath: [['$', '$'], ['\\(', '\\)']],
     displayMath: [['$$', '$$'], ['\\[', '\\]']]
   }
-};</script><meta name="generator" content="Hexo 7.1.1"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">chaos-warzh's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2024-NJUSE-编译原理</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">2024-NJUSE-编译原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-02-26T09:07:21.690Z" title="更新于 2025-02-26 17:07:21">2025-02-26</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><h1>2024-NJUSE-编译原理</h1>
-<blockquote>
+};</script><meta name="generator" content="Hexo 7.1.1"><link href="https://cdn.bootcss.com/KaTeX/0.11.1/katex.min.css" rel="stylesheet" /></head><body><div class="post" id="body-wrap"><header class="post-bg" id="page-header"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">chaos-warzh's blog</span></a><a class="nav-page-title" href="/"><span class="site-name">2024-NJUSE-编译原理</span></a></span><div id="menus"></div></nav><div id="post-info"><h1 class="post-title">2024-NJUSE-编译原理</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-03-04T02:02:48.971Z" title="更新于 2025-03-04 10:02:48">2025-03-04</time></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title=""><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">浏览量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
 <p>课程内容参考 <a target="_blank" rel="noopener" href="https://qingkaishi.github.io/Compilers.html">https://qingkaishi.github.io/Compilers.html</a></p>
 </blockquote>
-<h2 id="0-intro">0: intro</h2>
-<ul>
-<li>行内公式：$E=mc^2$</li>
-<li>行內 \(E=mc^2\)</li>
-<li>多行內 \(E=mc^2\)</li>
-<li>块级公式：$$E=mc^2$$</li>
-</ul>
+<h1>intro</h1>
 <ol>
 <li>
 <p>编译器的工作:</p>
@@ -182,7 +175,7 @@
 <li><strong>词法分析（Lexical Analysis）</strong></li>
 <li><strong>语法分析（Syntax Analysis / Parsing）</strong></li>
 <li><strong>语义分析（Semantic Analysis）</strong></li>
-<li><strong>翻译（Translating）</strong></li>
+<li><strong>翻译（Translating）产生IR</strong></li>
 <li><strong>优化（Optimization）</strong></li>
 <li><strong>代码生成（Code Generating）</strong></li>
 </ul>
@@ -203,7 +196,7 @@
 <p>趟: 以文件输入输出单位的编译过程的个数, 每趟可以由一个或若干个步骤构成.</p>
 </li>
 <li>
-<p><strong>字符串基本概念复习:</strong></p>
+<p><strong>字符串基本概念:</strong></p>
 <ol>
 <li>
 <p>字母表, 一个有限的符号集合; 串–字母表中符号组成的一个有穷序列</p>
@@ -237,7 +230,7 @@
 <p>运算优先级 $*$ (闭包) &gt; 连接 &gt; $|$ (或运算)</p>
 </li>
 </ol>
-<h2 id="1-ANTLR-4">1: ANTLR 4</h2>
+<h1>ANTLR 4</h1>
 <ol>
 <li>
 <p>词法分析</p>
@@ -301,7 +294,7 @@
 </li>
 <li></li>
 </ol>
-<h2 id="2-Lexer">2: Lexer</h2>
+<h1>Lexer</h1>
 <ol>
 <li>
 <p>正则表达式 regular expression (re) 是词法分析使用的工具.</p>
@@ -365,14 +358,14 @@
 <p>给定字母表 $Σ$, $Σ$ 上的正则表达式由且仅由以下规则定义:</p>
 <p>(1) $ϵ$ 是正则表达式;</p>
 <p>(2) $∀a ∈ Σ$, $a$ 是正则表达式;</p>
-<p>(3) 如果 $r$ 是正则表达式, 则 $®$ 是正则表达式;</p>
+<p>(3) 如果 $r$ 是正则表达式, 则 $($$r)$ 是正则表达式;</p>
 <p>(4) 如果 $r$ 与 $s$ 是正则表达式, 则 $r|s$, $rs$, $r ^∗$ 也是正则表达式.</p>
 </li>
 <li>
 <p>运算优先级: $*$ (闭包) &gt; 连接 &gt; $|$ (或运算)</p>
 </li>
 <li>
-<p>每一个正则表达式$r$都对应一个正则语言 $L®$.</p>
+<p>每一个正则表达式$r$都对应一个正则语言 $L($$r)$.</p>
 </li>
 <li>
 <p><strong>语言</strong>的运算 (注意区别于串的运算):</p>
@@ -400,9 +393,9 @@
 </li>
 <li>
 <p>正则语言的运算规则:</p>
-<p>$L(r|s) = L®\cup L(s)$</p>
-<p>$L(rs) = L®L(s) $</p>
-<p>$L(r ^∗ ) = (L®)^∗$</p>
+<p>$L(r|s) = L($$r)\cup L(s)$</p>
+<p>$L(rs) = L($$r)L(s) $</p>
+<p>$L(r ^∗ ) = (L($$r))^∗$</p>
 </li>
 <li>
 <p>非确定性有穷自动机(Nondeterministic Finite Automaton) A 是一个五元组 A = (Σ, S, s~0~, δ, F):</p>
@@ -426,7 +419,7 @@
 </li>
 <li>
 <p><strong>接受 (Accept)</strong></p>
-<p>(非确定性) 有穷自动机 A 接受字符串 x, 当且仅当存在一条从开始状态 s~0~ 到某个<strong>接受状态</strong> f ∈ F、标号为 x 的路径.</p>
+<p>(非确定性) 有穷自动机 A 接受字符串 x, 当且仅当存在一条从开始状态 $s_0$ 到某个<strong>接受状态</strong> f ∈ F、标号为 x 的路径.</p>
 </li>
 <li>
 <p>进行转换时, 要注意自动机能接受的语言不能变化, 否则就不等价了.</p>
@@ -435,7 +428,7 @@
 <p>确定性有穷自动机 A 是一个五元组 A = (Σ, S, s0, δ, F):</p>
 <p>(1) 字母表 Σ (ϵ $\notin$ Σ)</p>
 <p>(2) 有穷的状态集合 S</p>
-<p>(3) <strong>唯一</strong>的初始状态 s~0~ ∈ S</p>
+<p>(3) <strong>唯一</strong>的初始状态 $s_0$ ∈ S</p>
 <p>(4) 状态转移函数 δ : S × Σ → S</p>
 <p>(5) 接受状态集合 F ⊆ S</p>
 </li>
@@ -453,8 +446,8 @@
 </li>
 <li>
 <p>正则表达式转NFA (RE =&gt; NFA)</p>
-<p>r =&gt; N®</p>
-<p>要求: L(N®) =  L®</p>
+<p>$r$ =&gt; $N(r$$)$</p>
+<p>要求: $L(N(r$$))$ =  $L(r$$)$</p>
 </li>
 <li>
 <p>Thompson 构造法:</p>
@@ -485,11 +478,11 @@
 <p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/202211291511497.png" alt=""></p>
 </li>
 <li>
-<p>N® 的性质以及 Thompson 构造法复杂度分析</p>
+<p>$N(r$$)$ 的性质以及 Thompson 构造法复杂度分析</p>
 <ol>
-<li>N® 的开始状态与接受状态均唯一</li>
+<li>$N(r$$)$ 的开始状态与接受状态均唯一</li>
 <li>开始状态没有入边, 接受状态没有出边</li>
-<li>N® 的状态数 |S| ≤ 2 × |r|  (|r| : r 中运算符与运算分量的总和)</li>
+<li>$N(r$$)$ 的状态数 |S| ≤ 2 × |r|  (|r| : r 中运算符与运算分量的总和)</li>
 <li>每个状态最多有两个 ϵ-入边与两个 ϵ-出边</li>
 <li>∀a ∈ Σ, 每个状态最多有一个 a-入边与一个 a-出边</li>
 </ol>
@@ -507,7 +500,7 @@
 <p>NFA -&gt; DFA</p>
 <ol>
 <li>寻找初始状态: start指向的状态 (n0) 以及经过 ϵ 转移能到达的状态. (0 1 2 4 7)</li>
-<li>经过a转移之后能到达的状态集 ( -a-&gt; 3 8 6 7 1 2 4)</li>
+<li>经过a转移之后能到达的状态集 ( $\xrightarrow{\text{a}}$ 3 8 6 7 1 2 4)</li>
 <li>按照状态集构造DFA 构造出来的DFA的每个状态是NFA所有状态的一个子集. (子集构造法)</li>
 <li>哪里是接受状态? NFA的接受状态在DFA的哪个状态集中? =&gt; 所在的那些DFA状态集就是接受状态.</li>
 </ol>
@@ -519,18 +512,18 @@
 </li>
 <li>
 <p>子集构造法 (N ⇒ D) 的原理: (<strong>形式化</strong>)</p>
-<p>N : (Σ~N~ , S~N~ , n~0~, δ~N~ , F~N~ )</p>
-<p>D : (Σ~D~, S~D~, d~0~, δ~D~, F~D~)</p>
-<p>Σ~D~ = Σ~N~</p>
-<p>S~D~ ⊆ 2 $^{S_N}$ (∀s~D~ ∈ S~D~ : s~D~ ⊆ S~N~ )</p>
-<p>初始状态 d~0~ = ϵ-closure(n~0~)</p>
-<p>转移函数 ∀a ∈ Σ~D~ : δ~D~(s~D~, a) = ϵ-closure(move(s~D~, a))</p>
-<p>接受状态集 F~D~ = {s~D~ ∈ S~D~ | ∃f ∈ F~N~ . f ∈ s~D~}</p>
+<p>N : $(Σ_N , S_N , n_0, δ_N , F_N )$</p>
+<p>D : $(Σ_D, S_D, d_0, δ_D, F_D)$</p>
+<p>$Σ_D = Σ_N$</p>
+<p>$S_D \subseteq 2 ^{S_N} (\forall s_D ∈ S_D : s_D \subseteq S_N )$</p>
+<p>初始状态 $d_0 = ϵ\rm{-}closure(n_0)$</p>
+<p>转移函数 $\forall a ∈ Σ_D : δ_D(s_D, a) = ϵ-closure(move(s_D, a)) $</p>
+<p>接受状态集 $F_D = {s_D \in S_D | \exist f \in F_N . f \in s_D}$</p>
 </li>
 <li>
 <p>子集构造法的复杂度分析:</p>
-<p>(|S~N~ | = n)</p>
-<p>|S~D~| = Θ(2^n^ ) = O(2^n^ ) ∩ Ω(2^n^ )</p>
+<p>($|S_N | = n$)</p>
+<p>$|S_D| = Θ(2^n ) = O(2^n ) ∩ Ω(2^n )$</p>
 <p>子集构造法复杂度这么高? – 事实上, 对于任何算法, 最坏情况下, 复杂度也必须是Ω(2^n^ ).</p>
 </li>
 <li>
@@ -593,7 +586,7 @@
 <li></li>
 <li></li>
 </ol>
-<h2 id="lexer-复习">lexer-复习</h2>
+<h1>Lexer Analysis</h1>
 <ol>
 <li>
 <p>NFA(Nondeterministic Finite Automaton, 非确定性有限自动机) DFA(Deterministic Finite Automaton, 确定性有限自动机) 的区别和转换.</p>
@@ -682,7 +675,7 @@
 </li>
 <li>
 <p><strong>自顶向下语法分析</strong>: 为输入串构造语法分析树. 也可以是看作一种寻找输入串的最左推导的过程.</p>
-<p>(<em><strong>==一定会考至少一个题目==</strong></em>: 1.预测分析法  2. 优先级算法)</p>
+<p>(必考: 1.预测分析法  2. 优先级算法)</p>
 </li>
 <li>
 <p>递归下降分析框架:</p>
@@ -764,13 +757,8 @@
 <li>
 <p>2种错误恢复方法: 恐慌模式 (忽略掉某些符号, 通过识别同步符号如if, while来实现) ; 短语层次的恢复 (相当于把错的符号改变处理)</p>
 </li>
-<li>
-<p><em><strong>优先级上升算法</strong></em> – 必考</p>
-</li>
-<li></li>
-<li></li>
 </ol>
-<h2 id="4-parser-antlr">4: parser-antlr</h2>
+<h1>parser-antlr</h1>
 <ol>
 <li>
 <p>目标: 1. 分析语法结构 2.打印语法分析树</p>
@@ -795,7 +783,7 @@
 <p><strong>antlr4允许给每一个备选分支加标签, 如: <code>#FuncCall</code> 也可以给每一个符号 (终结或非终结) 起别名.</strong></p>
 </li>
 </ol>
-<h2 id="5-parser-context-free">5: parser: context-free</h2>
+<h1>parser: context-free</h1>
 <ol>
 <li>
 <p>冒号左边 head头部; 冒号右边 规则体 body</p>
@@ -889,7 +877,7 @@
 </li>
 <li></li>
 </ol>
-<h2 id="6-parser-ll">6: parser - ll</h2>
+<h1>parser - ll</h1>
 <ol>
 <li>
 <p>简单的: ll</p>
@@ -1039,7 +1027,7 @@
 </li>
 <li></li>
 </ol>
-<h2 id="7-parser-Adaptive-LL">7: parser - Adaptive LL(*)</h2>
+<h1>parser - Adaptive LL(*)</h1>
 <ol>
 <li>
 <p>由antlr作者提出</p>
@@ -1131,861 +1119,8 @@
 <li>
 <p>更详细请见antlr的paper. (可能有点难读…)</p>
 </li>
-<li></li>
-<li></li>
-<li></li>
 </ol>
-<h2 id="8-semantics-symtable">8: semantics - symtable</h2>
-<ol>
-<li>
-<p>语义分析的任务很分散</p>
-<ol>
-<li>
-<p>类型检查 (<strong>Type Checking</strong>)</p>
-<ul>
-<li>强类型语言 (如Java) – 类型检查更严格 (弱类型语言的类型检查 不严格 就像开玩笑一样, 如 while(1) – C语言 ); 动态类型语言 (运行时做类型检查) / 静态类型语言 (编译期做类型检查)  (<em>类型论 – Type Theory</em>)</li>
-</ul>
-</li>
-<li>
-<p>符号检查 (Symbol Checking)</p>
-<ul>
-<li>符号(Symbols): 变量名, 函数名, 类型名, 标签名, …</li>
-<li>符号检查包括: 未定义的符号 / 重复定义 / 定义类型不匹配 (变量定义当函数名用)</li>
-</ul>
-<p>…</p>
-</li>
-</ol>
-</li>
-<li>
-<p>Definition (符号表 (Symbol Table))</p>
-<p>符号表是用于保存各种信息的数据结构.</p>
-</li>
-<li>
-<p>领域特定语言 (DSL) 通常只有单作用域 (全局作用域)</p>
-</li>
-<li>
-<p>通用程序设计语言 (GPL) 通常需要嵌套作用域.</p>
-</li>
-<li>
-<p>符号的作用域:</p>
-<p>不同的作用域通过数据结构维护</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140342843.webp" alt=""></p>
-<p>在此我们认为作用域有3类:</p>
-<ol>
-<li>全局作用域</li>
-<li>函数作用域 (其实这个定义假设了函数的形参是一个单独的作用域, 而不是和函数体合并为同一个作用域)</li>
-<li>局部作用域</li>
-</ol>
-</li>
-<li>
-<p>设计作用域的接口:</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140512430.webp" alt=""></p>
-<p>局部作用域的标识采用父作用域来标识.</p>
-</li>
-<li>
-<p>通过currentScope表示当前的作用域.</p>
-</li>
-<li>
-<p>通过给语法分析的分支打Tag的方式进行监听进入和退出某个语法产生式的一个分支. (如: <strong># assign</strong>) 这是一个高效的方式.</p>
-</li>
-<li>
-<p>类型符号 (如 int, void ) 也要作为符号加入到符号表里.</p>
-</li>
-<li>
-<p>实现scope树的方法很简单, 利用监听器, 每监听到进入scope, 就将其的EnclosingScope设为currentScope, 进入scope的时机就是看到函数定义(FuncDecl) 或Block (局部作用域) . (索引上一个作用域便于解析符号和回退. )</p>
-</li>
-<li>
-<p>提供的类体系参考设计(并不很好):</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140908716.webp" alt=""></p>
-</li>
-<li>
-<p>Symbol应该是一个由符号名索引相关信息的HashMap.</p>
-</li>
-<li>
-<p>加入结构体, 结构体成员的访问, 其实也要检查符号是否定义过. 那么就多出了一个结构体成员的作用域, 甚至还有嵌套结构体.</p>
-</li>
-<li>
-<p>符号表无论从概念上还是实践上都比较简单, 下面要讲的类型检查, 则更复杂些. (加入了数组 / 指针类型的语言则更加复杂)</p>
-</li>
-<li></li>
-</ol>
-<h2 id="9-semantics-ag">9: semantics - ag</h2>
-<ol>
-<li>
-<p>语义分析 - 用一个新的文法实现语义分析, 原来的上下文无关文法不够用了.</p>
-</li>
-<li>
-<p>有一个人提出了加入了类型检查 / 符号检查的文法 – 属性文法. 这个人就是knuth.</p>
-</li>
-<li>
-<p>属性文法 (Attribute Grammar) : 为上下文无关文法赋予语义.</p>
-</li>
-<li>
-<p>父节点的属性仅仅依赖于子节点的属性 – 综合属性 (synthesized) 例如: SUM: NUM + NUM</p>
-</li>
-<li>
-<p>子节点要从父节点继承一些信息 – 继承属性 (inherited)</p>
-</li>
-<li>
-<p>knuth在论文中提出, 只要是基于综合属性和继承属性的属性, <strong>都可以高效计算出来</strong>.</p>
-</li>
-<li>
-<p>任务: 利用属性文法编写交互式计算器.</p>
-</li>
-<li>
-<p>原来我们利用监听器模式实现的交互式计算器实际是offline 的方式计算属性值, 已经构建好语法树了, 关键在于在DFS的合适时机做合适事情.</p>
-</li>
-<li>
-<p>在语法分析中实现属性文法:</p>
-<p>B -&gt; X**{a}**Y</p>
-<p>语义动作嵌入的位置决定了何时执行该动作</p>
-<p><strong>基本思想</strong>: 一个动作在它<strong>左边</strong>的所有文法符号都<strong>处理完</strong>之后立刻执行</p>
-</li>
-<li>
-<p>计算器的实现:</p>
-<p>给expr起别名:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expr : l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr</span><br></pre></td></tr></table></figure>
-<p>这样就可以使用l和r索引对应位置的语法单元.</p>
-</li>
-<li>
-<p>添加属性: (给规则加了返回值 <strong>returns</strong> 之后, 我们后续就可以用val来获取这一属性值.)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@header &#123;</span><br><span class="line">	package ag.expr;</span><br><span class="line">	import java.util.*;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@parser::members &#123;</span><br><span class="line">	Map&lt;String, Integer&gt; memory = new HashMap&lt;&gt;();</span><br><span class="line">	int eval(int l, int r, int op) &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expr returns [int val]</span><br><span class="line">	: l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr &#123; $val = $l.val $r.val; System.out.println($val); &#125;</span><br><span class="line">	| ...</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
-<ol>
-<li>
-<p>插入一段java代码以告诉antlr如何计算属性值. 要在开头使用一个$符来引用对象.</p>
-</li>
-<li>
-<p>插入的代码放在了产生式的最右端, 这不是为了好看, 而是说明<strong>前面所有操作执行过之后</strong>, 再执行花括号里的代码.</p>
-</li>
-<li>
-<p>antlr4允许你在members里面填任何java代码. (@parser限定了只允许在生成的parser文件中插入代码, 而非全部)</p>
-</li>
-</ol>
-</li>
-<li>
-<p>例子2: <strong>类型声明</strong>文法举例.</p>
-</li>
-<li>
-<p>多了2种依赖: 1. 右兄弟对于左兄弟的属性值的依赖 2. 子节点对于父节点属性值的依赖.</p>
-</li>
-<li>
-<p>如何支持上述2种依赖? 把属性值作为参数, 通过递归调用的方式把信息传递下去.</p>
-</li>
-<li>
-<p>antlr对于给规则加参数的支持:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vars[String typeStr]</span><br><span class="line">	: vars[$typeStr] &#x27;,&#x27; ID</span><br><span class="line">		 &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	| ID &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>语法制导的定义 (SDD, Syntax-Directed Definition)</p>
-<p>SDD 是一个上下文无关文法和属性及规则的结合.</p>
-<p>每个文法符号都可以关联多个属性;</p>
-<p>每个产生式都可以关联一组规则.</p>
-</li>
-<li>
-<p>SDD唯一确定了语法分析树上每个非终结符节点的属性值.</p>
-</li>
-<li>
-<p>SDD没有规定以什么方式, 什么顺序计算这些属性值.</p>
-</li>
-<li>
-<p>综合属性 (Synthesized Attribute) 节点N上的综合属性只能通过N的子节点或N本身的属性来定义.</p>
-</li>
-<li>
-<p><em>S属性定义</em>: 如果一个SDD的每个属性都是综合属性, 则它是S属性定义.</p>
-<p>S属性定义的依赖图刻画了属性实例之间自底向上的信息流动.</p>
-<p>此类属性值的计算可以在 <em>自顶向下的LL语法分析</em> <strong>过程中</strong>实现.</p>
-</li>
-<li>
-<p>**依赖图: ** 用于确定一棵给定语法分析树中各个属性实例之间的依赖关系.</p>
-</li>
-<li>
-<p>继承属性 (Inherited Attribute) 节点N上的继承属性只能通过N的父节点, N本身和N的兄弟节点上的属性来定义.</p>
-</li>
-<li>
-<p>继承信息流: 从上至下, 从左至右 (因为语法分析树是这样构建的)</p>
-</li>
-<li>
-<p><em>L属性定义</em> :</p>
-<p>如果一个SDD的每个属性</p>
-<p>(1) 要么是综合属性,</p>
-<p>(2) 要么是继承属性, 但是它的规则满足以下限制:</p>
-<p>​	对于产生式 A -&gt; X~1~X~2~…X~n~ 及其对应规则定义的继承属性 X~i~.a, 则这个规则只能使用</p>
-<p>​	(a) 和 <strong>产生式头 A</strong> 关联的继承属性</p>
-<p>​	(b) 位于X~i~ 左边的文法符号实例 X~1~ X~2~ … X~i-1~ 相关的继承属性或综合属性</p>
-<p>​	© 和这个X~i~ 的实例本身相关的继承属性或综合属性, 但是在由这个X~i~ 的全部属性组成的依赖图中不存在环.</p>
-<p>则它是 L属性定义.</p>
-</li>
-<li>
-<p>语义分析时, 先自左至右自上至下构建一遍, 完成<strong>继承属性</strong>; 再自下至上走一遍, 完成<strong>综合属性</strong>. (2趟)</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220210256289.webp" alt=""></p>
-</li>
-<li>
-<p>例子1: 属性文法计算后缀表达式. (S属性定义 / 只使用综合属性 / 通过返回值传递)</p>
-</li>
-<li>
-<p>例子2: 数组类型解析</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[2][3]  ( int a[2][3]; )</span><br><span class="line">(2, (3, int))</span><br></pre></td></tr></table></figure>
-<p>绿色框内为<font color=green><strong>继承属性</strong></font></p>
-<p>红色框内为<font color=red><strong>综合属性</strong></font></p>
-<p><img src="https://box.nju.edu.cn/f/a50b437ef26c446697fd/?dl=1" alt=""></p>
-</li>
-<li>
-<p>更复杂的例子: 数组声明 / 数组引用 / 类型检查</p>
-</li>
-<li>
-<p>online 方式: 属性文法; offline : visitor / listener; 第3种: addParseListener</p>
-</li>
-<li>
-<p>例子: <strong>有符号二进制数</strong>文法</p>
-</li>
-<li>
-<p>Definition (语法制导的翻译方案 (Syntax-Directed Translation Scheme; SDT))</p>
-<p><strong>SDT</strong> 是在其产生式体中嵌入<strong>语义动作</strong>的上下文无关文法。</p>
-</li>
-<li>
-<p>SDD规定了一些语义规则, 而SDT采用嵌入语义动作的方式实现这些语义规则, 所以说, SDT是SDD的一种实现.</p>
-</li>
-<li></li>
-</ol>
-<h2 id="Lab-1">Lab 1</h2>
-<ol>
-<li>
-<p>把 /out 目录放入gitignore</p>
-</li>
-<li>
-<p>忽略注释, 十六进制和八进制数要打印为十进制.</p>
-</li>
-<li>
-<p>例如:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">IDENT</span><br><span class="line">	:[_a-zA-Z][_a-zA-z0-9]*</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>同样, 可以识别十六进制和八进制的数 (a-fA-F 都行)</p>
-</li>
-<li>
-<p>错误监听器: 继承自<code>BaseErrorListener</code> 当词法分析报告错误时打印错误信息, 监听器遇到错误会自动打印错误信息, 然后用一个if语句判断是否有监听到错误.</p>
-</li>
-<li>
-<p>数组定义和使用, 进制转换, 变量列表式定义.</p>
-</li>
-<li>
-<p>需要自己定义 <code>LexerListener</code>, 其它Main.java里面的东西都是通过 g4文件自动生成的.</p>
-</li>
-<li>
-<p><code>make antlr</code> <strong>自动生成词法分析器</strong>, 编写完g4之后就这样做.</p>
-</li>
-<li>
-<p><code>make run FILEPATH=nc.sy</code></p>
-</li>
-<li>
-<p>自己编写 <code>test_lexer.sh</code>脚本来自动化测试. (当然你也可以写Python)</p>
-</li>
-<li>
-<p>antlr4的核心设计模式:</p>
-<ol>
-<li>观察者 (监听者) 模式 (对象被多个观察者依赖, 对象状态改变会被观察者注意到)</li>
-<li>访问者模式 (不区分元素是哪种, 而根据访问者的不同信息返回相应的信息)</li>
-</ol>
-</li>
-<li>
-<p>像运算符是什么意思, 这是lexer / parser做不到的.</p>
-</li>
-<li></li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="semantics">semantics</h2>
-<ol>
-<li>
-<p><strong>==SDD (Syntax-Directed Definition) 语法制导定义==</strong></p>
-</li>
-<li>
-<p>产生式 E -&gt; E~1~ + T 这里的E和E~1~是同一个东西, 下标1表示第一次出现</p>
-</li>
-<li>
-<p>每一个非终结符都有一个或若干个综合属性和继承属性, 终结符只有综合属性. (综合属性 - 从子节点或自身综合而来 ; 继承属性 - 从父节点继承而来)</p>
-</li>
-<li>
-<p>S属性的SDD (只包含综合属性的SDD称为S属性的SDD) (还有L属性的SDD)</p>
-</li>
-<li>
-<p>没有副作用的SDD称属性文法.</p>
-</li>
-<li>
-<p>注释语法分析树 – 已知条件从哪儿来? 终结符. -&gt; 有词法分析阶段赋好的val</p>
-</li>
-<li>
-<p>考试可能考画<em><strong>依赖图</strong></em></p>
-</li>
-<li>
-<p>受控副作用 – 例如使用符号表</p>
-</li>
-<li>
-<p>抽象语法树 AST ,  每个节点代表一个语法结构, <strong>对应于一个运算符</strong>; 节点的每个子节点代表其子结构, <strong>对应于运算分量</strong>. 这些子结构按照特定方式组成了较大的结构; 可以忽略掉一些标点符号等非本质的东西.</p>
-<p>而语法分析树是按层的, 节点并不是运算符. (有很多关于结构的冗余的符号)</p>
-</li>
-<li>
-<p>类型描述的是一个变量被分配的内存区域的值域和行为域 (类型系统)</p>
-</li>
-<li>
-<p>后缀SDT的栈实现:</p>
-<p>T -&gt; T~1~ * F</p>
-<p>{stack[top - 2].val = stack[top - 2].val * stack[top].val; top = top - 2;}</p>
-<p>注意: top - 1是 * , 不是运算符!</p>
-</li>
-<li>
-<p>L属性的SDT实例 继承属性-next: 语句结束后应该跳转的标号; true / false : 条件为真/假时跳转的标号. 综合属性: code表示代码</p>
-</li>
-<li></li>
-<li></li>
-</ol>
-<h2 id="10-llvm-ir">10: llvm - ir</h2>
-<ol>
-<li>
-<p>Chris Lattner – llvm项目的发起者. (此外他的贡献有: clang, swift语言, …)</p>
-</li>
-<li>
-<p>llvm本身不是编译器, 而是编译的基础设施, 是一系列工具链. (llvm是模块化可重用的 (modular and reusable) )</p>
-</li>
-<li>
-<p>llvm ir 是一种中间表示, 你只需要把你的语言编译成ir (前端), 就可以在任何平台上用已有的llvm ir的后端编译生成目标代码.</p>
-</li>
-<li>
-<p><strong>“IR 设计的优秀与否决定着整个编译器的好坏”</strong></p>
-</li>
-<li>
-<p>llvm ir: 带类型的, 介于高级程序语言与汇编语言之间的 (LLVM Assembly Language)</p>
-</li>
-<li>
-<p>如何把一个.c文件编译为一个.ll文件? (一个.ll文件叫作一个module, 模块. )</p>
-</li>
-<li>
-<p>一个module包括: 函数 / 全局变量</p>
-</li>
-<li>
-<p>函数 – 有若干个基本块 (BB) 构成.</p>
-</li>
-<li>
-<p>每一个基本块 由若干条指令构成.</p>
-</li>
-<li>
-<p>代码实例:</p>
-</li>
-<li>
-<p>例1: factorial0.c</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clang -S -emit-llvm -fno-discard-value-names factorial0.c -o f0-opt0.ll -O1 -g0</span><br></pre></td></tr></table></figure>
-<p><code>-emit-llvm</code>: 翻译(发射)成llvm中间代码 (bitcode) , 而不是目标代码.</p>
-<p><code>-S</code>: 翻译成人类可读的llvm ir</p>
-<p><code>-g0</code>: 不生成任何debug信息</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> val)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> **argv)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> factorial(<span class="number">2</span>) * <span class="number">7</span> == <span class="number">42</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220220126419.webp" alt=""></p>
-</li>
-<li>
-<p>全局符号 函数名 / 全局变量 -&gt; 命名以<code>@</code>开头;</p>
-<p>局部符号 -&gt; 以 <code>%</code> 开头. (寄存器, 虚拟的, 有无限多, 和真正的物理寄存器无关)</p>
-<p>纯数字 -&gt; 立即数</p>
-</li>
-<li>
-<p><code>declare</code>声明, <code>define</code>定义</p>
-</li>
-<li>
-<p><code>icmp</code> int型数比较.</p>
-</li>
-<li>
-<p>1bit的信息, 如bool型, 就用 <code>i1</code></p>
-</li>
-<li>
-<p>如何把1bit的整数扩展到32位的int? 零扩展!</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%6 = zext i1 %5 to i32</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>这种中间代码是一种 Three Address Code (TAC / 3AC)</p>
-</li>
-<li>
-<p>llvm ir是满足<strong>静态单赋值</strong>性质的. (SSA)</p>
-</li>
-<li>
-<p><strong>SSA</strong> 是什么?</p>
-<ol>
-<li>单赋值: 一个变量只被赋值一次</li>
-<li>静态</li>
-</ol>
-</li>
-<li>
-<p>SSA带来的在静态分析时的优势远远大于SSA带来的冗余.</p>
-</li>
-<li>
-<p>过程内控制流图 : Intra-procedure CFG</p>
-</li>
-<li>
-<p>Definition (CFG):</p>
-<p>Each node represents a <em>basic block</em> (BB),</p>
-<p>i.e. a straight-line code sequence with no <strong>branches/jumps</strong> in except to the entry point and no <strong>branches/jumps</strong> out except at the exit point.</p>
-<p><strong>Jump targets start a block, and jumps end a block.</strong></p>
-<p>Directed <strong>edges</strong> are used to represent jumps in the control flow.</p>
-</li>
-<li>
-<p>在栈帧上分配空间:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%3 = alloca i32, align 4</span><br></pre></td></tr></table></figure>
-<p>在栈帧上分配一个 i32 变量 %3 的空间.</p>
-</li>
-<li>
-<p>store指令:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store i32 1, i32* %2, align4</span><br></pre></td></tr></table></figure>
-<p>注意store / load要加*号, 表示取地址 (?).</p>
-</li>
-<li>
-<p>为什么基本块的中间某条指令可以是 call 指令?</p>
-<p>其实这是视角的问题, 因为函数最终会返回回到call指令的下一条, 相当于并没有真正离开这个基本块. 而jmp是真正会走的, 所以CFG的边专门由jmp生成. (有始有终 – call; 有始无终 – jmp)</p>
-</li>
-<li>
-<p>不使用store / load, 怎么汇合同一个变量经过不同路径后的多个可能值?</p>
-<p><strong>φ指令!</strong></p>
-<p>但是事实上, x86等目标架构没有φ指令, 所以φ指令优化后的代码<strong>还是要还原至使用store / load的方式 (绕过了SSA的要求)</strong> (生成目标代码时).</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220222623949.webp" alt=""></p>
-<p><code>phi i32 [%6, %3], [1, %1]</code> 表示</p>
-<p>​	<strong>如果是从%3来的, 就取值%6; 如果从%1来的, 就取值1.</strong></p>
-</li>
-<li>
-<p>φ根据控制流决定选择y1还是y2.</p>
-</li>
-<li>
-<p>φ指令对于<strong>SSA的构建</strong>十分重要! (把φ指令变成机器代码的实现, 叫作<strong>SSA的消去</strong>; 让机器指令重新拥有φ指令的性质 - <strong>SSA的重建</strong>)</p>
-</li>
-<li>
-<p>没必要一上来就读llvm文档, 可以阅读ppt上的资源和llvm开发者的tutorial.</p>
-</li>
-<li>
-<p>我们的实验 – 使用Java api生成LLVM IR. 课程实验可以自学生成φ指令的算法, 也可以直接写load store指令 (不开优化时生成的代码).</p>
-</li>
-<li>
-<p>简单的实验讲解:</p>
-<ol>
-<li>build对象 - 构建器 <code>  LLVMBuilderRef builder = LLVMCreateBuilderInContext(context);</code></li>
-<li>用构建器构建各种东西</li>
-<li><a target="_blank" rel="noopener" href="https://github.com/courses-at-nju-by-hfwei/2024-compilers-coding/blob/main/src/main/java/llvm/factorial/Factorial1.java">https://github.com/courses-at-nju-by-hfwei/2024-compilers-coding/blob/main/src/main/java/llvm/factorial/Factorial1.java</a></li>
-</ol>
-</li>
-<li>
-<p>llvm官方给出的一种小语言Kaleidoscope的编译器前端:</p>
-<p><a target="_blank" rel="noopener" href="https://llvm.org/docs/tutorial/">https://llvm.org/docs/tutorial/</a></p>
-<p><a target="_blank" rel="noopener" href="https://github.com/courses-at-nju-by-hfwei/kaleidoscope-in-java">https://github.com/courses-at-nju-by-hfwei/kaleidoscope-in-java</a> (java版本的教程)</p>
-</li>
-</ol>
-<h2 id="11-ir-expr">11: ir-expr</h2>
-<ol>
-<li>
-<p>中间代码生成 - 表达式翻译</p>
-</li>
-<li>
-<p>综合属性 <code>E.code</code>: 中间代码</p>
-</li>
-<li>
-<p>综合属性 <code>E.addr</code>: <strong>变量名 (包括临时变量)、常量</strong>    (龙书上这样叫变量)</p>
-</li>
-<li>
-<p>利用E.code和E.addr生成中间代码: (top就是当前作用域的符号表)</p>
-<p><img src="https://box.nju.edu.cn/f/1155ffce45624c17bcab/?dl=1" alt=""></p>
-</li>
-<li>
-<p>数组引用的中间代码翻译:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">2</span>][<span class="number">3</span>]; </span><br></pre></td></tr></table></figure>
-<p>需要计算<code>a[2][3]</code>相对于数组基地址 a 的<strong>偏移地址</strong>.</p>
-<p>width既是继承属性又是综合属性, 4字节继承自int, 加上数组引用时综合出新的width.</p>
-<p><img src="https://box.nju.edu.cn/f/e286f2195d974632adc1/?dl=1" alt=""></p>
-</li>
-<li>
-<p>在已声明a的类型为<code>int a[2][3];</code>的前提下,  实现翻译数组访问 <code>a[i][j]</code>: (手写一遍更易理解!)</p>
-<p>a</p>
-<p>-&gt; a[i]      宽度 (width) 为12字节 (计算方式见上一张图)</p>
-<p>-&gt; a[i][j]</p>
-<p>语义规则: (同时还用了上一张图里的 <code>.width</code> 属性)</p>
-<p><img src="https://chendingya.github.io/2023/04/04/23-Compilers/ch12-ir-expr-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BF%BB%E8%AF%91/image-20230526173312021.png" alt=""></p>
-<p>形成<strong>注释语法树</strong>:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c + a[i][j]</span><br></pre></td></tr></table></figure>
-<p><img src="https://chendingya.github.io/2023/04/04/23-Compilers/ch12-ir-expr-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BF%BB%E8%AF%91/image-20230526173353737.png" alt=""></p>
-</li>
-<li>
-<p>llvm对于数组访问的实现:</p>
-<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230221083640233.webp" alt=""></p>
-</li>
-<li>
-<p>使用alloca为数组分配内存空间, <code>[2 x [3 x i32]]</code> 几乎就是源码的直译.</p>
-</li>
-<li>
-<p>而取数组里的内容, 用到了GEP指令.</p>
-</li>
-<li>
-<p>GEP指令 (用于访问聚合类型, 如数组, 结构体 … ; 是用来操作指针的, 不是操作内存)</p>
-</li>
-</ol>
-<p>GEP provides a way to access arrays and manipulate pointers</p>
-<ol start="11">
-<li>
-<p>getelementptr</p>
-<p>&lt;base-type&gt;, &lt;base-type&gt;* , &lt;base-addr&gt;, [i32/i64 &lt;index&gt; ]+</p>
-<p>参数1: 被操作元素的类型</p>
-<p>参数2: 数组的首地址</p>
-<p>参数3: 从数组的首地址开始, 整体地偏移几个被操作元素的内存大小</p>
-<p>参数4: 对数组做一次索引的取值, 可以重复索引多次.</p>
-<p><code>a[1][2]</code></p>
-<p><code>gep [1 x [2 x i32]], [1 x [2 x i32]]* %a, i32 0, i32 %1, i32 %2</code></p>
-</li>
-<li>
-<p>更复杂的是涉及结构体, 以及结构体 / 数组嵌套时的GEP指令生成 (自学)</p>
-</li>
-<li>
-<p>llvm的全局变量实际上都是指针.</p>
-</li>
-<li></li>
-</ol>
-<h2 id="12-ir-control">12: ir-control</h2>
-<ol>
-<li>
-<p>控制流语句的翻译和布尔表达式的翻译:</p>
-<p>(把赋值语句抽象成一个终结符, B表示布尔表达式)</p>
-<p><img src="https://chendingya.github.io/2023/04/05/23-Compilers/ch13-ir-control-%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%9A%84%E7%BF%BB%E8%AF%91/image-20230527114721450.png" alt=""></p>
-</li>
-<li>
-<p>控制流的翻译方案: 1. 简单的方案 - 产生冗余  2. 困难的方案 - 更短, 更高效 (龙书)</p>
-</li>
-<li>
-<p>分工与合作: B生成的代码和S生成的代码如何组合起来?</p>
-</li>
-<li>
-<p>简单方案: 将B的逻辑值算出来 (<strong>B生成的代码</strong>) , 并保存到临时变量t1里. 然后利用br指令根据t1的真假跳转到B.true和B.false标签 (<strong>S生成的代码</strong>) .</p>
-</li>
-<li>
-<p>实现顺序: 布尔表达式 - if - while - break - 短路求值</p>
-</li>
-<li>
-<p>相关的产生式:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">grammar Control;</span><br><span class="line"></span><br><span class="line"><span class="meta">@header</span> &#123;</span><br><span class="line"><span class="keyword">package</span> codegen;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prog : stat ;</span><br><span class="line"></span><br><span class="line">stat : ID <span class="string">&#x27;=&#x27;</span> expr <span class="string">&#x27;;&#x27;</span>                      # AssignStat</span><br><span class="line">     | <span class="string">&#x27;if&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> ifStat = stat <span class="string">&#x27;&#125;&#x27;</span> <span class="string">&#x27;else&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> elseStat = stat <span class="string">&#x27;&#125;&#x27;</span> # IfElseStat</span><br><span class="line">     | <span class="string">&#x27;if&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> stat <span class="string">&#x27;&#125;&#x27;</span>       # IfStat</span><br><span class="line">     | <span class="string">&#x27;while&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> stat <span class="string">&#x27;&#125;&#x27;</span>    # WhileStat</span><br><span class="line">     | <span class="string">&#x27;break&#x27;</span> <span class="string">&#x27;;&#x27;</span>                          # BreakStat</span><br><span class="line">     | first = <span class="type">stat</span> <span class="variable">second</span> <span class="operator">=</span> stat           # SeqStat</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line">bool : lhs = <span class="type">expr</span> <span class="variable">op</span> <span class="operator">=</span> (<span class="string">&#x27;&gt;&#x27;</span> | <span class="string">&#x27;&gt;=&#x27;</span> | <span class="string">&#x27;==&#x27;</span>) rhs = expr   # RelExpr</span><br><span class="line">     | op = <span class="string">&#x27;!&#x27;</span> bool                                    # NotExpr</span><br><span class="line">     | lhs = <span class="type">bool</span> <span class="variable">op</span> <span class="operator">=</span> <span class="string">&#x27;&amp;&amp;&#x27;</span> rhs = bool                  # AndExpr</span><br><span class="line">     | lhs = <span class="type">bool</span> <span class="variable">op</span> <span class="operator">=</span> <span class="string">&#x27;||&#x27;</span> rhs = bool                  # OrExpr</span><br><span class="line">     | <span class="string">&#x27;true&#x27;</span>                                           # TrueExpr</span><br><span class="line">     | <span class="string">&#x27;false&#x27;</span>                                          # FalseExpr</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Section 6.4.1: grammar for expressions</span></span><br><span class="line"><span class="comment"> *   (array decl and references are not included yet)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">expr : <span class="string">&#x27;-&#x27;</span> expr         # NegExpr</span><br><span class="line">     | expr <span class="string">&#x27;*&#x27;</span> expr    # MultExpr</span><br><span class="line">     | expr <span class="string">&#x27;+&#x27;</span> expr    # ADDExpr</span><br><span class="line">     | <span class="string">&#x27;(&#x27;</span> expr <span class="string">&#x27;)&#x27;</span>     # ParenExpr</span><br><span class="line">     | ID               # IdExpr</span><br><span class="line">     | INT              # IntExpr</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line">GT : <span class="string">&#x27;&gt;&#x27;</span> ;</span><br><span class="line">GE : <span class="string">&#x27;&gt;=&#x27;</span> ;</span><br><span class="line">EE : <span class="string">&#x27;==&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">ID : [a-z] ;</span><br><span class="line">INT : [<span class="number">0</span>-<span class="number">9</span>] ;</span><br><span class="line">WS : [ \t\r\n]+ -&gt; skip;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>使用访问者模式生成中间代码: (生成的ir没有行末分号)</p>
-<p>对于具体的 and or 等表达式, 分别地进行visit并返回临时变量.</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CodeGenVisitor</span> <span class="keyword">extends</span> <span class="title class_">ControlBaseVisitor</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="comment">// stat -&gt; ID = expr</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">visitAssignStat</span><span class="params">(ControlParser.AssignStatContext ctx)</span> &#123;</span><br><span class="line">    	<span class="type">String</span> <span class="variable">expr</span> <span class="operator">=</span> visit(ctx.expr());</span><br><span class="line">    	emit(ctx.ID().getText() + <span class="string">&quot; = &quot;</span> + expr);</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  	<span class="comment">// stat -&gt; if (bool) &#123; stat &#125;</span></span><br><span class="line">  	<span class="comment">// if语句</span></span><br><span class="line">  	<span class="meta">@Override</span></span><br><span class="line">  	<span class="keyword">public</span> String <span class="title function_">visitIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">   	 	<span class="type">String</span> <span class="variable">bool</span> <span class="operator">=</span> visit(ctx.bool());</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//生成label</span></span><br><span class="line">    	<span class="type">String</span> <span class="variable">trueLabel</span> <span class="operator">=</span> getNewLabel(<span class="string">&quot;b.true&quot;</span>);</span><br><span class="line">    	<span class="type">String</span> <span class="variable">falseLabel</span> <span class="operator">=</span> getNewLabel(<span class="string">&quot;b.false&quot;</span>);</span><br><span class="line">      	<span class="comment">//选择跳转的label</span></span><br><span class="line">    	emit(<span class="string">&quot;br &quot;</span> + bool + <span class="string">&quot; &quot;</span> + trueLabel + <span class="string">&quot; &quot;</span> + falseLabel);</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//为真</span></span><br><span class="line">    	emitLabel(trueLabel);</span><br><span class="line">    	visit(ctx.stat());</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//直接跳到false</span></span><br><span class="line">    	emitLabel(falseLabel);</span><br><span class="line"></span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  	&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>翻译break语句: 如果进入了一层while循环, 那么就将这一层的对应的false标签压栈, 退出循环体时, 就弹栈. <code>break</code>语句只要peek一下栈顶然后 <code>br</code> 跳转一下就行.</p>
-</li>
-<li>
-<p>翻译continue语句: 类似break, 应该将循环入口压栈, 退出时弹栈, <code>continue</code>语句peek栈顶跳转到最内层循环入口.</p>
-</li>
-<li>
-<p>实现布尔表达式的短路求值:</p>
-<p>(思路: 以<code>and</code>为例, <code>B1 and B2</code>, 如果B1为false, 那么直接跳转到false目标, 不访问B2)</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bool -&gt; lhs = bool &amp;&amp; rhs = bool</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">visitAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    <span class="comment">// short-circuit version</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">lhs</span> <span class="operator">=</span> visit(ctx.lhs);</span><br><span class="line">    </span><br><span class="line">    emitCode(<span class="string">&quot;br &quot;</span> + lhs + <span class="string">&quot; &quot;</span> + trueLabel + <span class="string">&quot; &quot;</span> + falseLabel);</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">temp</span> <span class="operator">=</span> getNewTemp();</span><br><span class="line"></span><br><span class="line">    emitLabel(trueLabel); <span class="comment">// trueLabel:</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">rhs</span> <span class="operator">=</span> visit(ctx.rhs);</span><br><span class="line">    emitCode(temp + <span class="string">&quot; = &quot;</span> + rhs);</span><br><span class="line">    emitCode(<span class="string">&quot;br &quot;</span> + endLabel);</span><br><span class="line"></span><br><span class="line">    emitLabel(falseLabel); <span class="comment">// falseLabel: </span></span><br><span class="line">    emitCode(temp + <span class="string">&quot; = false&quot;</span>);</span><br><span class="line"></span><br><span class="line">    emitLabel(endLabel); <span class="comment">// endLabel: </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>之前的方案有冗余: <code>t1 = true</code> 可以直接常量替换, 并存在冗余的多级跳转.</p>
-</li>
-<li>
-<p>复杂方案: 减少冗余的跳转路径, 生成更短, 更高效的代码.</p>
-</li>
-<li>
-<p>直接用布尔表达式改变控制流, 无需计算最终逻辑值. <strong>从父节点获取<em>更具体</em>的跳转目标, 缩短跳转路径.</strong></p>
-</li>
-<li>
-<p>语义规则: (根据<strong>继承下来的跳转目标</strong>跳转)</p>
-<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230602165059117.png" alt=""></p>
-</li>
-<li>
-<p>重点在于根据if / while 的语义选择不同的翻译方案, 不同翻译方案的关键在于3个属性 <code>B.true</code> /<code>B.false</code> / <code>S.next</code> 如何取值. (根据语义确定取值, 再根据取值分配到具体的语义规则处理)</p>
-</li>
-<li>
-<p>顺序语句:</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">S -&gt; S1 S2</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S1.next = newlabel()</span><br><span class="line">S2.next = S.next</span><br><span class="line">S.code = S1.code || label(S1.next) || S2.code </span><br></pre></td></tr></table></figure>
-<p>为什么要在S1后面也加标签, 因为S1可能是if / while 语句, 需要有出口, 必须考虑它们需要出口的情况.  当然, 这种方式可能会引入多余的标签. (容易使用Basic Block优化)</p>
-</li>
-<li>
-<p>布尔表达式的产生式和语义规则:</p>
-<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622141759361.png" alt=""></p>
-<p>这里每一个布尔表达式翻译后会直接<strong>生成跳转到目标位置</strong>的代码, 最终归结到 <code>true</code> / <code>false</code> 字面值 或者 表达式比较 (<code>E rel E</code>) .</p>
-<p>(<strong>布尔表达式</strong> 的 2个作用 : 1. <strong>布尔值</strong> 2. <strong>控制流跳转</strong>)</p>
-<p>至于B.true和B.false怎么来, 见上一点S的语义规则, 这2个属性是继承属性, 从S继承而来.</p>
-</li>
-<li>
-<p>如果我们就只想单纯计算布尔表达式的值而不用它作跳转呢? 龙书6.6.6节: 分成2个函数 –  <code>jump()</code> 专门用于产生控制流跳转代码, <code>rvalue()</code> 专门用于生成求值 (并将值存入临时变量) 的代码, 并在不同的情景下选择仅使用 rvalue 还是2个都使用.</p>
-</li>
-<li>
-<p>短路求值: 上图的 and 和 or 运算的语义规则都是短路求值的. 以 <code>or</code> 为例:</p>
-<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622142051115.png" alt=""></p>
-</li>
-<li>
-<p>一个综合的例子:</p>
-<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622142430258.png" alt=""></p>
-<p>翻译结果:</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">100</span> <span class="keyword">goto</span> L2</span><br><span class="line">    <span class="keyword">goto</span> L3</span><br><span class="line">L3: <span class="keyword">if</span> x &gt; <span class="number">200</span> <span class="keyword">goto</span> L4</span><br><span class="line">    <span class="keyword">goto</span> L1</span><br><span class="line">L4: <span class="keyword">if</span> x != y <span class="keyword">goto</span> L2</span><br><span class="line">    <span class="keyword">goto</span> L1</span><br><span class="line">L2: x = <span class="number">0</span></span><br><span class="line">L1: </span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>使用antlr4的实现 (使用Listenner) :</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterWhileStat</span><span class="params">(ControlParser.WhileStatContext ctx)</span> &#123;</span><br><span class="line">    beginLabel.put(ctx, getNewLabel() + <span class="string">&quot;begin&quot;</span>);</span><br><span class="line"></span><br><span class="line">    trueLabel.put(ctx.bool(), getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.bool(), nextLabel.get(ctx));</span><br><span class="line">    nextLabel.put(ctx.stat(), beginLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitWhileStat</span><span class="params">(ControlParser.WhileStatContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s:%n%s%n%s:%n%s%n%s&quot;</span>,</span><br><span class="line">        <span class="comment">//对着规则一行一行翻译</span></span><br><span class="line">        beginLabel.get(ctx),</span><br><span class="line">        codeProperty.get(ctx.bool()),</span><br><span class="line">        trueLabel.get(ctx.bool()),</span><br><span class="line">        codeProperty.get(ctx.stat()),</span><br><span class="line">        <span class="string">&quot;goto &quot;</span> + beginLabel.get(ctx));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">    trueLabel.put(ctx.bool(), getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.bool(), nextLabel.get(ctx));</span><br><span class="line">    nextLabel.put(ctx.stat(), nextLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s%n%s:%n%s&quot;</span>,</span><br><span class="line">        codeProperty.get(ctx.bool()),</span><br><span class="line">        trueLabel.get(ctx.bool()),</span><br><span class="line">        codeProperty.get(ctx.stat()));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    trueLabel.put(ctx.lhs, getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.lhs, falseLabel.get(ctx));</span><br><span class="line"></span><br><span class="line">    trueLabel.put(ctx.rhs, trueLabel.get(ctx));</span><br><span class="line">    falseLabel.put(ctx.rhs, falseLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s%n%s:%n%s&quot;</span>,</span><br><span class="line">        codeProperty.get(ctx.lhs),</span><br><span class="line">        trueLabel.get(ctx.lhs),</span><br><span class="line">        codeProperty.get(ctx.rhs));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>现在翻译的结果是只产生标签, 而不是真实的地址. 真实世界的编译器 (如<code>javac</code>) 真的会用这种方案吗? – 下节课.</p>
-</li>
-<li></li>
-</ol>
-<h2 id="13-ir-backpatch">13: ir-backpatch</h2>
-<ol>
-<li>
-<p>上一节的翻译方案: 生成的是标签而不是地址 / 相对地址. (出于效率考虑, 希望一次扫描就能获得地址)</p>
-</li>
-<li>
-<p>地址回填技术 (Backpatching) :</p>
-<p>Backpatching is a technique used in compiler design to update previously generated code with the correct target addresses or labels. It helps establish the connections between control flow constructs, such as conditionals and loops, by setting the appropriate target addresses <strong>during code generation</strong>. (只进行一趟扫描)</p>
-</li>
-<li>
-<p>先假设指令大小都是1, 那么地址就等于行号. 事实上, 一条指令可能占有多个字节, 如某条指令编号为3，占据了三个字节，下一个指令编号为6. 事实上, 接下来介绍的算法也很容易改成<strong>一条指令占据多个字节</strong>的版本.</p>
-</li>
-<li>
-<p>回填 (Backpatching) 技术: 子节点挖坑、祖先节点填坑</p>
-<ul>
-<li>子节点暂时不指定跳转指令的目标地址</li>
-<li>待祖先节点能够确定目标地址时回头填充</li>
-</ul>
-</li>
-<li>
-<p>子节点跳转的目标地址先不填, 而是通过 truelist / falselist 传递给父节点. 父节点通过<strong>综合属性</strong>收集子节点中具有<strong>相同目标</strong>的跳转指令.</p>
-</li>
-<li>
-<p>向上传递的过程中, 需要用到 merge (union) 操作. (向上传递的过程中, true / false 的list属性要么向上层传递了, 要么被填上了)</p>
-</li>
-<li>
-<p>语义规则:</p>
-<p><font color=red><strong>B.falselist</strong></font> 保存所有需要跳转到 false 标签的指令, <font color=green><strong>S.nextlist</strong></font> 保存所有需要跳转到 next 标签的指令 (用于回填)</p>
-<p><font color=lighblue><strong>backpatch</strong></font> 操作表示将跳转的目标位置回填到指令的list里.</p>
-<p><img src="https://box.nju.edu.cn/f/65dab1df8a714ff18526/?dl=1" alt=""></p>
-</li>
-<li>
-<p>则所有的信息流都是自底向上流动, 都是综合属性.</p>
-</li>
-<li>
-<p>布尔表达式的产生式文法:</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622152721058.png" alt=""></p>
-</li>
-<li>
-<p>M的引入是为了获取B2的第一行代码.</p>
-</li>
-<li>
-<p>B -&gt; true  和 B -&gt; false 的翻译方案:</p>
-<ul>
-<li>B.truelist就是一个集合，将所有去往B.true的指令收集起来</li>
-<li>makelist 创建一个list</li>
-<li>nextinstr 是指示下一条指令的全局变量, 每生成一条指令就自增.</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622152852697.png" alt=""></p>
-<p>上面是回填的翻译方案, 下面的是上一节的方案. 可以看出, 二者是相对应的. (理解时建议对照理解)</p>
-</li>
-<li>
-<p>关系表达式的翻译方案:</p>
-<p>原来的 goto B.true 现在将标签空出, 并行号加入truelist即可.</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153252292.png" alt=""></p>
-</li>
-<li>
-<p>取反和括号的翻译方案:</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153519707.png" alt=""></p>
-</li>
-<li>
-<p>与 (&amp;&amp;) 操作的翻译:</p>
-<ul>
-<li>非终结符M的属性 instr 表示 <strong>下一条指令</strong>, 即B2的第一条指令的地址.</li>
-<li>根据短路求值计算出 B 的 truelist 和 falselist.</li>
-<li>如果B1 为 true, 那么B1跳转的目标已经能够知道了 (即B2的第一条指令) , 所以在此时回填 B1.truelist.</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153752740.png" alt=""></p>
-</li>
-<li>
-<p>或 (||) 操作同理.</p>
-</li>
-<li>
-<p>一个例子:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &lt; <span class="number">100</span> || (x &gt; <span class="number">200</span> &amp;&amp; x != y)</span><br></pre></td></tr></table></figure>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622154644961.png" alt=""></p>
-<p>翻译结果: ( _ 的地方待上层节点填充 )</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155316362.png" alt=""></p>
-</li>
-<li>
-<p>控制流语句的翻译方案:</p>
-<ul>
-<li>
-<p>除了之前用到的M, 还额外引入了N.</p>
-</li>
-<li>
-<p>N的作用比M多一点, 除了获取下一条指令之外, 还负责生成一条goto指令.</p>
-</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155336961.png" alt=""></p>
-</li>
-<li>
-<p>if语句的翻译方案:</p>
-<ul>
-<li>生成要跳往 S.next 的指令集合 (S.nextlist), 为 B.falselist 和 S1.nextlist的合并.</li>
-<li>发现B为true的跳转目标已知, 回填 B.truelist.</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155449711.png" alt=""></p>
-</li>
-<li>
-<p>if else 的翻译方案:</p>
-<ul>
-<li>会生成一条 goto 指令 (通过 N)</li>
-<li>S.nextlist 是 S1.nextlist, N.nextlist 和 S2.nextlist 三者的合并. (为什么? 因为N里面有goto语句, 需要回填, 而S1和S2都可能有break语句, 也可能需要回填)</li>
-<li>B为true和B为false的跳转目标都已知, 所以 B.truelist 和 B.falselist 都回填.</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155719893.png" alt=""></p>
-</li>
-<li>
-<p>while 语句的翻译方案:</p>
-<ul>
-<li>会生成一条跳回开头的 goto 语句, 这条goto语句的目标是已经经过的代码, 所以不用回填, 可以直接用M1.instr获取目标地址.</li>
-<li>只有 B.false 会跳到 S.next, 所以 S.nextlist = B.falselist</li>
-<li>B为真 和 S1的下一条指令 的地址都可以确定了, 所以都回填.</li>
-</ul>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155756022.png" alt=""></p>
-</li>
-<li>
-<p>顺序语句: 2条语句 L 和 S 之间要插入M, 是为了如果L里有要跳出的 nextlist, 就可以使用M定位到跳出的位置 (S前面). 这样的做法解决了所有的跳转地址的确定, 并且与上一节所讲的加标签的做法相比, 这样的回填方案不会产生无用标签.</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622160637031.png" alt=""></p>
-</li>
-<li>
-<p>加 {} 和 赋值语句 (A, assign) 的翻译方案:</p>
-<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622160644159.png" alt=""></p>
-</li>
-<li>
-<p>只需要理解回填的思想 <strong>(如何计算和传递几个综合属性, 何时回填 (能确定目标地址时), 何时生成goto指令)</strong> , 并且<strong>会读语义规则</strong>即可. 不需要记忆具体的语义规则.</p>
-</li>
-<li>
-<p>switch语句的翻译 – 使用跳转表 (方便二分查找)</p>
-</li>
-<li></li>
-</ol>
-<h2 id="14-codegen-riscv">14: codegen - riscv</h2>
-<ol>
-<li>
-<p>目标 – 中间代码 -&gt; 汇编语言 (RISCV)</p>
-</li>
-<li>
-<p>目标代码生成的困难 – 指令选择 (LLVM IR 与 目标代码不是一一对应的) / 寄存器分配 / 栈管理问题 (寄存器不够用, 放入栈 / 函数调用) / 目标代码优化</p>
-</li>
-<li>
-<p>RISCV – Reduced Instruction Set Computer V 精简指令集计算机第5代</p>
-</li>
-<li>
-<p>ISA (Instruction Set Architecture) as the Software/Hardware Interface 软件和硬件之间的接口, 为硬件定义了指令集. 数据类型, 寄存器, 基础特性, IO模型 …</p>
-</li>
-<li>
-<p>CISC 复杂 (Complex) 指令集计算机. 可以做2件不同的事情 (如 load + 运算)</p>
-</li>
-<li>
-<p>RISC 与 CISC 的区别:</p>
-<ol>
-<li>RISC指令只能做一件事 (不能同时做load / 运算)</li>
-<li>RISC指令都是定长的 (RISCV32的指令长为 4字节), CISC指令可以是变长的.</li>
-</ol>
-</li>
-<li>
-<p>RISCV是开源指令集, RISCV国际基金会 (包括若干家中国企业)</p>
-</li>
-<li>
-<p>全套大餐 (大而全, 增量式; x86)  菜单 (模块化; RISC-V)</p>
-</li>
-<li>
-<p>RISCV的模块化使得其<strong>易扩展</strong>.</p>
-</li>
-<li>
-<p><em>RISC-V开放架构设计之道</em>, 推荐, 其中除了RISC-V的设计之外, 还讲解了为什么要这样设计.</p>
-</li>
-<li>
-<p>下面将带你入门RISC-V.</p>
-</li>
-<li>
-<p>RISC-V寄存器 (32个, 0号-31号), 除了编号, 每个寄存器还有别名.</p>
-</li>
-<li>
-<p>0号寄存器 zero : 永远是0</p>
-</li>
-<li>
-<p>1号寄存器 ra : return address</p>
-</li>
-<li>
-<p>t0-t6: 临时寄存器</p>
-</li>
-<li>
-<p>pc: 程序计数器</p>
-</li>
-<li>
-<p><code>add.asm</code>: li load immediate 加载立即数</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li t0, 100</span><br><span class="line">li t1. 200</span><br><span class="line">add t2, t0, t1</span><br></pre></td></tr></table></figure>
-<p><code>li</code> 是 RISC-V 里的伪指令, 也就是语法糖. 实际上 <code>li t0, 100</code> 是 <code>addi t0, zero, 100</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li t0, 100</span><br><span class="line">addi t1, t0, 200</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><code>add-sub.asm</code></p>
-<p>f = (g + h) - (i + j)</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">li t0, 0</span><br><span class="line">li t1, 10</span><br><span class="line">add t2, t0, t1</span><br><span class="line"></span><br><span class="line">li t3, 30</span><br><span class="line">li t4, 40</span><br><span class="line">add t5, t3, t4</span><br><span class="line"></span><br><span class="line">sub t6, t2, t5</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><code>output.asm</code></p>
-<p>想要将数值输出, 需要调用合适的系统调用.</p>
-<p>阅读RISC-V手册可知:</p>
-<p>step1: 将设备号加载到a7寄存器中.</p>
-<p>step2: 将参数加载到 a0, a1, a2, a3, fa0, … .(寄存器 a0 的 a 就是 参数的意思)</p>
-<p>step3: 发射一条ecall指令</p>
-<p>step4: 取回返回值</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li t6, -47</span><br><span class="line"># output:</span><br><span class="line">li a7, 1</span><br><span class="line">mv a0, t6</span><br><span class="line">ecall</span><br></pre></td></tr></table></figure>
-<p>mv 也是伪指令, 作用是寄存器赋值.</p>
-<p>(注意, <code>mov</code> 是 intel 格式的, 即 <code>mov</code> <code>dest</code> <code>src</code>)</p>
-</li>
-<li>
-<p><code>data.asm</code></p>
-<p>text段 – 放指令</p>
-<p>data段 – 放数据</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">g: .word 0</span><br><span class="line">h: .word 10</span><br><span class="line">i: .word 30</span><br><span class="line">j: .word 40</span><br><span class="line"></span><br><span class="line">result: .word 0</span><br><span class="line"></span><br><span class="line">msg: .string &quot;The result is :&quot;	#.string会自动在末尾加\0;  .ascii则不会自动在末尾加\0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, g  # la: load address</span><br><span class="line">lw t1, 0(t0) # lw: load word</span><br><span class="line"># lw t1, g</span><br><span class="line"></span><br><span class="line">la t0, h</span><br><span class="line">lw t2, 0(t0)</span><br><span class="line">add t3, t1, t2</span><br><span class="line"></span><br><span class="line">la t0, i</span><br><span class="line">lw t4, 0(t0)</span><br><span class="line"></span><br><span class="line">la t0, j</span><br><span class="line">lw t5, 0(t0)</span><br><span class="line">add t6, t4, t5</span><br><span class="line"></span><br><span class="line">sub t6, t3, t6</span><br><span class="line"></span><br><span class="line">la t0, result</span><br><span class="line">sw t6, 0(t0)</span><br><span class="line"></span><br><span class="line">li a7, 4 # 4号调用打印字符串</span><br><span class="line">la a0, msg	# a0是参数, 加载字符串的首地址即可</span><br><span class="line">ecall</span><br><span class="line"></span><br><span class="line">li a7, 1</span><br><span class="line">mv a0, t6</span><br><span class="line">ecall</span><br></pre></td></tr></table></figure>
-<p>g是一个标签, 表示存储 数据 <code>0</code> 的那一段内存的首地址. <code>.word</code> 表示长度4字节. <code>.string</code> 表示是字符串.</p>
-<p><code>la</code> 伪指令, 获得标签指示的内存的首地址</p>
-<p><code>lw</code> 加载一个字.</p>
-<p><code>0(t0)</code> 是RISC-V的寻址模式, 基址加偏移量.</p>
-</li>
-<li>
-<p><code>array.asm</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">numbers: .word -30, 30, -20, 20, -10, 10, 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, numbers</span><br><span class="line">lw t1, 12(t0)  # numbers[3]</span><br><span class="line">addi t1, t1, 80</span><br><span class="line">sw t1, 12(t0)</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p><code>branch-max.asm</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># c = max(a, b)</span><br><span class="line"></span><br><span class="line">.data</span><br><span class="line">a: .word 100</span><br><span class="line">b: .word 200</span><br><span class="line">c: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">lw t0, a</span><br><span class="line">lw t1, b</span><br><span class="line"></span><br><span class="line">bge t0, t1, greater_equal # br if t0 &gt;= t1</span><br><span class="line">mv t2, t1</span><br><span class="line">j end</span><br><span class="line"></span><br><span class="line">greater_equal:</span><br><span class="line">mv t2, t0</span><br><span class="line"></span><br><span class="line">end:</span><br><span class="line">la t3, c</span><br><span class="line">sw t2, 0(t3)</span><br></pre></td></tr></table></figure>
-<p><code>bge</code>: 伪指令, &lt;= , 跳转</p>
-<p><code>j</code> : 伪指令, 无条件跳转</p>
-</li>
-<li>
-<p><code>for.asm</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># 求数组中所有 正数 / 负数 之和</span><br><span class="line">.data</span><br><span class="line">numbers: .word -30, 30, -20, 20, -10, 10, 0</span><br><span class="line">size: .word 7</span><br><span class="line"></span><br><span class="line">positive_sum: .word 0</span><br><span class="line">negative_sum: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, numbers</span><br><span class="line">lw t1, size</span><br><span class="line"></span><br><span class="line">mv t2, zero # counter: i = 0</span><br><span class="line"></span><br><span class="line">li t3, 0 	# positive_number</span><br><span class="line">li t4, 0	# negative_number</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">	bge t2, t1, end_loop</span><br><span class="line">	# numbers[i]</span><br><span class="line">	slli t5, t2, 2 # 即: mul t5, t2, 4</span><br><span class="line">	add t5, t0, t5</span><br><span class="line">	lw t5, 0(t5)  # numbers[i]</span><br><span class="line">	</span><br><span class="line">	addi t2, t2, 1</span><br><span class="line">	</span><br><span class="line">	bltz t5, negative  # br if less than zero</span><br><span class="line">	# positive</span><br><span class="line">	add t3, t3, t5</span><br><span class="line">	j loop</span><br><span class="line">	</span><br><span class="line">negative:</span><br><span class="line">	add t4, t4, t5</span><br><span class="line">	j loop</span><br><span class="line">	</span><br><span class="line">end_loop:</span><br><span class="line">	la t5, positive_sum</span><br><span class="line">	sw t3, 0(t5)</span><br><span class="line">	la t5, negative_sum</span><br><span class="line">	sw t4, 0(t5)</span><br></pre></td></tr></table></figure>
-<p><code>slli</code> shift logical left immediate 逻辑左移一个立即数</p>
-</li>
-<li>
-<p>riscv函数实现:</p>
-<p><code>max.asm</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">max_result: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">.globl main # the program entry</span><br><span class="line"></span><br><span class="line">max:</span><br><span class="line"># (3) get arguments (natrually)</span><br><span class="line"></span><br><span class="line"># (4) computing</span><br><span class="line">blt a0, a1, smaller</span><br><span class="line">j end_max</span><br><span class="line"></span><br><span class="line">smaller:</span><br><span class="line">mv a0, a1 	# 约定: a0, a1用作返回值寄存器.</span><br><span class="line"></span><br><span class="line">end_max:</span><br><span class="line">ret</span><br><span class="line">#jr ra</span><br><span class="line">#jalr zero 0(ra)  # jalr: jump and link register, link =&gt; save (pc + 4) in register &lt;zero&gt;</span><br><span class="line"></span><br><span class="line">.data</span><br><span class="line">a: .word 100 # 定义全局数据变量</span><br><span class="line">b: .word 200</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">main:</span><br><span class="line"># (1) preparing the arguments (a0, a1, ..., a7), 传参</span><br><span class="line">lw a0, a</span><br><span class="line">lw a1, b</span><br><span class="line"></span><br><span class="line"># (2) call the max function</span><br><span class="line">call max # jal max</span><br><span class="line">#jal ra, max   # jal: jump and link (jump: ra &lt;- pc + 4; pc &lt;- &amp;max)</span><br><span class="line"></span><br><span class="line"># (5) get return value</span><br><span class="line">sw a0, max_result, t0</span><br></pre></td></tr></table></figure>
-</li>
-<li>
-<p>需要用到栈的例子:</p>
-<p>(递归) <code>fact.asm</code></p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">.text</span><br><span class="line">.globl main</span><br><span class="line"></span><br><span class="line">factorial: </span><br><span class="line">beqz a0 base_case:</span><br><span class="line"></span><br><span class="line">addi sp, sp, -8</span><br><span class="line">sw a0, 4(sp)</span><br><span class="line">sw ra, 0(sp) # it&#x27;s key to save ra if call chain&#x27;s length &gt; 1</span><br><span class="line"></span><br><span class="line"># n &gt; 0: n * factorial(n - 1)</span><br><span class="line">addi a0, a0, -1 # no subi</span><br><span class="line">call factorial # get value -- factorial(n - 1) in a0</span><br><span class="line">mv t0, a0      # save ret value in t0</span><br><span class="line"></span><br><span class="line">lw a0, 4(sp)</span><br><span class="line">lw ra, 0(sp)</span><br><span class="line">addi, sp, sp, 8</span><br><span class="line"></span><br><span class="line">mul a0, a0, t0</span><br><span class="line">j end</span><br><span class="line"></span><br><span class="line">base_case:</span><br><span class="line">	li a0, 1</span><br><span class="line"></span><br><span class="line">end:	</span><br><span class="line">	ret</span><br><span class="line"></span><br><span class="line">## main ##</span><br><span class="line">.data</span><br><span class="line">n: .word 10 </span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">main:</span><br><span class="line">lw a0, n</span><br><span class="line">call factorial</span><br></pre></td></tr></table></figure>
-<p>一般栈的空间的布局如下:</p>
-<p>从高到低:</p>
-<p>保存参数寄存器</p>
-<p>保存返回地址寄存器 (ra)</p>
-</li>
-<li>
-<p>复杂的例子: 中序遍历</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> &#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> *<span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> *<span class="title">right</span>;</span></span><br><span class="line">    <span class="type">long</span> value;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">long</span> <span class="title function_">tree_sum</span><span class="params">(<span class="type">const</span> <span class="keyword">struct</span> tree_node *node)</span> &#123;</span><br><span class="line">    <span class="type">long</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (node) &#123;</span><br><span class="line">        result += tree_sum(node-&gt;left);</span><br><span class="line">        result += node-&gt;value;</span><br><span class="line">        node = node-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> <span class="title">t</span> =</span> &#123; <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>&#125;;</span><br><span class="line">    <span class="type">long</span> sum = tree_sum(&amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum = %ld&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">tree_sum:                               # @tree_sum</span><br><span class="line">        addi    sp, sp, -16</span><br><span class="line">        sw      ra, 12(sp)                      # 4-byte Folded Spill</span><br><span class="line">        sw      s0, 8(sp)                       # 4-byte Folded Spill</span><br><span class="line">        sw      s1, 4(sp)                       # 4-byte Folded Spill</span><br><span class="line">        beqz    a0, .LBB0_3</span><br><span class="line">        mv      s0, a0</span><br><span class="line">        li      s1, 0</span><br><span class="line">.LBB0_2:                                # =&gt;This Inner Loop Header: Depth=1</span><br><span class="line">        lw      a0, 0(s0)</span><br><span class="line">        call    tree_sum</span><br><span class="line">        lw      a1, 8(s0)</span><br><span class="line">        lw      s0, 4(s0)</span><br><span class="line">        add     a1, a1, s1</span><br><span class="line">        add      s1, a0, a1</span><br><span class="line">        bnez    s0, .LBB0_2</span><br><span class="line">        j       .LBB0_4</span><br><span class="line">.LBB0_3:</span><br><span class="line">        li      s1, 0</span><br><span class="line">.LBB0_4:</span><br><span class="line">        mv      a0, s1</span><br><span class="line">        lw      ra, 12(sp)                      # 4-byte Folded Reload</span><br><span class="line">        lw      s0, 8(sp)                       # 4-byte Folded Reload</span><br><span class="line">        lw      s1, 4(sp)                       # 4-byte Folded Reload</span><br><span class="line">        addi    sp, sp, 16</span><br><span class="line">        ret</span><br><span class="line">main:                                   # @main</span><br><span class="line">        addi    sp, sp, -16</span><br><span class="line">        sw      ra, 12(sp)                      # 4-byte Folded Spill</span><br><span class="line">        lui     a0, %hi(.L__const.main.t)</span><br><span class="line">        lw      a1, %lo(.L__const.main.t)(a0)</span><br><span class="line">        addi    a0, a0, %lo(.L__const.main.t)</span><br><span class="line">        lw      a2, 8(a0)</span><br><span class="line">        lw      a0, 4(a0)</span><br><span class="line">        sw      a1, 0(sp)</span><br><span class="line">        sw      a2, 8(sp)</span><br><span class="line">        sw      a0, 4(sp)</span><br><span class="line">        mv      a0, sp</span><br><span class="line">        call    tree_sum</span><br><span class="line">        mv      a1, a0</span><br><span class="line">        lui     a0, %hi(.L.str)</span><br><span class="line">        addi    a0, a0, %lo(.L.str)</span><br><span class="line">        call    printf</span><br><span class="line">        li      a0, 0</span><br><span class="line">        lw      ra, 12(sp)                      # 4-byte Folded Reload</span><br><span class="line">        addi    sp, sp, 16</span><br><span class="line">        ret</span><br><span class="line">.L__const.main.t:</span><br><span class="line">        .word   0</span><br><span class="line">        .word   0</span><br><span class="line">        .word   3                               # 0x3</span><br><span class="line"></span><br><span class="line">.L.str:</span><br><span class="line">        .asciz  &quot;sum = %ld&quot;</span><br></pre></td></tr></table></figure>
-</li>
-<li></li>
-</ol>
-<h2 id="15-parser-lr-0">15: parser-lr(0)</h2>
+<h1>parser-lr(0)</h1>
 <ol>
 <li>
 <p>回顾: <strong>LL(1)</strong> 语法分析器</p>
@@ -2148,9 +1283,8 @@
 <p>自动机: 向前走  &lt;-&gt; 栈: 移入</p>
 <p>自动机: 回溯      &lt;-&gt; 栈: 归约</p>
 </li>
-<li></li>
 </ol>
-<h2 id="16-parser-lr-1">16: parser-lr(1)</h2>
+<h1>parser-lr(1)</h1>
 <ol>
 <li>
 <p>LR(0) 语法分析 – 可能产生 <strong>移入-归约冲突</strong></p>
@@ -2252,11 +1386,769 @@
 </li>
 <li></li>
 </ol>
-<h2 id="17-codegen-isel">17: codegen-isel</h2>
+<h1>semantics - symtable</h1>
+<ol>
+<li>
+<p>语义分析的任务很分散</p>
+<ol>
+<li>
+<p>类型检查 (<strong>Type Checking</strong>)</p>
+<ul>
+<li>强类型语言 (如Java) – 类型检查更严格 (弱类型语言的类型检查 不严格 就像开玩笑一样, 如 while(1) – C语言 ); 动态类型语言 (运行时做类型检查) / 静态类型语言 (编译期做类型检查)  (<em>类型论 – Type Theory</em>)</li>
+</ul>
+</li>
+<li>
+<p>符号检查 (Symbol Checking)</p>
+<ul>
+<li>符号(Symbols): 变量名, 函数名, 类型名, 标签名, …</li>
+<li>符号检查包括: 未定义的符号 / 重复定义 / 定义类型不匹配 (变量定义当函数名用)</li>
+</ul>
+<p>…</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Definition (符号表 (Symbol Table))</p>
+<p>符号表是用于保存各种信息的数据结构.</p>
+</li>
+<li>
+<p>领域特定语言 (DSL) 通常只有单作用域 (全局作用域)</p>
+</li>
+<li>
+<p>通用程序设计语言 (GPL) 通常需要嵌套作用域.</p>
+</li>
+<li>
+<p>符号的作用域:</p>
+<p>不同的作用域通过数据结构维护</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140342843.webp" alt=""></p>
+<p>在此我们认为作用域有3类:</p>
+<ol>
+<li>全局作用域</li>
+<li>函数作用域 (其实这个定义假设了函数的形参是一个单独的作用域, 而不是和函数体合并为同一个作用域)</li>
+<li>局部作用域</li>
+</ol>
+</li>
+<li>
+<p>设计作用域的接口:</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140512430.webp" alt=""></p>
+<p>局部作用域的标识采用父作用域来标识.</p>
+</li>
+<li>
+<p>通过currentScope表示当前的作用域.</p>
+</li>
+<li>
+<p>通过给语法分析的分支打Tag的方式进行监听进入和退出某个语法产生式的一个分支. (如: <strong># assign</strong>) 这是一个高效的方式.</p>
+</li>
+<li>
+<p>类型符号 (如 int, void ) 也要作为符号加入到符号表里.</p>
+</li>
+<li>
+<p>实现scope树的方法很简单, 利用监听器, 每监听到进入scope, 就将其的EnclosingScope设为currentScope, 进入scope的时机就是看到函数定义(FuncDecl) 或Block (局部作用域) . (索引上一个作用域便于解析符号和回退. )</p>
+</li>
+<li>
+<p>提供的类体系参考设计(并不很好):</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220140908716.webp" alt=""></p>
+</li>
+<li>
+<p>Symbol应该是一个由符号名索引相关信息的HashMap.</p>
+</li>
+<li>
+<p>加入结构体, 结构体成员的访问, 其实也要检查符号是否定义过. 那么就多出了一个结构体成员的作用域, 甚至还有嵌套结构体.</p>
+</li>
+<li>
+<p>符号表无论从概念上还是实践上都比较简单, 下面要讲的类型检查, 则更复杂些. (加入了数组 / 指针类型的语言则更加复杂)</p>
+</li>
+<li></li>
+</ol>
+<h1>semantics - ag</h1>
+<ol>
+<li>
+<p>语义分析 - 用一个新的文法实现语义分析, 原来的上下文无关文法不够用了.</p>
+</li>
+<li>
+<p>有一个人提出了加入了类型检查 / 符号检查的文法 – 属性文法. 这个人就是knuth.</p>
+</li>
+<li>
+<p>属性文法 (Attribute Grammar) : 为上下文无关文法赋予语义.</p>
+</li>
+<li>
+<p>父节点的属性仅仅依赖于子节点的属性 – 综合属性 (synthesized) 例如: SUM: NUM + NUM</p>
+</li>
+<li>
+<p>子节点要从父节点继承一些信息 – 继承属性 (inherited)</p>
+</li>
+<li>
+<p>knuth在论文中提出, 只要是基于综合属性和继承属性的属性, <strong>都可以高效计算出来</strong>.</p>
+</li>
+<li>
+<p>任务: 利用属性文法编写交互式计算器.</p>
+</li>
+<li>
+<p>原来我们利用监听器模式实现的交互式计算器实际是offline 的方式计算属性值, 已经构建好语法树了, 关键在于在DFS的合适时机做合适事情.</p>
+</li>
+<li>
+<p>在语法分析中实现属性文法:</p>
+<p>B -&gt; X**{a}**Y</p>
+<p>语义动作嵌入的位置决定了何时执行该动作</p>
+<p><strong>基本思想</strong>: 一个动作在它<strong>左边</strong>的所有文法符号都<strong>处理完</strong>之后立刻执行</p>
+</li>
+<li>
+<p>计算器的实现:</p>
+<p>给expr起别名:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">expr : l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr</span><br></pre></td></tr></table></figure>
+<p>这样就可以使用l和r索引对应位置的语法单元.</p>
+</li>
+<li>
+<p>添加属性: (给规则加了返回值 <strong>returns</strong> 之后, 我们后续就可以用val来获取这一属性值.)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">@header &#123;</span><br><span class="line">	package ag.expr;</span><br><span class="line">	import java.util.*;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">@parser::members &#123;</span><br><span class="line">	Map&lt;String, Integer&gt; memory = new HashMap&lt;&gt;();</span><br><span class="line">	int eval(int l, int r, int op) &#123;...&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">expr returns [int val]</span><br><span class="line">	: l = expr op = (&#x27;*&#x27; | &#x27;/&#x27;) r = expr &#123; $val = $l.val $r.val; System.out.println($val); &#125;</span><br><span class="line">	| ...</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
+<ol>
+<li>
+<p>插入一段java代码以告诉antlr如何计算属性值. 要在开头使用一个$符来引用对象.</p>
+</li>
+<li>
+<p>插入的代码放在了产生式的最右端, 这不是为了好看, 而是说明<strong>前面所有操作执行过之后</strong>, 再执行花括号里的代码.</p>
+</li>
+<li>
+<p>antlr4允许你在members里面填任何java代码. (@parser限定了只允许在生成的parser文件中插入代码, 而非全部)</p>
+</li>
+</ol>
+</li>
+<li>
+<p>例子2: <strong>类型声明</strong>文法举例.</p>
+</li>
+<li>
+<p>多了2种依赖: 1. 右兄弟对于左兄弟的属性值的依赖 2. 子节点对于父节点属性值的依赖.</p>
+</li>
+<li>
+<p>如何支持上述2种依赖? 把属性值作为参数, 通过递归调用的方式把信息传递下去.</p>
+</li>
+<li>
+<p>antlr对于给规则加参数的支持:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">vars[String typeStr]</span><br><span class="line">	: vars[$typeStr] &#x27;,&#x27; ID</span><br><span class="line">		 &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	| ID &#123; System.out.println($ID.text + &quot;:&quot; + $typeStr); &#125;</span><br><span class="line">	;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>语法制导的定义 (SDD, Syntax-Directed Definition)</p>
+<p>SDD 是一个上下文无关文法和属性及规则的结合.</p>
+<p>每个文法符号都可以关联多个属性;</p>
+<p>每个产生式都可以关联一组规则.</p>
+</li>
+<li>
+<p>SDD唯一确定了语法分析树上每个非终结符节点的属性值.</p>
+</li>
+<li>
+<p>SDD没有规定以什么方式, 什么顺序计算这些属性值.</p>
+</li>
+<li>
+<p>综合属性 (Synthesized Attribute) 节点N上的综合属性只能通过N的子节点或N本身的属性来定义.</p>
+</li>
+<li>
+<p><em>S属性定义</em>: 如果一个SDD的每个属性都是综合属性, 则它是S属性定义.</p>
+<p>S属性定义的依赖图刻画了属性实例之间自底向上的信息流动.</p>
+<p>此类属性值的计算可以在 <em>自顶向下的LL语法分析</em> <strong>过程中</strong>实现.</p>
+</li>
+<li>
+<p>**依赖图: ** 用于确定一棵给定语法分析树中各个属性实例之间的依赖关系.</p>
+</li>
+<li>
+<p>继承属性 (Inherited Attribute) 节点N上的继承属性只能通过N的父节点, N本身和N的兄弟节点上的属性来定义.</p>
+</li>
+<li>
+<p>继承信息流: 从上至下, 从左至右 (因为语法分析树是这样构建的)</p>
+</li>
+<li>
+<p><em>L属性定义</em> :</p>
+<p>如果一个SDD的每个属性</p>
+<p>(1) 要么是综合属性,</p>
+<p>(2) 要么是继承属性, 但是它的规则满足以下限制:</p>
+<p>​	对于产生式 A -&gt; X~1~X~2~…X~n~ 及其对应规则定义的继承属性 X~i~.a, 则这个规则只能使用</p>
+<p>​	(a) 和 <strong>产生式头 A</strong> 关联的继承属性</p>
+<p>​	(b) 位于X~i~ 左边的文法符号实例 X~1~ X~2~ … X~i-1~ 相关的继承属性或综合属性</p>
+<p>​	© 和这个X~i~ 的实例本身相关的继承属性或综合属性, 但是在由这个X~i~ 的全部属性组成的依赖图中不存在环.</p>
+<p>则它是 L属性定义.</p>
+</li>
+<li>
+<p>语义分析时, 先自左至右自上至下构建一遍, 完成<strong>继承属性</strong>; 再自下至上走一遍, 完成<strong>综合属性</strong>. (2趟)</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220210256289.webp" alt=""></p>
+</li>
+<li>
+<p>例子1: 属性文法计算后缀表达式. (S属性定义 / 只使用综合属性 / 通过返回值传递)</p>
+</li>
+<li>
+<p>例子2: 数组类型解析</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int[2][3]  ( int a[2][3]; )</span><br><span class="line">(2, (3, int))</span><br></pre></td></tr></table></figure>
+<p>绿色框内为<font color=green><strong>继承属性</strong></font></p>
+<p>红色框内为<font color=red><strong>综合属性</strong></font></p>
+<p><img src="https://box.nju.edu.cn/f/a50b437ef26c446697fd/?dl=1" alt=""></p>
+</li>
+<li>
+<p>更复杂的例子: 数组声明 / 数组引用 / 类型检查</p>
+</li>
+<li>
+<p>online 方式: 属性文法; offline : visitor / listener; 第3种: addParseListener</p>
+</li>
+<li>
+<p>例子: <strong>有符号二进制数</strong>文法</p>
+</li>
+<li>
+<p>Definition (语法制导的翻译方案 (Syntax-Directed Translation Scheme; SDT))</p>
+<p><strong>SDT</strong> 是在其产生式体中嵌入<strong>语义动作</strong>的上下文无关文法。</p>
+</li>
+<li>
+<p>SDD规定了一些语义规则, 而SDT采用嵌入语义动作的方式实现这些语义规则, 所以说, SDT是SDD的一种实现.</p>
+</li>
+<li></li>
+</ol>
+<h1>LLVM</h1>
+<ol>
+<li>
+<p>Chris Lattner – llvm项目的发起者. (此外他的贡献有: clang, swift语言, …)</p>
+</li>
+<li>
+<p>llvm本身不是编译器, 而是编译的基础设施, 是一系列工具链. (llvm是模块化可重用的 (modular and reusable) )</p>
+</li>
+<li>
+<p>llvm ir 是一种中间表示, 你只需要把你的语言编译成ir (前端), 就可以在任何平台上用已有的llvm ir的后端编译生成目标代码.</p>
+</li>
+<li>
+<p><strong>“IR 设计的优秀与否决定着整个编译器的好坏”</strong></p>
+</li>
+<li>
+<p>llvm ir: 带类型的, 介于高级程序语言与汇编语言之间的 (LLVM Assembly Language)</p>
+</li>
+<li>
+<p>如何把一个.c文件编译为一个.ll文件? (一个.ll文件叫作一个module, 模块. )</p>
+</li>
+<li>
+<p>一个module包括: 函数 / 全局变量</p>
+</li>
+<li>
+<p>函数 – 有若干个基本块 (BB) 构成.</p>
+</li>
+<li>
+<p>每一个基本块 由若干条指令构成.</p>
+</li>
+<li>
+<p>代码实例:</p>
+</li>
+<li>
+<p>例1: factorial0.c</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">clang -S -emit-llvm -fno-discard-value-names factorial0.c -o f0-opt0.ll -O1 -g0</span><br></pre></td></tr></table></figure>
+<p><code>-emit-llvm</code>: 翻译(发射)成llvm中间代码 (bitcode) , 而不是目标代码.</p>
+<p><code>-S</code>: 翻译成人类可读的llvm ir</p>
+<p><code>-g0</code>: 不生成任何debug信息</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">factorial</span><span class="params">(<span class="type">int</span> val)</span>;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">int</span> argc, <span class="type">char</span> **argv)</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> factorial(<span class="number">2</span>) * <span class="number">7</span> == <span class="number">42</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220220126419.webp" alt=""></p>
+</li>
+<li>
+<p>全局符号 函数名 / 全局变量 -&gt; 命名以<code>@</code>开头;</p>
+<p>局部符号 -&gt; 以 <code>%</code> 开头. (寄存器, 虚拟的, 有无限多, 和真正的物理寄存器无关)</p>
+<p>纯数字 -&gt; 立即数</p>
+</li>
+<li>
+<p><code>declare</code>声明, <code>define</code>定义</p>
+</li>
+<li>
+<p><code>icmp</code> int型数比较.</p>
+</li>
+<li>
+<p>1bit的信息, 如bool型, 就用 <code>i1</code></p>
+</li>
+<li>
+<p>如何把1bit的整数扩展到32位的int? 零扩展!</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%6 = zext i1 %5 to i32</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>这种中间代码是一种 Three Address Code (TAC / 3AC)</p>
+</li>
+<li>
+<p>llvm ir是满足<strong>静态单赋值</strong>性质的. (SSA)</p>
+</li>
+<li>
+<p><strong>SSA</strong> 是什么?</p>
+<ol>
+<li>单赋值: 一个变量只被赋值一次</li>
+<li>静态</li>
+</ol>
+</li>
+<li>
+<p>SSA带来的在静态分析时的优势远远大于SSA带来的冗余.</p>
+</li>
+<li>
+<p>过程内控制流图 : Intra-procedure CFG</p>
+</li>
+<li>
+<p>Definition (CFG):</p>
+<p>Each node represents a <em>basic block</em> (BB),</p>
+<p>i.e. a straight-line code sequence with no <strong>branches/jumps</strong> in except to the entry point and no <strong>branches/jumps</strong> out except at the exit point.</p>
+<p><strong>Jump targets start a block, and jumps end a block.</strong></p>
+<p>Directed <strong>edges</strong> are used to represent jumps in the control flow.</p>
+</li>
+<li>
+<p>在栈帧上分配空间:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">%3 = alloca i32, align 4</span><br></pre></td></tr></table></figure>
+<p>在栈帧上分配一个 i32 变量 %3 的空间.</p>
+</li>
+<li>
+<p>store指令:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">store i32 1, i32* %2, align4</span><br></pre></td></tr></table></figure>
+<p>注意store / load要加*号, 表示取地址 (?).</p>
+</li>
+<li>
+<p>为什么基本块的中间某条指令可以是 call 指令?</p>
+<p>其实这是视角的问题, 因为函数最终会返回回到call指令的下一条, 相当于并没有真正离开这个基本块. 而jmp是真正会走的, 所以CFG的边专门由jmp生成. (有始有终 – call; 有始无终 – jmp)</p>
+</li>
+<li>
+<p>不使用store / load, 怎么汇合同一个变量经过不同路径后的多个可能值?</p>
+<p><strong>φ指令!</strong></p>
+<p>但是事实上, x86等目标架构没有φ指令, 所以φ指令优化后的代码<strong>还是要还原至使用store / load的方式 (绕过了SSA的要求)</strong> (生成目标代码时).</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230220222623949.webp" alt=""></p>
+<p><code>phi i32 [%6, %3], [1, %1]</code> 表示</p>
+<p>​	<strong>如果是从%3来的, 就取值%6; 如果从%1来的, 就取值1.</strong></p>
+</li>
+<li>
+<p>φ根据控制流决定选择y1还是y2.</p>
+</li>
+<li>
+<p>φ指令对于<strong>SSA的构建</strong>十分重要! (把φ指令变成机器代码的实现, 叫作<strong>SSA的消去</strong>; 让机器指令重新拥有φ指令的性质 - <strong>SSA的重建</strong>)</p>
+</li>
+<li>
+<p>没必要一上来就读llvm文档, 可以阅读ppt上的资源和llvm开发者的tutorial.</p>
+</li>
+<li>
+<p>我们的实验 – 使用Java api生成LLVM IR. 课程实验可以自学生成φ指令的算法, 也可以直接写load store指令 (不开优化时生成的代码).</p>
+</li>
+<li>
+<p>简单的实验讲解:</p>
+<ol>
+<li>build对象 - 构建器 <code>  LLVMBuilderRef builder = LLVMCreateBuilderInContext(context);</code></li>
+<li>用构建器构建各种东西</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/courses-at-nju-by-hfwei/2024-compilers-coding/blob/main/src/main/java/llvm/factorial/Factorial1.java">https://github.com/courses-at-nju-by-hfwei/2024-compilers-coding/blob/main/src/main/java/llvm/factorial/Factorial1.java</a></li>
+</ol>
+</li>
+<li>
+<p>llvm官方给出的一种小语言Kaleidoscope的编译器前端:</p>
+<p><a target="_blank" rel="noopener" href="https://llvm.org/docs/tutorial/">https://llvm.org/docs/tutorial/</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/courses-at-nju-by-hfwei/kaleidoscope-in-java">https://github.com/courses-at-nju-by-hfwei/kaleidoscope-in-java</a> (java版本的教程)</p>
+</li>
+</ol>
+<h1>ir-expr</h1>
+<ol>
+<li>
+<p>中间代码生成 - 表达式翻译</p>
+</li>
+<li>
+<p>综合属性 <code>E.code</code>: 中间代码</p>
+</li>
+<li>
+<p>综合属性 <code>E.addr</code>: <strong>变量名 (包括临时变量)、常量</strong>    (龙书上这样叫变量)</p>
+</li>
+<li>
+<p>利用E.code和E.addr生成中间代码: (top就是当前作用域的符号表)</p>
+<p><img src="https://box.nju.edu.cn/f/1155ffce45624c17bcab/?dl=1" alt=""></p>
+</li>
+<li>
+<p>数组引用的中间代码翻译:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">a[<span class="number">2</span>][<span class="number">3</span>]; </span><br></pre></td></tr></table></figure>
+<p>需要计算<code>a[2][3]</code>相对于数组基地址 a 的<strong>偏移地址</strong>.</p>
+<p>width既是继承属性又是综合属性, 4字节继承自int, 加上数组引用时综合出新的width.</p>
+<p><img src="https://box.nju.edu.cn/f/e286f2195d974632adc1/?dl=1" alt=""></p>
+</li>
+<li>
+<p>在已声明a的类型为<code>int a[2][3];</code>的前提下,  实现翻译数组访问 <code>a[i][j]</code>: (手写一遍更易理解!)</p>
+<p>a</p>
+<p>-&gt; a[i]      宽度 (width) 为12字节 (计算方式见上一张图)</p>
+<p>-&gt; a[i][j]</p>
+<p>语义规则: (同时还用了上一张图里的 <code>.width</code> 属性)</p>
+<p><img src="https://chendingya.github.io/2023/04/04/23-Compilers/ch12-ir-expr-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BF%BB%E8%AF%91/image-20230526173312021.png" alt=""></p>
+<p>形成<strong>注释语法树</strong>:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">c + a[i][j]</span><br></pre></td></tr></table></figure>
+<p><img src="https://chendingya.github.io/2023/04/04/23-Compilers/ch12-ir-expr-%E8%A1%A8%E8%BE%BE%E5%BC%8F%E7%BF%BB%E8%AF%91/image-20230526173353737.png" alt=""></p>
+</li>
+<li>
+<p>llvm对于数组访问的实现:</p>
+<p><img src="https://pictures-1312865652.cos.ap-nanjing.myqcloud.com/image-20230221083640233.webp" alt=""></p>
+</li>
+<li>
+<p>使用alloca为数组分配内存空间, <code>[2 x [3 x i32]]</code> 几乎就是源码的直译.</p>
+</li>
+<li>
+<p>而取数组里的内容, 用到了GEP指令.</p>
+</li>
+<li>
+<p>GEP指令 (用于访问聚合类型, 如数组, 结构体 … ; 是用来操作指针的, 不是操作内存)</p>
+</li>
+</ol>
+<p>GEP provides a way to access arrays and manipulate pointers</p>
+<ol start="11">
+<li>
+<p>getelementptr</p>
+<p>&lt;base-type&gt;, &lt;base-type&gt;* , &lt;base-addr&gt;, [i32/i64 &lt;index&gt; ]+</p>
+<p>参数1: 被操作元素的类型</p>
+<p>参数2: 数组的首地址</p>
+<p>参数3: 从数组的首地址开始, 整体地偏移几个被操作元素的内存大小</p>
+<p>参数4: 对数组做一次索引的取值, 可以重复索引多次.</p>
+<p><code>a[1][2]</code></p>
+<p><code>gep [1 x [2 x i32]], [1 x [2 x i32]]* %a, i32 0, i32 %1, i32 %2</code></p>
+</li>
+<li>
+<p>更复杂的是涉及结构体, 以及结构体 / 数组嵌套时的GEP指令生成 (自学)</p>
+</li>
+<li>
+<p>llvm的全局变量实际上都是指针.</p>
+</li>
+<li></li>
+</ol>
+<h1>ir-control</h1>
+<ol>
+<li>
+<p>控制流语句的翻译和布尔表达式的翻译:</p>
+<p>(把赋值语句抽象成一个终结符, B表示布尔表达式)</p>
+<p><img src="https://chendingya.github.io/2023/04/05/23-Compilers/ch13-ir-control-%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%9A%84%E7%BF%BB%E8%AF%91/image-20230527114721450.png" alt=""></p>
+</li>
+<li>
+<p>控制流的翻译方案: 1. 简单的方案 - 产生冗余  2. 困难的方案 - 更短, 更高效 (龙书)</p>
+</li>
+<li>
+<p>分工与合作: B生成的代码和S生成的代码如何组合起来?</p>
+</li>
+<li>
+<p>简单方案: 将B的逻辑值算出来 (<strong>B生成的代码</strong>) , 并保存到临时变量t1里. 然后利用br指令根据t1的真假跳转到B.true和B.false标签 (<strong>S生成的代码</strong>) .</p>
+</li>
+<li>
+<p>实现顺序: 布尔表达式 - if - while - break - 短路求值</p>
+</li>
+<li>
+<p>相关的产生式:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line">grammar Control;</span><br><span class="line"></span><br><span class="line"><span class="meta">@header</span> &#123;</span><br><span class="line"><span class="keyword">package</span> codegen;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">prog : stat ;</span><br><span class="line"></span><br><span class="line">stat : ID <span class="string">&#x27;=&#x27;</span> expr <span class="string">&#x27;;&#x27;</span>                      # AssignStat</span><br><span class="line">     | <span class="string">&#x27;if&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> ifStat = stat <span class="string">&#x27;&#125;&#x27;</span> <span class="string">&#x27;else&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> elseStat = stat <span class="string">&#x27;&#125;&#x27;</span> # IfElseStat</span><br><span class="line">     | <span class="string">&#x27;if&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> stat <span class="string">&#x27;&#125;&#x27;</span>       # IfStat</span><br><span class="line">     | <span class="string">&#x27;while&#x27;</span> <span class="string">&#x27;(&#x27;</span> bool <span class="string">&#x27;)&#x27;</span> <span class="string">&#x27;&#123;&#x27;</span> stat <span class="string">&#x27;&#125;&#x27;</span>    # WhileStat</span><br><span class="line">     | <span class="string">&#x27;break&#x27;</span> <span class="string">&#x27;;&#x27;</span>                          # BreakStat</span><br><span class="line">     | first = <span class="type">stat</span> <span class="variable">second</span> <span class="operator">=</span> stat           # SeqStat</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line">bool : lhs = <span class="type">expr</span> <span class="variable">op</span> <span class="operator">=</span> (<span class="string">&#x27;&gt;&#x27;</span> | <span class="string">&#x27;&gt;=&#x27;</span> | <span class="string">&#x27;==&#x27;</span>) rhs = expr   # RelExpr</span><br><span class="line">     | op = <span class="string">&#x27;!&#x27;</span> bool                                    # NotExpr</span><br><span class="line">     | lhs = <span class="type">bool</span> <span class="variable">op</span> <span class="operator">=</span> <span class="string">&#x27;&amp;&amp;&#x27;</span> rhs = bool                  # AndExpr</span><br><span class="line">     | lhs = <span class="type">bool</span> <span class="variable">op</span> <span class="operator">=</span> <span class="string">&#x27;||&#x27;</span> rhs = bool                  # OrExpr</span><br><span class="line">     | <span class="string">&#x27;true&#x27;</span>                                           # TrueExpr</span><br><span class="line">     | <span class="string">&#x27;false&#x27;</span>                                          # FalseExpr</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Section 6.4.1: grammar for expressions</span></span><br><span class="line"><span class="comment"> *   (array decl and references are not included yet)</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line">expr : <span class="string">&#x27;-&#x27;</span> expr         # NegExpr</span><br><span class="line">     | expr <span class="string">&#x27;*&#x27;</span> expr    # MultExpr</span><br><span class="line">     | expr <span class="string">&#x27;+&#x27;</span> expr    # ADDExpr</span><br><span class="line">     | <span class="string">&#x27;(&#x27;</span> expr <span class="string">&#x27;)&#x27;</span>     # ParenExpr</span><br><span class="line">     | ID               # IdExpr</span><br><span class="line">     | INT              # IntExpr</span><br><span class="line">     ;</span><br><span class="line"></span><br><span class="line">GT : <span class="string">&#x27;&gt;&#x27;</span> ;</span><br><span class="line">GE : <span class="string">&#x27;&gt;=&#x27;</span> ;</span><br><span class="line">EE : <span class="string">&#x27;==&#x27;</span> ;</span><br><span class="line"></span><br><span class="line">ID : [a-z] ;</span><br><span class="line">INT : [<span class="number">0</span>-<span class="number">9</span>] ;</span><br><span class="line">WS : [ \t\r\n]+ -&gt; skip;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用访问者模式生成中间代码: (生成的ir没有行末分号)</p>
+<p>对于具体的 and or 等表达式, 分别地进行visit并返回临时变量.</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">CodeGenVisitor</span> <span class="keyword">extends</span> <span class="title class_">ControlBaseVisitor</span>&lt;String&gt; &#123;</span><br><span class="line">    <span class="comment">// stat -&gt; ID = expr</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">	<span class="keyword">public</span> String <span class="title function_">visitAssignStat</span><span class="params">(ControlParser.AssignStatContext ctx)</span> &#123;</span><br><span class="line">    	<span class="type">String</span> <span class="variable">expr</span> <span class="operator">=</span> visit(ctx.expr());</span><br><span class="line">    	emit(ctx.ID().getText() + <span class="string">&quot; = &quot;</span> + expr);</span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">  	<span class="comment">// stat -&gt; if (bool) &#123; stat &#125;</span></span><br><span class="line">  	<span class="comment">// if语句</span></span><br><span class="line">  	<span class="meta">@Override</span></span><br><span class="line">  	<span class="keyword">public</span> String <span class="title function_">visitIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">   	 	<span class="type">String</span> <span class="variable">bool</span> <span class="operator">=</span> visit(ctx.bool());</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//生成label</span></span><br><span class="line">    	<span class="type">String</span> <span class="variable">trueLabel</span> <span class="operator">=</span> getNewLabel(<span class="string">&quot;b.true&quot;</span>);</span><br><span class="line">    	<span class="type">String</span> <span class="variable">falseLabel</span> <span class="operator">=</span> getNewLabel(<span class="string">&quot;b.false&quot;</span>);</span><br><span class="line">      	<span class="comment">//选择跳转的label</span></span><br><span class="line">    	emit(<span class="string">&quot;br &quot;</span> + bool + <span class="string">&quot; &quot;</span> + trueLabel + <span class="string">&quot; &quot;</span> + falseLabel);</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//为真</span></span><br><span class="line">    	emitLabel(trueLabel);</span><br><span class="line">    	visit(ctx.stat());</span><br><span class="line"></span><br><span class="line">      	<span class="comment">//直接跳到false</span></span><br><span class="line">    	emitLabel(falseLabel);</span><br><span class="line"></span><br><span class="line">    	<span class="keyword">return</span> <span class="literal">null</span>;</span><br><span class="line">  	&#125;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>翻译break语句: 如果进入了一层while循环, 那么就将这一层的对应的false标签压栈, 退出循环体时, 就弹栈. <code>break</code>语句只要peek一下栈顶然后 <code>br</code> 跳转一下就行.</p>
+</li>
+<li>
+<p>翻译continue语句: 类似break, 应该将循环入口压栈, 退出时弹栈, <code>continue</code>语句peek栈顶跳转到最内层循环入口.</p>
+</li>
+<li>
+<p>实现布尔表达式的短路求值:</p>
+<p>(思路: 以<code>and</code>为例, <code>B1 and B2</code>, 如果B1为false, 那么直接跳转到false目标, 不访问B2)</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// bool -&gt; lhs = bool &amp;&amp; rhs = bool</span></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> String <span class="title function_">visitAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    <span class="comment">// short-circuit version</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">lhs</span> <span class="operator">=</span> visit(ctx.lhs);</span><br><span class="line">    </span><br><span class="line">    emitCode(<span class="string">&quot;br &quot;</span> + lhs + <span class="string">&quot; &quot;</span> + trueLabel + <span class="string">&quot; &quot;</span> + falseLabel);</span><br><span class="line"></span><br><span class="line">    <span class="type">String</span> <span class="variable">temp</span> <span class="operator">=</span> getNewTemp();</span><br><span class="line"></span><br><span class="line">    emitLabel(trueLabel); <span class="comment">// trueLabel:</span></span><br><span class="line">    <span class="type">String</span> <span class="variable">rhs</span> <span class="operator">=</span> visit(ctx.rhs);</span><br><span class="line">    emitCode(temp + <span class="string">&quot; = &quot;</span> + rhs);</span><br><span class="line">    emitCode(<span class="string">&quot;br &quot;</span> + endLabel);</span><br><span class="line"></span><br><span class="line">    emitLabel(falseLabel); <span class="comment">// falseLabel: </span></span><br><span class="line">    emitCode(temp + <span class="string">&quot; = false&quot;</span>);</span><br><span class="line"></span><br><span class="line">    emitLabel(endLabel); <span class="comment">// endLabel: </span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>之前的方案有冗余: <code>t1 = true</code> 可以直接常量替换, 并存在冗余的多级跳转.</p>
+</li>
+<li>
+<p>复杂方案: 减少冗余的跳转路径, 生成更短, 更高效的代码.</p>
+</li>
+<li>
+<p>直接用布尔表达式改变控制流, 无需计算最终逻辑值. <strong>从父节点获取<em>更具体</em>的跳转目标, 缩短跳转路径.</strong></p>
+</li>
+<li>
+<p>语义规则: (根据<strong>继承下来的跳转目标</strong>跳转)</p>
+<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230602165059117.png" alt=""></p>
+</li>
+<li>
+<p>重点在于根据if / while 的语义选择不同的翻译方案, 不同翻译方案的关键在于3个属性 <code>B.true</code> /<code>B.false</code> / <code>S.next</code> 如何取值. (根据语义确定取值, 再根据取值分配到具体的语义规则处理)</p>
+</li>
+<li>
+<p>顺序语句:</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">S -&gt; S1 S2</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">S1.next = newlabel()</span><br><span class="line">S2.next = S.next</span><br><span class="line">S.code = S1.code || label(S1.next) || S2.code </span><br></pre></td></tr></table></figure>
+<p>为什么要在S1后面也加标签, 因为S1可能是if / while 语句, 需要有出口, 必须考虑它们需要出口的情况.  当然, 这种方式可能会引入多余的标签. (容易使用Basic Block优化)</p>
+</li>
+<li>
+<p>布尔表达式的产生式和语义规则:</p>
+<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622141759361.png" alt=""></p>
+<p>这里每一个布尔表达式翻译后会直接<strong>生成跳转到目标位置</strong>的代码, 最终归结到 <code>true</code> / <code>false</code> 字面值 或者 表达式比较 (<code>E rel E</code>) .</p>
+<p>(<strong>布尔表达式</strong> 的 2个作用 : 1. <strong>布尔值</strong> 2. <strong>控制流跳转</strong>)</p>
+<p>至于B.true和B.false怎么来, 见上一点S的语义规则, 这2个属性是继承属性, 从S继承而来.</p>
+</li>
+<li>
+<p>如果我们就只想单纯计算布尔表达式的值而不用它作跳转呢? 龙书6.6.6节: 分成2个函数 –  <code>jump()</code> 专门用于产生控制流跳转代码, <code>rvalue()</code> 专门用于生成求值 (并将值存入临时变量) 的代码, 并在不同的情景下选择仅使用 rvalue 还是2个都使用.</p>
+</li>
+<li>
+<p>短路求值: 上图的 and 和 or 运算的语义规则都是短路求值的. 以 <code>or</code> 为例:</p>
+<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622142051115.png" alt=""></p>
+</li>
+<li>
+<p>一个综合的例子:</p>
+<p><img src="https://chendingya.github.io/2023/04/06/23-Compilers/ch14-ir-control-%E6%AF%94%E8%BE%83%E5%A4%8D%E6%9D%82%E7%9A%84%E6%8E%A7%E5%88%B6%E6%B5%81%E7%BF%BB%E8%AF%91/image-20230622142430258.png" alt=""></p>
+<p>翻译结果:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">	<span class="keyword">if</span> x &lt; <span class="number">100</span> <span class="keyword">goto</span> L2</span><br><span class="line">    <span class="keyword">goto</span> L3</span><br><span class="line">L3: <span class="keyword">if</span> x &gt; <span class="number">200</span> <span class="keyword">goto</span> L4</span><br><span class="line">    <span class="keyword">goto</span> L1</span><br><span class="line">L4: <span class="keyword">if</span> x != y <span class="keyword">goto</span> L2</span><br><span class="line">    <span class="keyword">goto</span> L1</span><br><span class="line">L2: x = <span class="number">0</span></span><br><span class="line">L1: </span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>使用antlr4的实现 (使用Listenner) :</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterWhileStat</span><span class="params">(ControlParser.WhileStatContext ctx)</span> &#123;</span><br><span class="line">    beginLabel.put(ctx, getNewLabel() + <span class="string">&quot;begin&quot;</span>);</span><br><span class="line"></span><br><span class="line">    trueLabel.put(ctx.bool(), getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.bool(), nextLabel.get(ctx));</span><br><span class="line">    nextLabel.put(ctx.stat(), beginLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitWhileStat</span><span class="params">(ControlParser.WhileStatContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s:%n%s%n%s:%n%s%n%s&quot;</span>,</span><br><span class="line">        <span class="comment">//对着规则一行一行翻译</span></span><br><span class="line">        beginLabel.get(ctx),</span><br><span class="line">        codeProperty.get(ctx.bool()),</span><br><span class="line">        trueLabel.get(ctx.bool()),</span><br><span class="line">        codeProperty.get(ctx.stat()),</span><br><span class="line">        <span class="string">&quot;goto &quot;</span> + beginLabel.get(ctx));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">    trueLabel.put(ctx.bool(), getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.bool(), nextLabel.get(ctx));</span><br><span class="line">    nextLabel.put(ctx.stat(), nextLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitIfStat</span><span class="params">(ControlParser.IfStatContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s%n%s:%n%s&quot;</span>,</span><br><span class="line">        codeProperty.get(ctx.bool()),</span><br><span class="line">        trueLabel.get(ctx.bool()),</span><br><span class="line">        codeProperty.get(ctx.stat()));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">enterAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    trueLabel.put(ctx.lhs, getNewLabel());</span><br><span class="line">    falseLabel.put(ctx.lhs, falseLabel.get(ctx));</span><br><span class="line"></span><br><span class="line">    trueLabel.put(ctx.rhs, trueLabel.get(ctx));</span><br><span class="line">    falseLabel.put(ctx.rhs, falseLabel.get(ctx));</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title function_">exitAndExpr</span><span class="params">(ControlParser.AndExprContext ctx)</span> &#123;</span><br><span class="line">    <span class="type">String</span> <span class="variable">code</span> <span class="operator">=</span> String.format(<span class="string">&quot;%s%n%s:%n%s&quot;</span>,</span><br><span class="line">        codeProperty.get(ctx.lhs),</span><br><span class="line">        trueLabel.get(ctx.lhs),</span><br><span class="line">        codeProperty.get(ctx.rhs));</span><br><span class="line"></span><br><span class="line">    codeProperty.put(ctx, code);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>现在翻译的结果是只产生标签, 而不是真实的地址. 真实世界的编译器 (如<code>javac</code>) 真的会用这种方案吗? – 下节课.</p>
+</li>
+<li></li>
+</ol>
+<h1>ir-backpatch</h1>
+<ol>
+<li>
+<p>上一节的翻译方案: 生成的是标签而不是地址 / 相对地址. (出于效率考虑, 希望一次扫描就能获得地址)</p>
+</li>
+<li>
+<p>地址回填技术 (Backpatching) :</p>
+<p>Backpatching is a technique used in compiler design to update previously generated code with the correct target addresses or labels. It helps establish the connections between control flow constructs, such as conditionals and loops, by setting the appropriate target addresses <strong>during code generation</strong>. (只进行一趟扫描)</p>
+</li>
+<li>
+<p>先假设指令大小都是1, 那么地址就等于行号. 事实上, 一条指令可能占有多个字节, 如某条指令编号为3，占据了三个字节，下一个指令编号为6. 事实上, 接下来介绍的算法也很容易改成<strong>一条指令占据多个字节</strong>的版本.</p>
+</li>
+<li>
+<p>回填 (Backpatching) 技术: 子节点挖坑、祖先节点填坑</p>
+<ul>
+<li>子节点暂时不指定跳转指令的目标地址</li>
+<li>待祖先节点能够确定目标地址时回头填充</li>
+</ul>
+</li>
+<li>
+<p>子节点跳转的目标地址先不填, 而是通过 truelist / falselist 传递给父节点. 父节点通过<strong>综合属性</strong>收集子节点中具有<strong>相同目标</strong>的跳转指令.</p>
+</li>
+<li>
+<p>向上传递的过程中, 需要用到 merge (union) 操作. (向上传递的过程中, true / false 的list属性要么向上层传递了, 要么被填上了)</p>
+</li>
+<li>
+<p>语义规则:</p>
+<p><font color=red><strong>B.falselist</strong></font> 保存所有需要跳转到 false 标签的指令, <font color=green><strong>S.nextlist</strong></font> 保存所有需要跳转到 next 标签的指令 (用于回填)</p>
+<p><font color=lighblue><strong>backpatch</strong></font> 操作表示将跳转的目标位置回填到指令的list里.</p>
+<p><img src="https://box.nju.edu.cn/f/65dab1df8a714ff18526/?dl=1" alt=""></p>
+</li>
+<li>
+<p>则所有的信息流都是自底向上流动, 都是综合属性.</p>
+</li>
+<li>
+<p>布尔表达式的产生式文法:</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622152721058.png" alt=""></p>
+</li>
+<li>
+<p>M的引入是为了获取B2的第一行代码.</p>
+</li>
+<li>
+<p>B -&gt; true  和 B -&gt; false 的翻译方案:</p>
+<ul>
+<li>B.truelist就是一个集合，将所有去往B.true的指令收集起来</li>
+<li>makelist 创建一个list</li>
+<li>nextinstr 是指示下一条指令的全局变量, 每生成一条指令就自增.</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622152852697.png" alt=""></p>
+<p>上面是回填的翻译方案, 下面的是上一节的方案. 可以看出, 二者是相对应的. (理解时建议对照理解)</p>
+</li>
+<li>
+<p>关系表达式的翻译方案:</p>
+<p>原来的 goto B.true 现在将标签空出, 并行号加入truelist即可.</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153252292.png" alt=""></p>
+</li>
+<li>
+<p>取反和括号的翻译方案:</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153519707.png" alt=""></p>
+</li>
+<li>
+<p>与 (&amp;&amp;) 操作的翻译:</p>
+<ul>
+<li>非终结符M的属性 instr 表示 <strong>下一条指令</strong>, 即B2的第一条指令的地址.</li>
+<li>根据短路求值计算出 B 的 truelist 和 falselist.</li>
+<li>如果B1 为 true, 那么B1跳转的目标已经能够知道了 (即B2的第一条指令) , 所以在此时回填 B1.truelist.</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622153752740.png" alt=""></p>
+</li>
+<li>
+<p>或 (||) 操作同理.</p>
+</li>
+<li>
+<p>一个例子:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">x &lt; <span class="number">100</span> || (x &gt; <span class="number">200</span> &amp;&amp; x != y)</span><br></pre></td></tr></table></figure>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622154644961.png" alt=""></p>
+<p>翻译结果: ( _ 的地方待上层节点填充 )</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155316362.png" alt=""></p>
+</li>
+<li>
+<p>控制流语句的翻译方案:</p>
+<ul>
+<li>
+<p>除了之前用到的M, 还额外引入了N.</p>
+</li>
+<li>
+<p>N的作用比M多一点, 除了获取下一条指令之外, 还负责生成一条goto指令.</p>
+</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155336961.png" alt=""></p>
+</li>
+<li>
+<p>if语句的翻译方案:</p>
+<ul>
+<li>生成要跳往 S.next 的指令集合 (S.nextlist), 为 B.falselist 和 S1.nextlist的合并.</li>
+<li>发现B为true的跳转目标已知, 回填 B.truelist.</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155449711.png" alt=""></p>
+</li>
+<li>
+<p>if else 的翻译方案:</p>
+<ul>
+<li>会生成一条 goto 指令 (通过 N)</li>
+<li>S.nextlist 是 S1.nextlist, N.nextlist 和 S2.nextlist 三者的合并. (为什么? 因为N里面有goto语句, 需要回填, 而S1和S2都可能有break语句, 也可能需要回填)</li>
+<li>B为true和B为false的跳转目标都已知, 所以 B.truelist 和 B.falselist 都回填.</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155719893.png" alt=""></p>
+</li>
+<li>
+<p>while 语句的翻译方案:</p>
+<ul>
+<li>会生成一条跳回开头的 goto 语句, 这条goto语句的目标是已经经过的代码, 所以不用回填, 可以直接用M1.instr获取目标地址.</li>
+<li>只有 B.false 会跳到 S.next, 所以 S.nextlist = B.falselist</li>
+<li>B为真 和 S1的下一条指令 的地址都可以确定了, 所以都回填.</li>
+</ul>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622155756022.png" alt=""></p>
+</li>
+<li>
+<p>顺序语句: 2条语句 L 和 S 之间要插入M, 是为了如果L里有要跳出的 nextlist, 就可以使用M定位到跳出的位置 (S前面). 这样的做法解决了所有的跳转地址的确定, 并且与上一节所讲的加标签的做法相比, 这样的回填方案不会产生无用标签.</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622160637031.png" alt=""></p>
+</li>
+<li>
+<p>加 {} 和 赋值语句 (A, assign) 的翻译方案:</p>
+<p><img src="https://chendingya.github.io/2023/04/07/23-Compilers/ch15-ir-backpatch%E6%8E%A7%E5%88%B6%E6%B5%81%E8%AF%AD%E5%8F%A5%E7%BF%BB%E8%AF%91%E4%B8%AD%E7%9A%84%E5%9C%B0%E5%9D%80%E5%9B%9E%E5%A1%AB%E6%8A%80%E6%9C%AF/image-20230622160644159.png" alt=""></p>
+</li>
+<li>
+<p>只需要理解回填的思想 <strong>(如何计算和传递几个综合属性, 何时回填 (能确定目标地址时), 何时生成goto指令)</strong> , 并且<strong>会读语义规则</strong>即可. 不需要记忆具体的语义规则.</p>
+</li>
+<li>
+<p>switch语句的翻译 – 使用跳转表 (方便二分查找)</p>
+</li>
+<li></li>
+</ol>
+<h1>codegen - RISC V</h1>
+<ol>
+<li>
+<p>目标 – 中间代码 -&gt; 汇编语言 (RISCV)</p>
+</li>
+<li>
+<p>目标代码生成的困难 – 指令选择 (LLVM IR 与 目标代码不是一一对应的) / 寄存器分配 / 栈管理问题 (寄存器不够用, 放入栈 / 函数调用) / 目标代码优化</p>
+</li>
+<li>
+<p>RISCV – Reduced Instruction Set Computer V 精简指令集计算机第5代</p>
+</li>
+<li>
+<p>ISA (Instruction Set Architecture) as the Software/Hardware Interface 软件和硬件之间的接口, 为硬件定义了指令集. 数据类型, 寄存器, 基础特性, IO模型 …</p>
+</li>
+<li>
+<p>CISC 复杂 (Complex) 指令集计算机. 可以做2件不同的事情 (如 load + 运算)</p>
+</li>
+<li>
+<p>RISC 与 CISC 的区别:</p>
+<ol>
+<li>RISC指令只能做一件事 (不能同时做load / 运算)</li>
+<li>RISC指令都是定长的 (RISCV32的指令长为 4字节), CISC指令可以是变长的.</li>
+</ol>
+</li>
+<li>
+<p>RISCV是开源指令集, RISCV国际基金会 (包括若干家中国企业)</p>
+</li>
+<li>
+<p>全套大餐 (大而全, 增量式; x86)  菜单 (模块化; RISC-V)</p>
+</li>
+<li>
+<p>RISCV的模块化使得其<strong>易扩展</strong>.</p>
+</li>
+<li>
+<p><em>RISC-V开放架构设计之道</em>, 推荐, 其中除了RISC-V的设计之外, 还讲解了为什么要这样设计.</p>
+</li>
+<li>
+<p>下面将带你入门RISC-V.</p>
+</li>
+<li>
+<p>RISC-V寄存器 (32个, 0号-31号), 除了编号, 每个寄存器还有别名.</p>
+</li>
+<li>
+<p>0号寄存器 zero : 永远是0</p>
+</li>
+<li>
+<p>1号寄存器 ra : return address</p>
+</li>
+<li>
+<p>t0-t6: 临时寄存器</p>
+</li>
+<li>
+<p>pc: 程序计数器</p>
+</li>
+<li>
+<p><code>add.asm</code>: li load immediate 加载立即数</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">li t0, 100</span><br><span class="line">li t1. 200</span><br><span class="line">add t2, t0, t1</span><br></pre></td></tr></table></figure>
+<p><code>li</code> 是 RISC-V 里的伪指令, 也就是语法糖. 实际上 <code>li t0, 100</code> 是 <code>addi t0, zero, 100</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">li t0, 100</span><br><span class="line">addi t1, t0, 200</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><code>add-sub.asm</code></p>
+<p>f = (g + h) - (i + j)</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">li t0, 0</span><br><span class="line">li t1, 10</span><br><span class="line">add t2, t0, t1</span><br><span class="line"></span><br><span class="line">li t3, 30</span><br><span class="line">li t4, 40</span><br><span class="line">add t5, t3, t4</span><br><span class="line"></span><br><span class="line">sub t6, t2, t5</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><code>output.asm</code></p>
+<p>想要将数值输出, 需要调用合适的系统调用.</p>
+<p>阅读RISC-V手册可知:</p>
+<p>step1: 将设备号加载到a7寄存器中.</p>
+<p>step2: 将参数加载到 a0, a1, a2, a3, fa0, … .(寄存器 a0 的 a 就是 参数的意思)</p>
+<p>step3: 发射一条ecall指令</p>
+<p>step4: 取回返回值</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">li t6, -47</span><br><span class="line"># output:</span><br><span class="line">li a7, 1</span><br><span class="line">mv a0, t6</span><br><span class="line">ecall</span><br></pre></td></tr></table></figure>
+<p>mv 也是伪指令, 作用是寄存器赋值.</p>
+<p>(注意, <code>mov</code> 是 intel 格式的, 即 <code>mov</code> <code>dest</code> <code>src</code>)</p>
+</li>
+<li>
+<p><code>data.asm</code></p>
+<p>text段 – 放指令</p>
+<p>data段 – 放数据</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">g: .word 0</span><br><span class="line">h: .word 10</span><br><span class="line">i: .word 30</span><br><span class="line">j: .word 40</span><br><span class="line"></span><br><span class="line">result: .word 0</span><br><span class="line"></span><br><span class="line">msg: .string &quot;The result is :&quot;	#.string会自动在末尾加\0;  .ascii则不会自动在末尾加\0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, g  # la: load address</span><br><span class="line">lw t1, 0(t0) # lw: load word</span><br><span class="line"># lw t1, g</span><br><span class="line"></span><br><span class="line">la t0, h</span><br><span class="line">lw t2, 0(t0)</span><br><span class="line">add t3, t1, t2</span><br><span class="line"></span><br><span class="line">la t0, i</span><br><span class="line">lw t4, 0(t0)</span><br><span class="line"></span><br><span class="line">la t0, j</span><br><span class="line">lw t5, 0(t0)</span><br><span class="line">add t6, t4, t5</span><br><span class="line"></span><br><span class="line">sub t6, t3, t6</span><br><span class="line"></span><br><span class="line">la t0, result</span><br><span class="line">sw t6, 0(t0)</span><br><span class="line"></span><br><span class="line">li a7, 4 # 4号调用打印字符串</span><br><span class="line">la a0, msg	# a0是参数, 加载字符串的首地址即可</span><br><span class="line">ecall</span><br><span class="line"></span><br><span class="line">li a7, 1</span><br><span class="line">mv a0, t6</span><br><span class="line">ecall</span><br></pre></td></tr></table></figure>
+<p>g是一个标签, 表示存储 数据 <code>0</code> 的那一段内存的首地址. <code>.word</code> 表示长度4字节. <code>.string</code> 表示是字符串.</p>
+<p><code>la</code> 伪指令, 获得标签指示的内存的首地址</p>
+<p><code>lw</code> 加载一个字.</p>
+<p><code>0(t0)</code> 是RISC-V的寻址模式, 基址加偏移量.</p>
+</li>
+<li>
+<p><code>array.asm</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">numbers: .word -30, 30, -20, 20, -10, 10, 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, numbers</span><br><span class="line">lw t1, 12(t0)  # numbers[3]</span><br><span class="line">addi t1, t1, 80</span><br><span class="line">sw t1, 12(t0)</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p><code>branch-max.asm</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"># c = max(a, b)</span><br><span class="line"></span><br><span class="line">.data</span><br><span class="line">a: .word 100</span><br><span class="line">b: .word 200</span><br><span class="line">c: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">lw t0, a</span><br><span class="line">lw t1, b</span><br><span class="line"></span><br><span class="line">bge t0, t1, greater_equal # br if t0 &gt;= t1</span><br><span class="line">mv t2, t1</span><br><span class="line">j end</span><br><span class="line"></span><br><span class="line">greater_equal:</span><br><span class="line">mv t2, t0</span><br><span class="line"></span><br><span class="line">end:</span><br><span class="line">la t3, c</span><br><span class="line">sw t2, 0(t3)</span><br></pre></td></tr></table></figure>
+<p><code>bge</code>: 伪指令, &lt;= , 跳转</p>
+<p><code>j</code> : 伪指令, 无条件跳转</p>
+</li>
+<li>
+<p><code>for.asm</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"># 求数组中所有 正数 / 负数 之和</span><br><span class="line">.data</span><br><span class="line">numbers: .word -30, 30, -20, 20, -10, 10, 0</span><br><span class="line">size: .word 7</span><br><span class="line"></span><br><span class="line">positive_sum: .word 0</span><br><span class="line">negative_sum: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">la t0, numbers</span><br><span class="line">lw t1, size</span><br><span class="line"></span><br><span class="line">mv t2, zero # counter: i = 0</span><br><span class="line"></span><br><span class="line">li t3, 0 	# positive_number</span><br><span class="line">li t4, 0	# negative_number</span><br><span class="line"></span><br><span class="line">loop:</span><br><span class="line">	bge t2, t1, end_loop</span><br><span class="line">	# numbers[i]</span><br><span class="line">	slli t5, t2, 2 # 即: mul t5, t2, 4</span><br><span class="line">	add t5, t0, t5</span><br><span class="line">	lw t5, 0(t5)  # numbers[i]</span><br><span class="line">	</span><br><span class="line">	addi t2, t2, 1</span><br><span class="line">	</span><br><span class="line">	bltz t5, negative  # br if less than zero</span><br><span class="line">	# positive</span><br><span class="line">	add t3, t3, t5</span><br><span class="line">	j loop</span><br><span class="line">	</span><br><span class="line">negative:</span><br><span class="line">	add t4, t4, t5</span><br><span class="line">	j loop</span><br><span class="line">	</span><br><span class="line">end_loop:</span><br><span class="line">	la t5, positive_sum</span><br><span class="line">	sw t3, 0(t5)</span><br><span class="line">	la t5, negative_sum</span><br><span class="line">	sw t4, 0(t5)</span><br></pre></td></tr></table></figure>
+<p><code>slli</code> shift logical left immediate 逻辑左移一个立即数</p>
+</li>
+<li>
+<p>riscv函数实现:</p>
+<p><code>max.asm</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">.data</span><br><span class="line">max_result: .word 0</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">.globl main # the program entry</span><br><span class="line"></span><br><span class="line">max:</span><br><span class="line"># (3) get arguments (natrually)</span><br><span class="line"></span><br><span class="line"># (4) computing</span><br><span class="line">blt a0, a1, smaller</span><br><span class="line">j end_max</span><br><span class="line"></span><br><span class="line">smaller:</span><br><span class="line">mv a0, a1 	# 约定: a0, a1用作返回值寄存器.</span><br><span class="line"></span><br><span class="line">end_max:</span><br><span class="line">ret</span><br><span class="line">#jr ra</span><br><span class="line">#jalr zero 0(ra)  # jalr: jump and link register, link =&gt; save (pc + 4) in register &lt;zero&gt;</span><br><span class="line"></span><br><span class="line">.data</span><br><span class="line">a: .word 100 # 定义全局数据变量</span><br><span class="line">b: .word 200</span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">main:</span><br><span class="line"># (1) preparing the arguments (a0, a1, ..., a7), 传参</span><br><span class="line">lw a0, a</span><br><span class="line">lw a1, b</span><br><span class="line"></span><br><span class="line"># (2) call the max function</span><br><span class="line">call max # jal max</span><br><span class="line">#jal ra, max   # jal: jump and link (jump: ra &lt;- pc + 4; pc &lt;- &amp;max)</span><br><span class="line"></span><br><span class="line"># (5) get return value</span><br><span class="line">sw a0, max_result, t0</span><br></pre></td></tr></table></figure>
+</li>
+<li>
+<p>需要用到栈的例子:</p>
+<p>(递归) <code>fact.asm</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line">.text</span><br><span class="line">.globl main</span><br><span class="line"></span><br><span class="line">factorial: </span><br><span class="line">beqz a0 base_case:</span><br><span class="line"></span><br><span class="line">addi sp, sp, -8</span><br><span class="line">sw a0, 4(sp)</span><br><span class="line">sw ra, 0(sp) # it&#x27;s key to save ra if call chain&#x27;s length &gt; 1</span><br><span class="line"></span><br><span class="line"># n &gt; 0: n * factorial(n - 1)</span><br><span class="line">addi a0, a0, -1 # no subi</span><br><span class="line">call factorial # get value -- factorial(n - 1) in a0</span><br><span class="line">mv t0, a0      # save ret value in t0</span><br><span class="line"></span><br><span class="line">lw a0, 4(sp)</span><br><span class="line">lw ra, 0(sp)</span><br><span class="line">addi, sp, sp, 8</span><br><span class="line"></span><br><span class="line">mul a0, a0, t0</span><br><span class="line">j end</span><br><span class="line"></span><br><span class="line">base_case:</span><br><span class="line">	li a0, 1</span><br><span class="line"></span><br><span class="line">end:	</span><br><span class="line">	ret</span><br><span class="line"></span><br><span class="line">## main ##</span><br><span class="line">.data</span><br><span class="line">n: .word 10 </span><br><span class="line"></span><br><span class="line">.text</span><br><span class="line">main:</span><br><span class="line">lw a0, n</span><br><span class="line">call factorial</span><br></pre></td></tr></table></figure>
+<p>一般栈的空间的布局如下:</p>
+<p>从高到低:</p>
+<p>保存参数寄存器</p>
+<p>保存返回地址寄存器 (ra)</p>
+</li>
+<li>
+<p>复杂的例子: 中序遍历</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;stdio.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> &#123;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> *<span class="title">left</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> *<span class="title">right</span>;</span></span><br><span class="line">    <span class="type">long</span> value;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">long</span> <span class="title function_">tree_sum</span><span class="params">(<span class="type">const</span> <span class="keyword">struct</span> tree_node *node)</span> &#123;</span><br><span class="line">    <span class="type">long</span> result = <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (node) &#123;</span><br><span class="line">        result += tree_sum(node-&gt;left);</span><br><span class="line">        result += node-&gt;value;</span><br><span class="line">        node = node-&gt;right;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="type">int</span> <span class="title function_">main</span><span class="params">(<span class="type">void</span>)</span> &#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">tree_node</span> <span class="title">t</span> =</span> &#123; <span class="number">0</span>, <span class="number">0</span>, <span class="number">3</span>&#125;;</span><br><span class="line">    <span class="type">long</span> sum = tree_sum(&amp;t);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;sum = %ld&quot;</span>, sum);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">tree_sum:                               # @tree_sum</span><br><span class="line">        addi    sp, sp, -16</span><br><span class="line">        sw      ra, 12(sp)                      # 4-byte Folded Spill</span><br><span class="line">        sw      s0, 8(sp)                       # 4-byte Folded Spill</span><br><span class="line">        sw      s1, 4(sp)                       # 4-byte Folded Spill</span><br><span class="line">        beqz    a0, .LBB0_3</span><br><span class="line">        mv      s0, a0</span><br><span class="line">        li      s1, 0</span><br><span class="line">.LBB0_2:                                # =&gt;This Inner Loop Header: Depth=1</span><br><span class="line">        lw      a0, 0(s0)</span><br><span class="line">        call    tree_sum</span><br><span class="line">        lw      a1, 8(s0)</span><br><span class="line">        lw      s0, 4(s0)</span><br><span class="line">        add     a1, a1, s1</span><br><span class="line">        add      s1, a0, a1</span><br><span class="line">        bnez    s0, .LBB0_2</span><br><span class="line">        j       .LBB0_4</span><br><span class="line">.LBB0_3:</span><br><span class="line">        li      s1, 0</span><br><span class="line">.LBB0_4:</span><br><span class="line">        mv      a0, s1</span><br><span class="line">        lw      ra, 12(sp)                      # 4-byte Folded Reload</span><br><span class="line">        lw      s0, 8(sp)                       # 4-byte Folded Reload</span><br><span class="line">        lw      s1, 4(sp)                       # 4-byte Folded Reload</span><br><span class="line">        addi    sp, sp, 16</span><br><span class="line">        ret</span><br><span class="line">main:                                   # @main</span><br><span class="line">        addi    sp, sp, -16</span><br><span class="line">        sw      ra, 12(sp)                      # 4-byte Folded Spill</span><br><span class="line">        lui     a0, %hi(.L__const.main.t)</span><br><span class="line">        lw      a1, %lo(.L__const.main.t)(a0)</span><br><span class="line">        addi    a0, a0, %lo(.L__const.main.t)</span><br><span class="line">        lw      a2, 8(a0)</span><br><span class="line">        lw      a0, 4(a0)</span><br><span class="line">        sw      a1, 0(sp)</span><br><span class="line">        sw      a2, 8(sp)</span><br><span class="line">        sw      a0, 4(sp)</span><br><span class="line">        mv      a0, sp</span><br><span class="line">        call    tree_sum</span><br><span class="line">        mv      a1, a0</span><br><span class="line">        lui     a0, %hi(.L.str)</span><br><span class="line">        addi    a0, a0, %lo(.L.str)</span><br><span class="line">        call    printf</span><br><span class="line">        li      a0, 0</span><br><span class="line">        lw      ra, 12(sp)                      # 4-byte Folded Reload</span><br><span class="line">        addi    sp, sp, 16</span><br><span class="line">        ret</span><br><span class="line">.L__const.main.t:</span><br><span class="line">        .word   0</span><br><span class="line">        .word   0</span><br><span class="line">        .word   3                               # 0x3</span><br><span class="line"></span><br><span class="line">.L.str:</span><br><span class="line">        .asciz  &quot;sum = %ld&quot;</span><br></pre></td></tr></table></figure>
+</li>
+<li></li>
+</ol>
+<h1>codegen-isel</h1>
 <ol>
 <li>指令选择问题实际上是一个组合优化问题. (在理论上是 NP-hard 问题)</li>
 </ol>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://chaos-warzh.github.io">Zhaohui Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://chaos-warzh.github.io" target="_blank">chaos-warzh's blog</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93/" title="2024毕昇杯总结.md"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2024毕昇杯总结.md</div></div><div class="info-2"><div class="info-item-1">  ...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Zhaohui Wang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/chaos-warzh"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/chaos-warzh" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><p>(2024-03-02) <br> Thank you for visiting my website! <br> I am an undergraduate student with a passion for exploring languages, logic, and software craftsmanship. </p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">2024-NJUSE-编译原理</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#0-intro"><span class="toc-number">1.1.</span> <span class="toc-text">0: intro</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#1-ANTLR-4"><span class="toc-number">1.2.</span> <span class="toc-text">1: ANTLR 4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2-Lexer"><span class="toc-number">1.3.</span> <span class="toc-text">2: Lexer</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#lexer-%E5%A4%8D%E4%B9%A0"><span class="toc-number">1.4.</span> <span class="toc-text">lexer-复习</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#4-parser-antlr"><span class="toc-number">1.5.</span> <span class="toc-text">4: parser-antlr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#5-parser-context-free"><span class="toc-number">1.6.</span> <span class="toc-text">5: parser: context-free</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#6-parser-ll"><span class="toc-number">1.7.</span> <span class="toc-text">6: parser - ll</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#7-parser-Adaptive-LL"><span class="toc-number">1.8.</span> <span class="toc-text">7: parser - Adaptive LL(*)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#8-semantics-symtable"><span class="toc-number">1.9.</span> <span class="toc-text">8: semantics - symtable</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#9-semantics-ag"><span class="toc-number">1.10.</span> <span class="toc-text">9: semantics - ag</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Lab-1"><span class="toc-number">1.11.</span> <span class="toc-text">Lab 1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#semantics"><span class="toc-number">1.12.</span> <span class="toc-text">semantics</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#10-llvm-ir"><span class="toc-number">1.13.</span> <span class="toc-text">10: llvm - ir</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#11-ir-expr"><span class="toc-number">1.14.</span> <span class="toc-text">11: ir-expr</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#12-ir-control"><span class="toc-number">1.15.</span> <span class="toc-text">12: ir-control</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#13-ir-backpatch"><span class="toc-number">1.16.</span> <span class="toc-text">13: ir-backpatch</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#14-codegen-riscv"><span class="toc-number">1.17.</span> <span class="toc-text">14: codegen - riscv</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#15-parser-lr-0"><span class="toc-number">1.18.</span> <span class="toc-text">15: parser-lr(0)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#16-parser-lr-1"><span class="toc-number">1.19.</span> <span class="toc-text">16: parser-lr(1)</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#17-codegen-isel"><span class="toc-number">1.20.</span> <span class="toc-text">17: codegen-isel</span></a></li></ol></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" title="2024-NJUSE-编译原理">2024-NJUSE-编译原理</a><time datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93/" title="2024毕昇杯总结.md">2024毕昇杯总结.md</a><time datetime="2024-08-22T14:24:48.000Z" title="发表于 2024-08-22 22:24:48">2024-08-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/18/RISC-V%E5%9C%B0%E5%9D%80%E5%AF%B9%E9%BD%90%E8%B8%A9%E5%9D%91/" title="backend-bugs">backend-bugs</a><time datetime="2024-07-17T17:53:21.000Z" title="发表于 2024-07-18 01:53:21">2024-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/30/Compilers%E6%A1%86%E6%9E%B6%E6%8C%87%E5%8D%97/" title="Compilers 框架指南">Compilers 框架指南</a><time datetime="2024-05-30T10:01:30.000Z" title="发表于 2024-05-30 18:01:30">2024-05-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/04/Golang%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Golang复习笔记">Golang复习笔记</a><time datetime="2024-03-04T06:02:53.000Z" title="发表于 2024-03-04 14:02:53">2024-03-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Zhaohui Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://chaos-warzh.github.io">Zhaohui Wang</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/">https://chaos-warzh.github.io/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="https://chaos-warzh.github.io" target="_blank">chaos-warzh's blog</a>！</span></div></div><div class="tag_share"><div class="post-share"><div class="social-share" data-image="/img/butterfly-icon.png" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav class="pagination-post" id="pagination"><a class="pagination-related full-width" href="/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93/" title="2024毕昇杯总结.md"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info"><div class="info-1"><div class="info-item-1">上一篇</div><div class="info-item-2">2024毕昇杯总结.md</div></div><div class="info-2"><div class="info-item-1">  ...</div></div></div></a></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/butterfly-icon.png" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">Zhaohui Wang</div><div class="author-info-description"></div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">8</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/chaos-warzh"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/chaos-warzh" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content"><p>(2024-03-02) <br> Thank you for visiting my website! <br> I am an undergraduate student with a passion for exploring languages, logic, and software craftsmanship. </p></div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">intro</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">2.</span> <span class="toc-text">ANTLR 4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">3.</span> <span class="toc-text">Lexer</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">4.</span> <span class="toc-text">Lexer Analysis</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">5.</span> <span class="toc-text">parser-antlr</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">6.</span> <span class="toc-text">parser: context-free</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">7.</span> <span class="toc-text">parser - ll</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">8.</span> <span class="toc-text">parser - Adaptive LL(*)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">9.</span> <span class="toc-text">parser-lr(0)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">10.</span> <span class="toc-text">parser-lr(1)</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">11.</span> <span class="toc-text">semantics - symtable</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">12.</span> <span class="toc-text">semantics - ag</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">13.</span> <span class="toc-text">LLVM</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">14.</span> <span class="toc-text">ir-expr</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">15.</span> <span class="toc-text">ir-control</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">16.</span> <span class="toc-text">ir-backpatch</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">17.</span> <span class="toc-text">codegen - RISC V</span></a></li><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">18.</span> <span class="toc-text">codegen-isel</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/02/25/2024-NJUSE-%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" title="2024-NJUSE-编译原理">2024-NJUSE-编译原理</a><time datetime="2025-02-25T06:50:49.000Z" title="发表于 2025-02-25 14:50:49">2025-02-25</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/08/22/2024%E6%AF%95%E6%98%87%E6%9D%AF%E6%80%BB%E7%BB%93/" title="2024毕昇杯总结.md">2024毕昇杯总结.md</a><time datetime="2024-08-22T14:24:48.000Z" title="发表于 2024-08-22 22:24:48">2024-08-22</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/07/18/RISC-V%E5%9C%B0%E5%9D%80%E5%AF%B9%E9%BD%90%E8%B8%A9%E5%9D%91/" title="backend-bugs">backend-bugs</a><time datetime="2024-07-17T17:53:21.000Z" title="发表于 2024-07-18 01:53:21">2024-07-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/05/30/Compilers%E6%A1%86%E6%9E%B6%E6%8C%87%E5%8D%97/" title="Compilers 框架指南">Compilers 框架指南</a><time datetime="2024-05-30T10:01:30.000Z" title="发表于 2024-05-30 18:01:30">2024-05-30</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2024/03/04/Golang%E5%A4%8D%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="Golang复习笔记">Golang复习笔记</a><time datetime="2024-03-04T06:02:53.000Z" title="发表于 2024-03-04 14:02:53">2024-03-04</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2019 - 2025 By Zhaohui Wang</div><div class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 7.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.3.3</a></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
   const option = null
 
